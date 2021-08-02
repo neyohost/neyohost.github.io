@@ -1,390 +1,378 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tour apprev="17873" start="node1" appversion="6.1.2">
+<tour start="node1" appversion="6.1.8" apprev="17956">
   <panorama id="node1">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-7.92" fov="70" pan="-6.55"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-53.26">
+      <start projection="4" fov="70" pan="-6.55" tilt="-7.92"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.586363" datetime="11/06/2020 11:48" source="" longitude="-76.665616" nodeid="node1" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="35.972" tilt="0" target="$fwd" title="default" id="Point01" description="" pan="-22.9033" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="35.972" tilt="-9.09" target="" title="Óvalo ingreso" id="Point02" description="" pan="-1.86998" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="161.4" tilt="-3.11" target="" title="Piscina" id="Point03" description="" pan="-327.37" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="140.17" tilt="-6.25" target="" title="Recepción" id="Point04" description="" pan="-314.08" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="54.4942" tilt="-8.79" target="" title="Laguna artificial" id="Point05" description="" pan="-295.57" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="115.677" tilt="-5.25" target="" title="Juego de niños" id="Point06" description="" pan="-303.57" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="147.736" tilt="-3.49" target="" title="Cancha sintética" id="Point07" description="" pan="-297.17" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="144.9" tilt="-2.34" target="" title="Lotes derecha" id="Point08" description="" pan="-67.27" url="{node10}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Portico" nodeid="node1" description="" datetime="11/06/2020 11:48" author="" source="" tags="Fotos 360" longitude="-76.66561208" info="" copyright="" latitude="-12.58638420" altitude="112.00" heading="-53.26">
+      <mapcoords y="-0.834961" y_floorplan_percent="78.3505" mapid="FloorPlan01" x="0.756683" x_floorplan_percent="53.0829"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Óvalo ingreso" description="" id="Point02" url="{node2}" target="" skinid="ht_node" distance="54.3875" pan="-1.86998" tilt="-9.09"/>
+      <hotspot title="Piscina" description="" id="Point03" url="{node9}" target="" skinid="ht_node" distance="163.795" pan="-327.37" tilt="-3.11"/>
+      <hotspot title="Recepción" description="" id="Point04" url="{node8}" target="" skinid="ht_node" distance="142.496" pan="-314.08" tilt="-6.25"/>
+      <hotspot title="Laguna artificial" description="" id="Point05" url="{node3}" target="" skinid="ht_node" distance="56.6662" pan="-295.57" tilt="-8.79"/>
+      <hotspot title="Juego de niños" description="" id="Point06" url="{node5}" target="" skinid="ht_node" distance="117.831" pan="-303.57" tilt="-5.25"/>
+      <hotspot title="Cancha sintética" description="" id="Point07" url="{node4}" target="" skinid="ht_node" distance="149.819" pan="-297.17" tilt="-3.49"/>
+      <hotspot title="Lotes derecha" description="" id="Point08" url="{node10}" target="" skinid="ht_node" distance="144.053" pan="-67.27" tilt="-2.34"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node2">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-1.4" fov="70" pan="-11.69"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-53.26">
+      <start projection="4" fov="70" pan="-17.27" tilt="-18.75"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.586065" datetime="11/06/2020 11:46" source="" longitude="-76.665487" nodeid="node2" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="47.1273" tilt="-10.72" target="" title="Laguna artificial" id="Point01" description="" pan="-338.89" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="135.23" tilt="-5.66" target="" title="Cancha sintética" id="Point02" description="" pan="-357.58" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="102.13" tilt="-7.52" target="" title="Juego de niños" id="Point03" description="" pan="-2.69" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="91.4516" tilt="-9.1" target="" title="Zona de parilla" id="Point04" description="" pan="-23.86" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="242.437" tilt="-1.83" target="" title="Lotes traseros" id="Point05" description="" pan="-47.03" url="{node7}" skinid="ht_node"/>
-      <hotspot distance="35.972" tilt="-13.68" target="" title="Pórtico" id="Point06" description="" pan="-263.17" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="141.869" tilt="0.64" target="" title="Lotes derecha" id="Point07" description="" pan="-168.81" url="{node10}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Ovalo de ingreso" nodeid="node2" description="" datetime="11/06/2020 11:46" author="" source="" tags="Fotos 360" longitude="-76.66539020" info="" copyright="" latitude="-12.58594563" altitude="114.00" heading="-53.26">
+      <mapcoords y="-0.785522" y_floorplan_percent="73.7113" mapid="FloorPlan01" x="0.780029" x_floorplan_percent="54.7206"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Laguna artificial" description="" id="Point01" url="{node3}" target="" skinid="ht_node" distance="56.3429" pan="-338.89" tilt="-10.72"/>
+      <hotspot title="Cancha sintética" description="" id="Point02" url="{node4}" target="" skinid="ht_node" distance="136.904" pan="-357.58" tilt="-5.66"/>
+      <hotspot title="Juego de niños" description="" id="Point03" url="{node5}" target="" skinid="ht_node" distance="104.228" pan="-2.69" tilt="-7.52"/>
+      <hotspot title="Zona de parilla" description="" id="Point04" url="{node6}" target="" skinid="ht_node" distance="87.4768" pan="-23.86" tilt="-9.1"/>
+      <hotspot title="Lotes traseros" description="" id="Point05" url="{node7}" target="" skinid="ht_node" distance="230.126" pan="-47.03" tilt="-1.83"/>
+      <hotspot title="Pórtico" description="" id="Point06" url="{node1}" target="" skinid="ht_node" distance="54.3875" pan="-263.17" tilt="-13.68"/>
+      <hotspot title="Lotes derecha" description="" id="Point07" url="{node10}" target="" skinid="ht_node" distance="139.021" pan="-168.81" tilt="0.64"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node3">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-41.61" fov="70" pan="61.61"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="25.36">
+      <start projection="4" fov="70" pan="61.61" tilt="-41.61"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.585965" datetime="11/06/2020 11:55" source="" longitude="-76.665909" nodeid="node3" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="61.1908" tilt="-13.01" target="" title="Juegos de niños" id="Point01" description="" pan="-292.89" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="93.4905" tilt="-7.96" target="" title="Cancha sintética" id="Point02" description="" pan="-290.77" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="520.824" tilt="-0.33" target="" title="Lotes izquierdo" id="Point03" description="" pan="-297.37" url="{node11}" skinid="ht_node"/>
-      <hotspot distance="87.4529" tilt="-9.03" target="" title="Recepción" id="Point04" description="" pan="-315.83" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="65.8259" tilt="-11.41" target="" title="Zona de parrilla" id="Point05" description="" pan="-334.48" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="232.86" tilt="-2.65" target="" title="Lotes trasero" id="Point06" description="" pan="-353.78" url="{node12}" skinid="ht_node"/>
-      <hotspot distance="47.1273" tilt="2.57" target="" title="Lotes derecha" id="Point07" description="" pan="-88.68" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="47.1273" tilt="-12.31" target="" title="Óvalo de ingreso" id="Point08" description="" pan="-81.15" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="54.4942" tilt="-11.95" target="" title="Pórtico" id="Point09" description="" pan="-123.32" url="{node1}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Lagunas artificiales" nodeid="node3" description="" datetime="11/06/2020 11:55" author="" source="" tags="Fotos 360" longitude="-76.665909" info="" copyright="" latitude="-12.585965" altitude="115.00" heading="25.36">
+      <mapcoords y="-0.762177" y_floorplan_percent="71.5206" mapid="FloorPlan01" x="0.720978" x_floorplan_percent="50.578"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Juegos de niños" description="" id="Point01" url="{node5}" target="" skinid="ht_node" distance="61.1908" pan="-292.89" tilt="-13.01"/>
+      <hotspot title="Cancha sintética" description="" id="Point02" url="{node4}" target="" skinid="ht_node" distance="93.4905" pan="-290.77" tilt="-7.96"/>
+      <hotspot title="Lotes izquierdo" description="" id="Point03" url="{node11}" target="" skinid="ht_node" distance="520.824" pan="-297.37" tilt="-0.33"/>
+      <hotspot title="Recepción" description="" id="Point04" url="{node8}" target="" skinid="ht_node" distance="87.4529" pan="-315.83" tilt="-9.03"/>
+      <hotspot title="Zona de parrilla" description="" id="Point05" url="{node6}" target="" skinid="ht_node" distance="65.8259" pan="-334.48" tilt="-11.41"/>
+      <hotspot title="Lotes derecha" description="" id="Point07" url="{node2}" target="" skinid="ht_node" distance="56.3429" pan="-88.68" tilt="2.57"/>
+      <hotspot title="Óvalo de ingreso" description="" id="Point08" url="{node2}" target="" skinid="ht_node" distance="56.3429" pan="-81.15" tilt="-12.31"/>
+      <hotspot title="Pórtico" description="" id="Point09" url="{node1}" target="" skinid="ht_node" distance="56.6662" pan="-123.32" tilt="-11.95"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node4">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-14.94" fov="70" pan="-35.29"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-26.5">
+      <start projection="4" fov="70" pan="-35.29" tilt="-14.94"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.585346" datetime="11/06/2020 12:05" source="" longitude="-76.666492" nodeid="node4" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="40.4574" tilt="-16.84" target="" title="Recepción" id="Point01" description="" pan="-43.32" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="59.5521" tilt="-10.74" target="" title="Zona de parrilla" id="Point02" description="" pan="-67.14" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="75.7044" tilt="-8.85" target="" title="Piscina" id="Point03" description="" pan="-26.83" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="187.242" tilt="-4.56" target="" title="Lotes traseros" id="Point04" description="" pan="-6.9" url="{node12}" skinid="ht_node"/>
-      <hotspot distance="147.736" tilt="0.31" target="" title="Pórtico" id="Point05" description="" pan="-110.55" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="135.23" tilt="-3.08" target="" title="Óvalo de ingreso" id="Point06" description="" pan="-98.79" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="93.4905" tilt="-6.19" target="" title="Laguna artificial" id="Point07" description="" pan="-122.29" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="275.834" tilt="3.36" target="" title="Lotes derecha" id="Point08" description="" pan="-93.02" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="428.065" tilt="0.73" target="" title="Lotes izquierda" id="Point09" description="" pan="-301.46" url="{node11}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Cancha sintetica" nodeid="node4" description="" datetime="11/06/2020 12:05" author="" source="" tags="Fotos 360" longitude="-76.666492" info="" copyright="" latitude="-12.585346" heading="-26.5">
+      <mapcoords y="-0.682526" y_floorplan_percent="64.0464" mapid="FloorPlan01" x="0.641327" x_floorplan_percent="44.9904"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Recepción" description="" id="Point01" url="{node8}" target="" skinid="ht_node" distance="40.4574" pan="-43.32" tilt="-16.84"/>
+      <hotspot title="Zona de parrilla" description="" id="Point02" url="{node6}" target="" skinid="ht_node" distance="59.5521" pan="-67.14" tilt="-10.74"/>
+      <hotspot title="Piscina" description="" id="Point03" url="{node9}" target="" skinid="ht_node" distance="75.7044" pan="-26.83" tilt="-8.85"/>
+      <hotspot title="Pórtico" description="" id="Point05" url="{node1}" target="" skinid="ht_node" distance="149.819" pan="-110.55" tilt="0.31"/>
+      <hotspot title="Óvalo de ingreso" description="" id="Point06" url="{node2}" target="" skinid="ht_node" distance="136.904" pan="-98.79" tilt="-3.08"/>
+      <hotspot title="Laguna artificial" description="" id="Point07" url="{node3}" target="" skinid="ht_node" distance="93.4905" pan="-122.29" tilt="-6.19"/>
+      <hotspot title="Lotes derecha" description="" id="Point08" url="{node10}" target="" skinid="ht_node" distance="275.834" pan="-93.02" tilt="3.36"/>
+      <hotspot title="Lotes izquierda" description="" id="Point09" url="{node11}" target="" skinid="ht_node" distance="428.065" pan="-301.46" tilt="0.73"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node5">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-37.51" fov="70" pan="25.28"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-53.26">
+      <start projection="4" fov="70" pan="25.28" tilt="-37.51"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.585526" datetime="11/06/2020 12:01" source="" longitude="-76.666249" nodeid="node5" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="33.1065" tilt="-14.77" target="" title="Cancha sintética" id="Point01" description="" pan="-5.06" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="459.644" tilt="-2.38" target="" title="Lotes izquierda" id="Point02" description="" pan="-24.23" url="{node11}" skinid="ht_node"/>
-      <hotspot distance="36.5883" tilt="-16.29" target="" title="Recepción" id="Point03" description="" pan="-76.49" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="73.4444" tilt="-6.21" target="" title="Piscina" id="Point04" description="" pan="-85.09" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="37.1651" tilt="-13.84" target="" title="Zona de parrila" id="Point05" description="" pan="-120.95" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="61.1908" tilt="-6.11" target="" title="Laguna artificial" id="Point06" description="" pan="-209.78" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="115.677" tilt="0.82" target="" title="Pórtico" id="Point07" description="" pan="-206.33" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="242.974" tilt="-3.95" target="" title="Óvalo de ingreso" id="Point08" description="" pan="-185.26" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="242.974" tilt="3.47" target="" title="Lotes derecha" id="Point09" description="" pan="-178.09" url="{node10}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Juego de niños" nodeid="node5" description="" datetime="11/06/2020 12:01" author="" source="" tags="Fotos 360" longitude="-76.666249" info="" copyright="" latitude="-12.585526" altitude="109.00" heading="-53.26">
+      <mapcoords y="-0.711365" y_floorplan_percent="66.7526" mapid="FloorPlan01" x="0.660553" x_floorplan_percent="46.3391"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Cancha sintética" description="" id="Point01" url="{node4}" target="" skinid="ht_node" distance="33.1065" pan="-5.06" tilt="-14.77"/>
+      <hotspot title="Lotes izquierda" description="" id="Point02" url="{node11}" target="" skinid="ht_node" distance="459.644" pan="-24.23" tilt="-2.38"/>
+      <hotspot title="Recepción" description="" id="Point03" url="{node8}" target="" skinid="ht_node" distance="36.5883" pan="-76.49" tilt="-16.29"/>
+      <hotspot title="Piscina" description="" id="Point04" url="{node9}" target="" skinid="ht_node" distance="73.4444" pan="-85.09" tilt="-6.21"/>
+      <hotspot title="Zona de parrila" description="" id="Point05" url="{node6}" target="" skinid="ht_node" distance="37.1651" pan="-120.95" tilt="-13.84"/>
+      <hotspot title="Laguna artificial" description="" id="Point06" url="{node3}" target="" skinid="ht_node" distance="61.1908" pan="-209.78" tilt="-6.11"/>
+      <hotspot title="Pórtico" description="" id="Point07" url="{node1}" target="" skinid="ht_node" distance="117.831" pan="-206.33" tilt="0.82"/>
+      <hotspot title="Óvalo de ingreso" description="" id="Point08" url="{node10}" target="" skinid="ht_node" distance="242.974" pan="-185.26" tilt="-3.95"/>
+      <hotspot title="Lotes derecha" description="" id="Point09" url="{node10}" target="" skinid="ht_node" distance="242.974" pan="-178.09" tilt="3.47"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node6">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-44.51" fov="70" pan="126.09"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="75.22">
+      <start projection="4" fov="70" pan="126.09" tilt="-44.51"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.585374" datetime="11/06/2020 12:33" source="" longitude="-76.665944" nodeid="node6" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="47.8415" tilt="-5.92" target="" title="Piscina" id="Point01" description="" pan="-284.07" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="466.845" tilt="3.18" target="" title="Lotes izquierdo" id="Point02" description="" pan="-242.09" url="{node11}" skinid="ht_node"/>
-      <hotspot distance="91.4516" tilt="-2.02" target="" title="Óvalo ingreso" id="Point03" description="" pan="-74.89" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="115.589" tilt="1.64" target="" title="Pórtico" id="Point04" description="" pan="-81.88" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="65.8259" tilt="0.81" target="" title="Laguna artificial" id="Point05" description="" pan="-110.29" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="224.781" tilt="3.44" target="" title="Lotes derecho" id="Point06" description="" pan="-49.83" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="37.1651" tilt="-7.08" target="" title="Juego de niños" id="Point07" description="" pan="-169.2" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="59.5521" tilt="-4.26" target="" title="Cancha sintética" id="Point08" description="" pan="-193.2" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="28.219" tilt="-13.59" target="" title="Rcepción " id="Point09" description="" pan="-229.43" url="{node8}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Zona de parrilla" nodeid="node6" description="" datetime="11/06/2020 12:33" author="" source="" tags="Fotos 360" longitude="-76.665944" info="" copyright="" latitude="-12.585374" heading="75.22">
+      <mapcoords y="-0.672913" y_floorplan_percent="63.1443" mapid="FloorPlan01" x="0.716858" x_floorplan_percent="50.289"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Piscina" description="" id="Point01" url="{node9}" target="" skinid="ht_node" distance="47.8415" pan="-284.07" tilt="-5.92"/>
+      <hotspot title="Lotes izquierdo" description="" id="Point02" url="{node11}" target="" skinid="ht_node" distance="466.845" pan="-242.09" tilt="3.18"/>
+      <hotspot title="Óvalo ingreso" description="" id="Point03" url="{node2}" target="" skinid="ht_node" distance="87.4768" pan="-74.89" tilt="-2.02"/>
+      <hotspot title="Pórtico" description="" id="Point04" url="{node1}" target="" skinid="ht_node" distance="117.963" pan="-81.88" tilt="1.64"/>
+      <hotspot title="Laguna artificial" description="" id="Point05" url="{node3}" target="" skinid="ht_node" distance="65.8259" pan="-110.29" tilt="0.81"/>
+      <hotspot title="Lotes derecho" description="" id="Point06" url="{node10}" target="" skinid="ht_node" distance="224.781" pan="-49.83" tilt="3.44"/>
+      <hotspot title="Juego de niños" description="" id="Point07" url="{node5}" target="" skinid="ht_node" distance="37.1651" pan="-169.2" tilt="-7.08"/>
+      <hotspot title="Cancha sintética" description="" id="Point08" url="{node4}" target="" skinid="ht_node" distance="59.5521" pan="-193.2" tilt="-4.26"/>
+      <hotspot title="Rcepción " description="" id="Point09" url="{node8}" target="" skinid="ht_node" distance="28.219" pan="-229.43" tilt="-13.59"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
-  </panorama>
-  <panorama id="node7">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
-      <preview strip="1" color="0x808080"/>
-    </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-22.2" fov="70" pan="21.94"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
-    </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.583889" datetime="11/06/2020 12:21" source="" longitude="-76.665627" nodeid="node7" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="121.803" tilt="-22.7" target="" title="Piscina" id="Point01" description="" pan="-322.59" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="157.59" tilt="-18.3" target="" title="Recepción" id="Point02" description="" pan="-328.38" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="187.242" tilt="-15.66" target="" title="Cancha sintética" id="Point03" description="" pan="-337.3" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="232.86" tilt="-11.55" target="" title="Laguna artificial" id="Point04" description="" pan="-313.76" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="242.437" tilt="-11.89" target="" title="Óvalo ingreso" id="Point05" description="" pan="-305.66" url="{node2}" skinid="ht_node"/>
-    </hotspots>
-    <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node8">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="2.89" fov="70" pan="18.54"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="38.05">
+      <start projection="4" fov="70" pan="18.54" tilt="2.89"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.585213" datetime="11/06/2020 12:27" source="" longitude="-76.666145" nodeid="node8" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="28.219" tilt="-9.15" target="" title="Zona de parrilla" id="Point01" description="" pan="-45.81" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="38.0023" tilt="-8.32" target="" title="Pisicina" id="Point02" description="" pan="-318.57" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="118.636" tilt="0.3" target="" title="óvalo ingreso" id="Point03" description="" pan="-69.26" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="140.17" tilt="2.45" target="" title="Pórtico " id="Point04" description="" pan="-76.56" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="87.4529" tilt="1.54" target="" title="Laguna artificial" id="Point05" description="" pan="-91.83" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="252.989" tilt="4.58" target="" title="Lotes derechos" id="Point06" description="" pan="-49.24" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="36.5883" tilt="-6" target="" title="Juego de niños" id="Point07" description="" pan="-127.16" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="40.4574" tilt="-3.1" target="" title="Cancha sintética" id="Point08" description="" pan="-174.79" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="439.096" tilt="1.61" target="" title="Lotes izquierdos" id="Point09" description="" pan="-241.78" url="{node11}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Recepcion" nodeid="node8" description="" datetime="11/06/2020 12:27" author="" source="" tags="Fotos 360" longitude="-76.666145" info="" copyright="" latitude="-12.585213" altitude="105.00" heading="38.05">
+      <mapcoords y="-0.65918" y_floorplan_percent="61.8557" mapid="FloorPlan01" x="0.690765" x_floorplan_percent="48.4586"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Zona de parrilla" description="" id="Point01" url="{node6}" target="" skinid="ht_node" distance="28.219" pan="-45.81" tilt="-9.15"/>
+      <hotspot title="Pisicina" description="" id="Point02" url="{node9}" target="" skinid="ht_node" distance="38.0023" pan="-318.57" tilt="-8.32"/>
+      <hotspot title="óvalo ingreso" description="" id="Point03" url="{node2}" target="" skinid="ht_node" distance="115.526" pan="-69.26" tilt="0.3"/>
+      <hotspot title="Pórtico " description="" id="Point04" url="{node1}" target="" skinid="ht_node" distance="142.496" pan="-76.56" tilt="2.45"/>
+      <hotspot title="Laguna artificial" description="" id="Point05" url="{node3}" target="" skinid="ht_node" distance="87.4529" pan="-91.83" tilt="1.54"/>
+      <hotspot title="Lotes derechos" description="" id="Point06" url="{node10}" target="" skinid="ht_node" distance="252.989" pan="-49.24" tilt="4.58"/>
+      <hotspot title="Juego de niños" description="" id="Point07" url="{node5}" target="" skinid="ht_node" distance="36.5883" pan="-127.16" tilt="-6"/>
+      <hotspot title="Cancha sintética" description="" id="Point08" url="{node4}" target="" skinid="ht_node" distance="40.4574" pan="-174.79" tilt="-3.1"/>
+      <hotspot title="Lotes izquierdos" description="" id="Point09" url="{node11}" target="" skinid="ht_node" distance="439.096" pan="-241.78" tilt="1.61"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node9">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-25.43" fov="70" pan="-151.88"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-109.49">
+      <start projection="4" fov="70" pan="-151.88" tilt="-25.43"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.584944" datetime="11/06/2020 12:07" source="" longitude="-76.665929" nodeid="node9" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="38.0023" tilt="-14.67" target="" title="Recepción" id="Point01" description="" pan="-166.78" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="47.8415" tilt="-10.44" target="" title="Zona de parrilla" id="Point02" description="" pan="-130.95" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="113.551" tilt="-2.9" target="" title="Laguna artificial" id="Point03" description="" pan="-136.51" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="73.4444" tilt="-2.67" target="" title="Juegos de niños" id="Point04" description="" pan="-156.56" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="75.7044" tilt="-6.37" target="" title="Cancha sintética" id="Point05" description="" pan="-183.65" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="133.56" tilt="-2.74" target="" title="Óvalo ingreso" id="Point06" description="" pan="-112.88" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="161.4" tilt="1.73" target="" title="Pórtico" id="Point07" description="" pan="-109.45" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="255.693" tilt="3.13" target="" title="Lotes derecha" id="Point08" description="" pan="-78.35" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="121.803" tilt="-5.8" target="" title="Lotes traseros" id="Point09" description="" pan="-328.46" url="{node12}" skinid="ht_node"/>
-      <hotspot distance="432.732" tilt="-0.49" target="" title="Lotes izquierda" id="Point10" description="" pan="-268.27" url="{node11}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Piscina" nodeid="node9" description="" datetime="11/06/2020 12:07" author="" source="" tags="Fotos 360" longitude="-76.665929" info="" copyright="" latitude="-12.584944" altitude="111.00" heading="-109.49">
+      <mapcoords y="-0.622101" y_floorplan_percent="58.3763" mapid="FloorPlan01" x="0.715485" x_floorplan_percent="50.1927"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Recepción" description="" id="Point01" url="{node8}" target="" skinid="ht_node" distance="38.0023" pan="-166.78" tilt="-14.67"/>
+      <hotspot title="Zona de parrilla" description="" id="Point02" url="{node6}" target="" skinid="ht_node" distance="47.8415" pan="-130.95" tilt="-10.44"/>
+      <hotspot title="Laguna artificial" description="" id="Point03" url="{node3}" target="" skinid="ht_node" distance="113.551" pan="-136.51" tilt="-2.9"/>
+      <hotspot title="Juegos de niños" description="" id="Point04" url="{node5}" target="" skinid="ht_node" distance="73.4444" pan="-156.56" tilt="-2.67"/>
+      <hotspot title="Cancha sintética" description="" id="Point05" url="{node4}" target="" skinid="ht_node" distance="75.7044" pan="-183.65" tilt="-6.37"/>
+      <hotspot title="Óvalo ingreso" description="" id="Point06" url="{node2}" target="" skinid="ht_node" distance="125.792" pan="-112.88" tilt="-2.74"/>
+      <hotspot title="Pórtico" description="" id="Point07" url="{node1}" target="" skinid="ht_node" distance="163.795" pan="-109.45" tilt="1.73"/>
+      <hotspot title="Lotes derecha" description="" id="Point08" url="{node10}" target="" skinid="ht_node" distance="255.693" pan="-78.35" tilt="3.13"/>
+      <hotspot title="Lotes izquierda" description="" id="Point10" url="{node11}" target="" skinid="ht_node" distance="432.732" pan="-268.27" tilt="-0.49"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node10">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-16.93" fov="70" pan="7.24"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-9.46">
+      <start projection="4" fov="70" pan="7.24" tilt="-16.93"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.586610" datetime="11/06/2020 11:41" source="" longitude="-76.664305" nodeid="node10" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="144.9" tilt="-17.79" target="" title="Pórtico" id="Point01" description="" pan="-332.71" url="{node1}" skinid="ht_node"/>
-      <hotspot distance="188.267" tilt="-14.37" target="" title="Laguna artificial" id="Point02" description="" pan="-344.81" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="141.869" tilt="-18.46" target="" title="óvalo ingreso" id="Point03" description="" pan="-351.21" url="{node2}" skinid="ht_node"/>
-      <hotspot distance="242.974" tilt="-12.97" target="" title="Juego de niños" id="Point04" description="" pan="-354.42" url="{node5}" skinid="ht_node"/>
-      <hotspot distance="275.834" tilt="-9.25" target="" title="Cancha sintética" id="Point05" description="" pan="-358.22" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="224.781" tilt="-13.44" target="" title="Zona de parrilla" id="Point06" description="" pan="-4.77" url="{node6}" skinid="ht_node"/>
-      <hotspot distance="255.693" tilt="-11.93" target="" title="Piscina" id="Point07" description="" pan="-11.51" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="334.853" tilt="-9.7" target="" title="Lotes traseros" id="Point08" description="" pan="-34.29" url="{node12}" skinid="ht_node"/>
-      <hotspot distance="688.391" tilt="-2.37" target="" title="Lotes izquierdos" id="Point09" description="" pan="-11.75" url="{node11}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Lotes derecho" nodeid="node10" description="" datetime="11/06/2020 11:41" author="" source="" tags="Fotos 360" longitude="-76.664305" info="" copyright="" latitude="-12.586610" altitude="152.00" heading="-9.46">
+      <mapcoords y="-0.870667" y_floorplan_percent="81.701" mapid="FloorPlan01" x="1.02722" x_floorplan_percent="72.0617"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Pórtico" description="" id="Point01" url="{node1}" target="" skinid="ht_node" distance="144.053" pan="-332.71" tilt="-17.79"/>
+      <hotspot title="Laguna artificial" description="" id="Point02" url="{node3}" target="" skinid="ht_node" distance="188.267" pan="-344.81" tilt="-14.37"/>
+      <hotspot title="óvalo ingreso" description="" id="Point03" url="{node2}" target="" skinid="ht_node" distance="139.021" pan="-351.21" tilt="-18.46"/>
+      <hotspot title="Juego de niños" description="" id="Point04" url="{node5}" target="" skinid="ht_node" distance="242.974" pan="-354.42" tilt="-12.97"/>
+      <hotspot title="Cancha sintética" description="" id="Point05" url="{node4}" target="" skinid="ht_node" distance="275.834" pan="-358.22" tilt="-9.25"/>
+      <hotspot title="Zona de parrilla" description="" id="Point06" url="{node6}" target="" skinid="ht_node" distance="224.781" pan="-4.77" tilt="-13.44"/>
+      <hotspot title="Piscina" description="" id="Point07" url="{node9}" target="" skinid="ht_node" distance="255.693" pan="-11.51" tilt="-11.93"/>
+      <hotspot title="Lotes izquierdos" description="" id="Point09" url="{node11}" target="" skinid="ht_node" distance="688.391" pan="-11.75" tilt="-2.37"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <panorama id="node11">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-13.65" fov="70" pan="26.12"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="33.9">
+      <start projection="4" fov="70" pan="26.12" tilt="-13.65"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.582180" datetime="11/06/2020 12:13" source="" longitude="-76.668736" nodeid="node11" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="688.391" tilt="0.29" target="" title="Lotes derecho" id="Point01" description="" pan="-321.68" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="387.236" tilt="-9.54" target="" title="Lotes traseros" id="Point02" description="" pan="-308.1" url="{node12}" skinid="ht_node"/>
-      <hotspot distance="432.732" tilt="-7.18" target="" title="Piscina" id="Point03" description="" pan="-324.78" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="439.096" tilt="-8.12" target="" title="Recepción" id="Point04" description="" pan="-328.42" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="428.065" tilt="-7.65" target="" title="Cancha sintética" id="Point05" description="" pan="-334.46" url="{node4}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Lotes izquierdo" nodeid="node11" description="" datetime="11/06/2020 12:13" author="" source="" tags="Fotos 360" longitude="-76.668736" info="" copyright="" latitude="-12.582180" altitude="151.00" heading="33.9">
+      <mapcoords y="-0.207367" y_floorplan_percent="19.4588" mapid="FloorPlan01" x="0.31311" x_floorplan_percent="21.9653"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Lotes derecho" description="" id="Point01" url="{node10}" target="" skinid="ht_node" distance="688.391" pan="-321.68" tilt="0.29"/>
+      <hotspot title="Piscina" description="" id="Point03" url="{node9}" target="" skinid="ht_node" distance="432.732" pan="-325.93" tilt="-7.8"/>
+      <hotspot title="Recepción" description="" id="Point04" url="{node8}" target="" skinid="ht_node" distance="439.096" pan="-328.42" tilt="-8.12"/>
+      <hotspot title="Cancha sintética" description="" id="Point05" url="{node4}" target="" skinid="ht_node" distance="428.065" pan="-334.46" tilt="-7.65"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
-  <panorama id="node12">
-    <input levelingroll="0" width="2048" leveltilesize="510" levelbiashidpi="1.000" levelingpitch="0" height="2048" overlap="1" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400">
-      <level width="2048" height="2048" predecode="0" preload="0"/>
-      <level width="1024" height="1024" predecode="0" preload="0"/>
-      <level width="512" height="512" predecode="0" preload="0"/>
-      <level width="256" height="256" predecode="1" preload="1"/>
+  <panorama id="node7">
+    <input height="2048" levelbiashidpi="1.000" levelingroll="0" levelbias="0.400" levelingpitch="0" leveltilesize="510" overlap="1" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048">
+      <level height="2048" predecode="0" width="2048" preload="0"/>
+      <level height="1024" predecode="0" width="1024" preload="0"/>
+      <level height="512" predecode="0" width="512" preload="0"/>
+      <level height="256" predecode="1" width="256" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" tilt="-18.74" fov="70" pan="21.84"/>
-      <flyin projection="9" tilt="-90" fov="170" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="0"/>
-      <max scaletofit="1" tilt="90" fov="120" fovfisheye="360" fovstereographic="270" pan="360"/>
+    <view fovmode="0" pannorth="-163.98">
+      <start projection="4" fov="70" pan="21.94" tilt="-22.2"/>
+      <flyin projection="9" fov="170" pan="0" tilt="-90"/>
+      <min fovpixel="2" pan="0" tilt="-90"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" tilt="90" fovfisheye="360"/>
     </view>
-    <userdata tags="Fotos 360" copyright="" latitude="-12.583889" datetime="11/06/2020 12:21" source="" longitude="-76.665627" nodeid="node12" title="default" author="" description="" customnodeid="" comment="" info=""/>
-    <hotspots width="180" wordwrap="1" height="20">
-      <label border="1" textcolor="0x000000" width="180" bordercolor="0x000000" enabled="1" wordwrap="1" background="1" height="20" backgroundcolor="0xffffff" backgroundalpha="1" textalpha="1" borderalpha="1" borderradius="1"/>
-      <polystyle bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" mode="0"/>
-      <hotspot distance="387.236" tilt="-10.21" target="" title="Lotes izquierdos" id="Point01" description="" pan="-50.71" url="{node11}" skinid="ht_node"/>
-      <hotspot distance="334.853" tilt="-5.29" target="" title="Lotes derecho" id="Point02" description="" pan="-271.68" url="{node10}" skinid="ht_node"/>
-      <hotspot distance="187.242" tilt="-15.36" target="" title="Cancha sintética" id="Point03" description="" pan="-336.26" url="{node4}" skinid="ht_node"/>
-      <hotspot distance="157.59" tilt="-17.81" target="" title="Recepción" id="Point04" description="" pan="-327.7" url="{node8}" skinid="ht_node"/>
-      <hotspot distance="121.803" tilt="-22.65" target="" title="Piscina" id="Point05" description="" pan="-322.3" url="{node9}" skinid="ht_node"/>
-      <hotspot distance="232.86" tilt="-9.91" target="" title="Laguna artificial" id="Point06" description="" pan="-314.94" url="{node3}" skinid="ht_node"/>
-      <hotspot distance="242.437" tilt="-10.2" target="" title="Óvlo ingreso" id="Point07" description="" pan="-306.48" url="{node2}" skinid="ht_node"/>
+    <userdata comment="" customnodeid="" title="Lotes traseros" nodeid="node7" description="" datetime="11/06/2020 12:21" author="" source="" tags="Fotos 360" longitude="-76.665627" info="" copyright="" latitude="-12.583889" altitude="149.00" heading="-163.98">
+      <mapcoords y="-0.465546" y_floorplan_percent="43.6856" mapid="FloorPlan01" x="0.778656" x_floorplan_percent="54.6243"/>
+    </userdata>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label enabled="1" backgroundcolor="0xffffff" textcolor="0x000000" background="1" height="20" bordercolor="0x000000" textalpha="1" borderradius="1" borderalpha="1" backgroundalpha="1" border="1" width="180" wordwrap="1"/>
+      <polystyle backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098"/>
+      <hotspot title="Piscina" description="" id="Point01" url="{node9}" target="" skinid="ht_node" distance="121.803" pan="-322.59" tilt="-22.7"/>
+      <hotspot title="Recepción" description="" id="Point02" url="{node8}" target="" skinid="ht_node" distance="157.59" pan="-328.38" tilt="-18.3"/>
+      <hotspot title="Cancha sintética" description="" id="Point03" url="{node4}" target="" skinid="ht_node" distance="187.242" pan="-337.3" tilt="-15.66"/>
+      <hotspot title="Laguna artificial" description="" id="Point04" url="{node3}" target="" skinid="ht_node" distance="232.86" pan="-313.76" tilt="-11.55"/>
+      <hotspot title="Óvalo ingreso" description="" id="Point05" url="{node2}" target="" skinid="ht_node" distance="230.126" pan="-305.66" tilt="-11.89"/>
+      <hotspot title="Lotes izquierdo" description="" id="Point06" url="{node11}" target="" skinid="ht_node" distance="387.236" pan="-56.65" tilt="-9.98"/>
+      <hotspot title="Lotes derecho" description="" id="Point07" url="{node10}" target="" skinid="ht_node" distance="334.853" pan="-267.1" tilt="-4.21"/>
     </hotspots>
     <media/>
-    <transition zoomin="0" blendcolor="0x000000" enabled="1" zoomspeed="2" type="crossdissolve" softedge="0" zoomout="0" blendtime="1" zoomfov="20" zoomoutpause="1"/>
-    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
-    <control lockedwheel="0" contextprojections="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" invertwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" dblclickfullscreen="0" rubberband="0" lockedmouse="0" sensitivity="8" lockedkeyboard="0"/>
+    <transition enabled="1" zoomout="0" blendtime="1" zoomfov="20" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomoutpause="1" type="crossdissolve" zoomin="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control rubberband="0" dblclickfullscreen="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" hideabout="0" lockedwheel="0" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" contextprojections="0" sensitivity="8" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <masternode>
-    <userdata tags="" copyright="" latitude="" datetime="" source="" longitude="" nodeid="master" title="" author="" description="" customnodeid="" comment="" info=""/>
+    <userdata comment="" customnodeid="" title="" nodeid="master" description="" datetime="" author="" source="" tags="" longitude="" info="" copyright="" latitude="" heading="0"/>
   </masternode>
+  <map title="" zoomlevels="4" bgcolor="rgba(255, 255, 255, 1)" height="776" id="FloorPlan01" tileformat="jpg" transparent="0" floorplannorth="359" type="file" width="1038"/>
 </tour>
