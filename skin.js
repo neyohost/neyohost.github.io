@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: customizacion_ny.ggsk
-// Generated 2021-09-14T11:23:27
+// Generated 2021-09-14T13:58:52
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -121,7 +121,7 @@ function pano2vrSkin(player,base) {
 		this.ggCurrentTime=new Date().getTime();
 		el=me._rectangle_1=document.createElement('div');
 		el.ggId="Rectangle 1";
-		el.ggDy=8;
+		el.ggDy=-9;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -130,11 +130,11 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
 		hs+='height : 93.3735%;';
-		hs+='left : 264px;';
+		hs+='left : 273px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 20px;';
+		hs+='width : 32px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -535,949 +535,9 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me.divSkin.appendChild(me._boton_atras_1);
-		el=me._scrollarea_10=document.createElement('div');
-		els=me._scrollarea_10__content=document.createElement('div');
-		els.className='ggskin ggskin_subelement ggskin_scrollarea';
-		el.ggContent=els;
-		el.appendChild(els);
-		el.ggHorScrollVisible = false;
-		el.ggVertScrollVisible = false;
-		el.ggContentLeftOffset = 0;
-		el.ggContentTopOffset = 0;
-		hs ='';
-		hs+='height : 358px;';
-		hs+='left : 0px;';
-		hs+='overflow : visible;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='width : 179px;';
-		hs+="";
-		els.setAttribute('style',hs);
-		me._scrollarea_10.ggScrollByX = function(diffX) {
-			if(!me._scrollarea_10.ggHorScrollVisible || diffX == 0 || me._scrollarea_10.ggHPercentVisible >= 1.0) return;
-			me._scrollarea_10.ggScrollPosX = (me._scrollarea_10__horScrollFg.offsetLeft + diffX);
-			me._scrollarea_10.ggScrollPosX = Math.max(me._scrollarea_10.ggScrollPosX, 0);
-			me._scrollarea_10.ggScrollPosX = Math.min(me._scrollarea_10.ggScrollPosX, me._scrollarea_10__horScrollBg.offsetWidth - me._scrollarea_10__horScrollFg.offsetWidth);
-			me._scrollarea_10__horScrollFg.style.left = me._scrollarea_10.ggScrollPosX + 'px';
-			me._scrollarea_10__content.style.left = -(Math.round(me._scrollarea_10.ggScrollPosX / me._scrollarea_10.ggHPercentVisible)) + me._scrollarea_10.ggContentLeftOffset + 'px';
-			me._scrollarea_10.ggScrollPosXPercent = (me._scrollarea_10__horScrollFg.offsetLeft / me._scrollarea_10__horScrollBg.offsetWidth);
-		}
-		me._scrollarea_10.ggScrollByXSmooth = function(diffX) {
-			if(!me._scrollarea_10.ggHorScrollVisible || diffX == 0 || me._scrollarea_10.ggHPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffX / 25;
-			var scrollCurrX = 0;
-			var id = setInterval(function() {
-				scrollCurrX += scrollPerInterval;
-				me._scrollarea_10.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._scrollarea_10.ggScrollPosX >= me._scrollarea_10__horScrollBg.offsetWidth - me._scrollarea_10__horScrollFg.offsetWidth)) {
-					me._scrollarea_10.ggScrollPosX = Math.min(me._scrollarea_10.ggScrollPosX, me._scrollarea_10__horScrollBg.offsetWidth - me._scrollarea_10__horScrollFg.offsetWidth);
-					clearInterval(id);
-				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._scrollarea_10.ggScrollPosX <= 0)) {
-					me._scrollarea_10.ggScrollPosX = Math.max(me._scrollarea_10.ggScrollPosX, 0);
-					clearInterval(id);
-				}
-			me._scrollarea_10__horScrollFg.style.left = me._scrollarea_10.ggScrollPosX + 'px';
-			me._scrollarea_10__content.style.left = -(Math.round(me._scrollarea_10.ggScrollPosX / me._scrollarea_10.ggHPercentVisible)) + me._scrollarea_10.ggContentLeftOffset + 'px';
-			me._scrollarea_10.ggScrollPosXPercent = (me._scrollarea_10__horScrollFg.offsetLeft / me._scrollarea_10__horScrollBg.offsetWidth);
-			}, 10);
-		}
-		me._scrollarea_10.ggScrollByY = function(diffY) {
-			if(!me._scrollarea_10.ggVertScrollVisible || diffY == 0 || me._scrollarea_10.ggVPercentVisible >= 1.0) return;
-			me._scrollarea_10.ggScrollPosY = (me._scrollarea_10__vertScrollFg.offsetTop + diffY);
-			me._scrollarea_10.ggScrollPosY = Math.max(me._scrollarea_10.ggScrollPosY, 0);
-			me._scrollarea_10.ggScrollPosY = Math.min(me._scrollarea_10.ggScrollPosY, me._scrollarea_10__vertScrollBg.offsetHeight - me._scrollarea_10__vertScrollFg.offsetHeight);
-			me._scrollarea_10__vertScrollFg.style.top = me._scrollarea_10.ggScrollPosY + 'px';
-			me._scrollarea_10__content.style.top = -(Math.round(me._scrollarea_10.ggScrollPosY / me._scrollarea_10.ggVPercentVisible)) + me._scrollarea_10.ggContentTopOffset + 'px';
-			me._scrollarea_10.ggScrollPosYPercent = (me._scrollarea_10__vertScrollFg.offsetTop / me._scrollarea_10__vertScrollBg.offsetHeight);
-		}
-		me._scrollarea_10.ggScrollByYSmooth = function(diffY) {
-			if(!me._scrollarea_10.ggVertScrollVisible || diffY == 0 || me._scrollarea_10.ggVPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffY / 25;
-			var scrollCurrY = 0;
-			var id = setInterval(function() {
-				scrollCurrY += scrollPerInterval;
-				me._scrollarea_10.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._scrollarea_10.ggScrollPosY >= me._scrollarea_10__vertScrollBg.offsetHeight - me._scrollarea_10__vertScrollFg.offsetHeight)) {
-					me._scrollarea_10.ggScrollPosY = Math.min(me._scrollarea_10.ggScrollPosY, me._scrollarea_10__vertScrollBg.offsetHeight - me._scrollarea_10__vertScrollFg.offsetHeight);
-					clearInterval(id);
-				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._scrollarea_10.ggScrollPosY <= 0)) {
-					me._scrollarea_10.ggScrollPosY = Math.max(me._scrollarea_10.ggScrollPosY, 0);
-					clearInterval(id);
-				}
-			me._scrollarea_10__vertScrollFg.style.top = me._scrollarea_10.ggScrollPosY + 'px';
-			me._scrollarea_10__content.style.top = -(Math.round(me._scrollarea_10.ggScrollPosY / me._scrollarea_10.ggVPercentVisible)) + me._scrollarea_10.ggContentTopOffset + 'px';
-			me._scrollarea_10.ggScrollPosYPercent = (me._scrollarea_10__vertScrollFg.offsetTop / me._scrollarea_10__vertScrollBg.offsetHeight);
-			}, 10);
-		}
-		me._scrollarea_10.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._scrollarea_10.ggHorScrollVisible) {
-				if (posX < 0) {
-					var diffX = Math.floor(posX * me._scrollarea_10.ggHPercentVisible);
-					me._scrollarea_10.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._scrollarea_10.offsetWidth - (me._scrollarea_10.ggVertScrollVisible ? 9 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._scrollarea_10.offsetWidth - (me._scrollarea_10.ggVertScrollVisible ? 9 : 0))) * me._scrollarea_10.ggHPercentVisible);
-					me._scrollarea_10.ggScrollByXSmooth(diffX);
-				}
-			}
-			if (me._scrollarea_10.ggVertScrollVisible) {
-				if (posY < 0) {
-					var diffY = Math.floor(posY * me._scrollarea_10.ggVPercentVisible);
-					me._scrollarea_10.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._scrollarea_10.offsetHeight - (me._scrollarea_10.ggHorScrollVisible ? 9 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._scrollarea_10.offsetHeight - (me._scrollarea_10.ggHorScrollVisible ? 9 : 0))) * me._scrollarea_10.ggVPercentVisible);
-					me._scrollarea_10.ggScrollByYSmooth(diffY);
-				}
-			}
-		}
-		els.ontouchstart = function(e) {
-			e = e || window.event;
-			var t = e.touches;
-			me._scrollarea_10.ggDragLastX = t[0].clientX;
-			me._scrollarea_10.ggDragLastY = t[0].clientY;
-			me._scrollarea_10__content.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_10.ggDragInertiaX *= 0.65;
-					me._scrollarea_10.ggDragInertiaY *= 0.65;
-					me._scrollarea_10.ggScrollByX(-me._scrollarea_10.ggDragInertiaX);
-					me._scrollarea_10.ggScrollByY(-me._scrollarea_10.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_10.ggDragInertiaX) < 1.0 && Math.abs(me._scrollarea_10.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				me._scrollarea_10__content.ontouchend = null;
-				me._scrollarea_10__content.ontouchmove = null;
-			}
-			me._scrollarea_10__content.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffX = t[0].clientX - me._scrollarea_10.ggDragLastX;
-				var diffY = t[0].clientY - me._scrollarea_10.ggDragLastY;
-				me._scrollarea_10.ggDragInertiaX = diffX;
-				me._scrollarea_10.ggDragInertiaY = diffY;
-				me._scrollarea_10.ggDragLastX = t[0].clientX;
-				me._scrollarea_10.ggDragLastY = t[0].clientY;
-				me._scrollarea_10.ggScrollByX(-diffX);
-				me._scrollarea_10.ggScrollByY(-diffY);
-			}
-		}
-		elVertScrollBg = me._scrollarea_10__vertScrollBg = document.createElement('div');
-		el.appendChild(elVertScrollBg);
-		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 9px; height: 438px; background-color: rgba(255,255,255,1); pointer-events: auto;');
-		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._scrollarea_10__vertScrollFg = document.createElement('div');
-		elVertScrollBg.appendChild(elVertScrollFg);
-		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 9px; height: 438px; background-color: rgba(254,188,72,1); pointer-events: auto;');
-		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._scrollarea_10.ggScrollPosY = 0;
-		me._scrollarea_10.ggScrollPosYPercent = 0.0;
-		elVertScrollFg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			me._scrollarea_10.ggDragLastY = e.clientY;
-			document.onmouseup = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_10.ggDragInertiaY *= 0.65;
-					me._scrollarea_10.ggScrollByY(me._scrollarea_10.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_10.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.onmouseup = null;
-				document.onmousemove = null;
-			}
-			document.onmousemove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var diffY = e.clientY - me._scrollarea_10.ggDragLastY;
-				me._scrollarea_10.ggDragInertiaY = diffY;
-				me._scrollarea_10.ggDragLastY = e.clientY;
-				me._scrollarea_10.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollFg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			me._scrollarea_10.ggDragLastY = t[0].clientY;
-			document.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_10.ggDragInertiaY *= 0.65;
-					me._scrollarea_10.ggScrollByY(me._scrollarea_10.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_10.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.ontouchend = null;
-				document.ontouchmove = null;
-			}
-			document.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffY = t[0].clientY - me._scrollarea_10.ggDragLastY;
-				me._scrollarea_10.ggDragInertiaY = diffY;
-				me._scrollarea_10.ggDragLastY = t[0].clientY;
-				me._scrollarea_10.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollBg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			var diffY = me._scrollarea_10.ggScrollHeight;
-			if (e.offsetY < me._scrollarea_10.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_10.ggScrollByYSmooth(diffY);
-		}
-		elVertScrollBg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			var rect = me._scrollarea_10__vertScrollBg.getBoundingClientRect();
-			var diffY = me._scrollarea_10.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._scrollarea_10.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_10.ggScrollByYSmooth(diffY);
-		}
-		el.addEventListener('wheel', function(e) {
-			e.preventDefault();
-			var wheelDelta = Math.sign(e.deltaY);
-			me._scrollarea_10.ggScrollByYSmooth(20 * wheelDelta);
-		});
-		elCornerBg = me._scrollarea_10__cornerBg = document.createElement('div');
-		el.appendChild(elCornerBg);
-		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 9px; height: 9px; background-color: rgba(255,255,255,1);');
-		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
-		el.ggId="Scrollarea 1";
-		el.ggDy=-34;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_scrollarea ";
-		el.ggType='scrollarea';
-		hs ='';
-		hs+='border : 1px solid rgba(0, 0, 0, 0);';
-		hs+='height : 438px;';
-		hs+='left : 33px;';
-		hs+='overflow : hidden;';
-		hs+='position : absolute;';
-		hs+='top : -10000px;';
-		hs+='visibility : inherit;';
-		hs+='width : 5px;';
-		hs+='pointer-events:auto;';
-		hs+='z-index: 1;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._scrollarea_10.ggIsActive=function() {
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			return player.getCurrentNode();
-		}
-		me._scrollarea_10.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var ph=this.parentNode.clientHeight;
-				var h=this.offsetHeight;
-					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
-			}
-			{
-				var horScrollWasVisible = this.ggHorScrollVisible;
-				var vertScrollWasVisible = this.ggVertScrollVisible;
-				this.ggContent.style.left = '0px';
-				this.ggContent.style.top = '0px';
-				this.ggContentLeftOffset = 0;
-				this.ggContentTopOffset = 0;
-				var offsetWidthWithScale = this.getBoundingClientRect().width;
-				var offsetHeightWithScale = this.getBoundingClientRect().height;
-				var domRectContent = this.ggContent.getBoundingClientRect();
-				var minX = 0;
-				var minY = 0;
-				var maxX = 0;
-				var maxY = 0;
-				var stack=[];
-				stack.push(this.ggContent);
-				while(stack.length>0) {
-					var e=stack.pop();
-					if (e!=this.ggContent && e.getBoundingClientRect && e.style['display']!='none') {
-						var domRectChild = e.getBoundingClientRect();
-						var diffX = domRectChild.left - domRectContent.left;
-						minX = Math.min(minX, diffX);
-						maxX = Math.max(maxX, diffX + domRectChild.width);
-						var diffY = domRectChild.top - domRectContent.top;
-						minY = Math.min(minY, diffY);
-						maxY = Math.max(maxY, diffY + domRectChild.height);
-					}
-					if (e.hasChildNodes() && e.style['display']!='none') {
-						for(var i=0;i<e.childNodes.length;i++) {
-							stack.push(e.childNodes[i]);
-						}
-					}
-				}
-				if (minX < 0) this.ggContentLeftOffset = -minX;
-				if (minY < 0) this.ggContentTopOffset = -minY;
-				var contentWidth = maxX - minX;
-				var contentHeight = maxY - minY;
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.top = this.ggContentTopOffset + 'px';
-				this.ggContent.style.width = contentWidth + 'px';
-				this.ggContent.style.height = contentHeight + 'px';
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.marginLeft = '0px';
-				this.ggContent.style.top = -(Math.round(me._scrollarea_10.ggScrollPosY / me._scrollarea_10.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
-				this.ggContent.style.marginTop = '0px';
-				me._scrollarea_10__vertScrollBg.style.visibility = 'inherit';
-				me._scrollarea_10__vertScrollFg.style.visibility = 'inherit';
-				me._scrollarea_10.ggVertScrollVisible = true;
-				if(me._scrollarea_10.ggVertScrollVisible) {
-					me._scrollarea_10.ggAvailableWidth = me._scrollarea_10.offsetWidth - 9;
-					if (me._scrollarea_10.ggHorScrollVisible) {
-						me._scrollarea_10.ggAvailableHeight = me._scrollarea_10.offsetHeight - 9;
-						me._scrollarea_10.ggAvailableHeightWithScale = me._scrollarea_10.getBoundingClientRect().height - me._scrollarea_10__vertScrollBg.getBoundingClientRect().width;
-						me._scrollarea_10__cornerBg.style.visibility = 'inherit';
-					} else {
-						me._scrollarea_10.ggAvailableHeight = me._scrollarea_10.offsetHeight;
-						me._scrollarea_10.ggAvailableHeightWithScale = me._scrollarea_10.getBoundingClientRect().height;
-						me._scrollarea_10__cornerBg.style.visibility = 'hidden';
-					}
-					me._scrollarea_10__vertScrollBg.style.height = me._scrollarea_10.ggAvailableHeight + 'px';
-					me._scrollarea_10.ggVPercentVisible = contentHeight != 0 ? me._scrollarea_10.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._scrollarea_10.ggVPercentVisible > 1.0) me._scrollarea_10.ggVPercentVisible = 1.0;
-					me._scrollarea_10.ggScrollHeight =  Math.round(me._scrollarea_10__vertScrollBg.offsetHeight * me._scrollarea_10.ggVPercentVisible);
-					me._scrollarea_10__vertScrollFg.style.height = me._scrollarea_10.ggScrollHeight + 'px';
-					me._scrollarea_10.ggScrollPosY = me._scrollarea_10.ggScrollPosYPercent * me._scrollarea_10.ggAvailableHeight;
-					me._scrollarea_10.ggScrollPosY = Math.min(me._scrollarea_10.ggScrollPosY, me._scrollarea_10__vertScrollBg.offsetHeight - me._scrollarea_10__vertScrollFg.offsetHeight);
-					me._scrollarea_10__vertScrollFg.style.top = me._scrollarea_10.ggScrollPosY + 'px';
-					if (me._scrollarea_10.ggVPercentVisible < 1.0) {
-						me._scrollarea_10__content.style.top = -(Math.round(me._scrollarea_10.ggScrollPosY / me._scrollarea_10.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
-					}
-				} else {
-					me._scrollarea_10.ggAvailableWidth = me._scrollarea_10.offsetWidth;
-					me._scrollarea_10.ggScrollPosY = 0;
-					me._scrollarea_10.ggScrollPosYPercent = 0.0;
-					me._scrollarea_10__content.style.top = this.ggContentTopOffset + 'px';
-					me._scrollarea_10__cornerBg.style.visibility = 'hidden';
-				}
-				if(horScrollWasVisible != me._scrollarea_10.ggHorScrollVisible || vertScrollWasVisible != me._scrollarea_10.ggVertScrollVisible) {
-					me.updateSize(me._scrollarea_10);
-					me._scrollarea_10.ggUpdatePosition();
-				}
-			}
-		}
-		el=me._cloner_10=document.createElement('div');
-		el.ggNumRepeat = 1;
-		el.ggNumRows = 0;
-		el.ggNumCols = 0;
-		el.ggWidth = 173;
-		el.ggHeight = 352;
-		el.ggUpdating = false;
-		el.ggFilter = [];
-		el.ggInstances = [];
-		el.ggUpdate = function(filter) {
-			if(me._cloner_10.ggUpdating == true) return;
-			me._cloner_10.ggUpdating = true;
-			var el=me._cloner_10;
-			var curNumCols = 0;
-			curNumCols = me._cloner_10.ggNumRepeat;
-			if (curNumCols < 1) curNumCols = 1;
-			if (typeof filter=='object') {
-				el.ggFilter = filter;
-			} else {
-				filter = el.ggFilter;
-			};
-			if (me.ggTag) filter.push(me.ggTag);
-			filter=filter.sort();
-			if ((el.ggNumCols == curNumCols) && (el.ggInstances.length > 0) && (filter.length === el.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.ggCurrentFilter[index] }) )) {
-				me._cloner_10.ggUpdating = false;
-				return;
-			} else {
-				el.ggNumRows = 1;
-				el.ggNumCols = curNumCols;
-			}
-			el.ggCurrentFilter = filter;
-			el.ggInstances = [];
-			if (el.hasChildNodes() == true) {
-				while (el.firstChild) {
-					el.removeChild(el.firstChild);
-				}
-			}
-			var tourNodes = player.getNodeIds();
-			var row = 0;
-			var column = 0;
-			var currentIndex = 0;
-			for (var i=0; i < tourNodes.length; i++) {
-				var nodeId = tourNodes[i];
-				var passed = true;
-				var nodeData = player.getNodeUserdata(nodeId);
-				if (filter.length > 0) {
-					for (var j=0; j < filter.length; j++) {
-						if (nodeData['tags'].indexOf(filter[j]) == -1) passed = false;
-					}
-				}
-				if (passed) {
-				var parameter={};
-				parameter.top=(row * me._cloner_10.ggHeight) + 'px';
-				parameter.left=(column * me._cloner_10.ggWidth) + 'px';
-				parameter.index=currentIndex;
-				parameter.title=nodeData['title'];
-				var inst = new SkinCloner_cloner_10_Class(nodeId, me, el, parameter);
-				currentIndex++;
-				el.ggInstances.push(inst);
-				el.appendChild(inst.__div);
-				inst.__div.ggObj=inst;
-				skin.updateSize(inst.__div);
-				column++;
-				if (column >= el.ggNumCols) {
-					column = 0;
-					row++;
-					el.ggNumRows++;
-				}
-				}
-			}
-			me._cloner_10.ggUpdating = false;
-			player.triggerEvent('clonerchanged');
-			if (me._cloner_10.parentNode.classList.contains('ggskin_subelement') && me._cloner_10.parentNode.parentNode.classList.contains('ggskin_scrollarea')) me._cloner_10.parentNode.parentNode.ggUpdatePosition();
-		}
-		el.ggFilter = [];
-		el.ggId="Cloner 1";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_cloner ";
-		el.ggType='cloner';
-		hs ='';
-		hs+='height : 352px;';
-		hs+='left : 7px;';
-		hs+='overflow : visible;';
-		hs+='position : absolute;';
-		hs+='top : 7px;';
-		hs+='visibility : inherit;';
-		hs+='width : 173px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._cloner_10.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._cloner_10.ggUpdateConditionNodeChange=function () {
-			var cnode=player.getCurrentNode();
-			for(var i=0; i<me._cloner_10.childNodes.length; i++) {
-				var child=me._cloner_10.childNodes[i];
-				if (child.ggObj && child.ggObj.ggNodeId==cnode) {
-			        var childOffX = child.offsetLeft;
-			        var childOffY = child.offsetTop;
-					var p = child.parentElement;
-			        while (p != null && p!==this.divSkin) {
-						if (p.ggType && p.ggType == 'scrollarea') {
-							p.ggScrollIntoView(childOffX, childOffY, child.clientWidth, child.clientHeight);
-						}
-						childOffX += p.offsetLeft;
-						childOffY += p.offsetTop;
-						p = p.parentElement;
-					}
-				}
-			}
-		}
-		me._cloner_10.ggUpdatePosition=function (useTransition) {
-				me._cloner_10.ggUpdate();
-		}
-		me._cloner_10.ggNodeChange=function () {
-			me._cloner_10.ggUpdateConditionNodeChange();
-		}
-		me._scrollarea_10__content.appendChild(me._cloner_10);
-		me.divSkin.appendChild(me._scrollarea_10);
-		el=me._scrollarea_1=document.createElement('div');
-		els=me._scrollarea_1__content=document.createElement('div');
-		els.className='ggskin ggskin_subelement ggskin_scrollarea';
-		el.ggContent=els;
-		el.appendChild(els);
-		el.ggHorScrollVisible = false;
-		el.ggVertScrollVisible = false;
-		el.ggContentLeftOffset = 0;
-		el.ggContentTopOffset = 0;
-		hs ='';
-		hs+='height : 154px;';
-		hs+='left : 0px;';
-		hs+='overflow : visible;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='width : 160px;';
-		hs+="";
-		els.setAttribute('style',hs);
-		me._scrollarea_1.ggScrollByX = function(diffX) {
-			if(!me._scrollarea_1.ggHorScrollVisible || diffX == 0 || me._scrollarea_1.ggHPercentVisible >= 1.0) return;
-			me._scrollarea_1.ggScrollPosX = (me._scrollarea_1__horScrollFg.offsetLeft + diffX);
-			me._scrollarea_1.ggScrollPosX = Math.max(me._scrollarea_1.ggScrollPosX, 0);
-			me._scrollarea_1.ggScrollPosX = Math.min(me._scrollarea_1.ggScrollPosX, me._scrollarea_1__horScrollBg.offsetWidth - me._scrollarea_1__horScrollFg.offsetWidth);
-			me._scrollarea_1__horScrollFg.style.left = me._scrollarea_1.ggScrollPosX + 'px';
-			me._scrollarea_1__content.style.left = -(Math.round(me._scrollarea_1.ggScrollPosX / me._scrollarea_1.ggHPercentVisible)) + me._scrollarea_1.ggContentLeftOffset + 'px';
-			me._scrollarea_1.ggScrollPosXPercent = (me._scrollarea_1__horScrollFg.offsetLeft / me._scrollarea_1__horScrollBg.offsetWidth);
-		}
-		me._scrollarea_1.ggScrollByXSmooth = function(diffX) {
-			if(!me._scrollarea_1.ggHorScrollVisible || diffX == 0 || me._scrollarea_1.ggHPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffX / 25;
-			var scrollCurrX = 0;
-			var id = setInterval(function() {
-				scrollCurrX += scrollPerInterval;
-				me._scrollarea_1.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._scrollarea_1.ggScrollPosX >= me._scrollarea_1__horScrollBg.offsetWidth - me._scrollarea_1__horScrollFg.offsetWidth)) {
-					me._scrollarea_1.ggScrollPosX = Math.min(me._scrollarea_1.ggScrollPosX, me._scrollarea_1__horScrollBg.offsetWidth - me._scrollarea_1__horScrollFg.offsetWidth);
-					clearInterval(id);
-				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._scrollarea_1.ggScrollPosX <= 0)) {
-					me._scrollarea_1.ggScrollPosX = Math.max(me._scrollarea_1.ggScrollPosX, 0);
-					clearInterval(id);
-				}
-			me._scrollarea_1__horScrollFg.style.left = me._scrollarea_1.ggScrollPosX + 'px';
-			me._scrollarea_1__content.style.left = -(Math.round(me._scrollarea_1.ggScrollPosX / me._scrollarea_1.ggHPercentVisible)) + me._scrollarea_1.ggContentLeftOffset + 'px';
-			me._scrollarea_1.ggScrollPosXPercent = (me._scrollarea_1__horScrollFg.offsetLeft / me._scrollarea_1__horScrollBg.offsetWidth);
-			}, 10);
-		}
-		me._scrollarea_1.ggScrollByY = function(diffY) {
-			if(!me._scrollarea_1.ggVertScrollVisible || diffY == 0 || me._scrollarea_1.ggVPercentVisible >= 1.0) return;
-			me._scrollarea_1.ggScrollPosY = (me._scrollarea_1__vertScrollFg.offsetTop + diffY);
-			me._scrollarea_1.ggScrollPosY = Math.max(me._scrollarea_1.ggScrollPosY, 0);
-			me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
-			me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
-			me._scrollarea_1__content.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + me._scrollarea_1.ggContentTopOffset + 'px';
-			me._scrollarea_1.ggScrollPosYPercent = (me._scrollarea_1__vertScrollFg.offsetTop / me._scrollarea_1__vertScrollBg.offsetHeight);
-		}
-		me._scrollarea_1.ggScrollByYSmooth = function(diffY) {
-			if(!me._scrollarea_1.ggVertScrollVisible || diffY == 0 || me._scrollarea_1.ggVPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffY / 25;
-			var scrollCurrY = 0;
-			var id = setInterval(function() {
-				scrollCurrY += scrollPerInterval;
-				me._scrollarea_1.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._scrollarea_1.ggScrollPosY >= me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight)) {
-					me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
-					clearInterval(id);
-				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._scrollarea_1.ggScrollPosY <= 0)) {
-					me._scrollarea_1.ggScrollPosY = Math.max(me._scrollarea_1.ggScrollPosY, 0);
-					clearInterval(id);
-				}
-			me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
-			me._scrollarea_1__content.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + me._scrollarea_1.ggContentTopOffset + 'px';
-			me._scrollarea_1.ggScrollPosYPercent = (me._scrollarea_1__vertScrollFg.offsetTop / me._scrollarea_1__vertScrollBg.offsetHeight);
-			}, 10);
-		}
-		me._scrollarea_1.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._scrollarea_1.ggHorScrollVisible) {
-				if (posX < 0) {
-					var diffX = Math.floor(posX * me._scrollarea_1.ggHPercentVisible);
-					me._scrollarea_1.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._scrollarea_1.offsetWidth - (me._scrollarea_1.ggVertScrollVisible ? 0 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._scrollarea_1.offsetWidth - (me._scrollarea_1.ggVertScrollVisible ? 0 : 0))) * me._scrollarea_1.ggHPercentVisible);
-					me._scrollarea_1.ggScrollByXSmooth(diffX);
-				}
-			}
-			if (me._scrollarea_1.ggVertScrollVisible) {
-				if (posY < 0) {
-					var diffY = Math.floor(posY * me._scrollarea_1.ggVPercentVisible);
-					me._scrollarea_1.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._scrollarea_1.offsetHeight - (me._scrollarea_1.ggHorScrollVisible ? 0 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._scrollarea_1.offsetHeight - (me._scrollarea_1.ggHorScrollVisible ? 0 : 0))) * me._scrollarea_1.ggVPercentVisible);
-					me._scrollarea_1.ggScrollByYSmooth(diffY);
-				}
-			}
-		}
-		els.ontouchstart = function(e) {
-			e = e || window.event;
-			var t = e.touches;
-			me._scrollarea_1.ggDragLastX = t[0].clientX;
-			me._scrollarea_1.ggDragLastY = t[0].clientY;
-			me._scrollarea_1__content.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_1.ggDragInertiaX *= 0.65;
-					me._scrollarea_1.ggDragInertiaY *= 0.65;
-					me._scrollarea_1.ggScrollByX(-me._scrollarea_1.ggDragInertiaX);
-					me._scrollarea_1.ggScrollByY(-me._scrollarea_1.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_1.ggDragInertiaX) < 1.0 && Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				me._scrollarea_1__content.ontouchend = null;
-				me._scrollarea_1__content.ontouchmove = null;
-			}
-			me._scrollarea_1__content.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffX = t[0].clientX - me._scrollarea_1.ggDragLastX;
-				var diffY = t[0].clientY - me._scrollarea_1.ggDragLastY;
-				me._scrollarea_1.ggDragInertiaX = diffX;
-				me._scrollarea_1.ggDragInertiaY = diffY;
-				me._scrollarea_1.ggDragLastX = t[0].clientX;
-				me._scrollarea_1.ggDragLastY = t[0].clientY;
-				me._scrollarea_1.ggScrollByX(-diffX);
-				me._scrollarea_1.ggScrollByY(-diffY);
-			}
-		}
-		elVertScrollBg = me._scrollarea_1__vertScrollBg = document.createElement('div');
-		el.appendChild(elVertScrollBg);
-		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 0px; height: 144px; background-color: rgba(230,196,198,1); pointer-events: auto;');
-		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._scrollarea_1__vertScrollFg = document.createElement('div');
-		elVertScrollBg.appendChild(elVertScrollFg);
-		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 0px; height: 144px; background-color: rgba(192,0,3,1); pointer-events: auto;');
-		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._scrollarea_1.ggScrollPosY = 0;
-		me._scrollarea_1.ggScrollPosYPercent = 0.0;
-		elVertScrollFg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			me._scrollarea_1.ggDragLastY = e.clientY;
-			document.onmouseup = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_1.ggDragInertiaY *= 0.65;
-					me._scrollarea_1.ggScrollByY(me._scrollarea_1.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.onmouseup = null;
-				document.onmousemove = null;
-			}
-			document.onmousemove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var diffY = e.clientY - me._scrollarea_1.ggDragLastY;
-				me._scrollarea_1.ggDragInertiaY = diffY;
-				me._scrollarea_1.ggDragLastY = e.clientY;
-				me._scrollarea_1.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollFg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			me._scrollarea_1.ggDragLastY = t[0].clientY;
-			document.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_1.ggDragInertiaY *= 0.65;
-					me._scrollarea_1.ggScrollByY(me._scrollarea_1.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.ontouchend = null;
-				document.ontouchmove = null;
-			}
-			document.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffY = t[0].clientY - me._scrollarea_1.ggDragLastY;
-				me._scrollarea_1.ggDragInertiaY = diffY;
-				me._scrollarea_1.ggDragLastY = t[0].clientY;
-				me._scrollarea_1.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollBg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			var diffY = me._scrollarea_1.ggScrollHeight;
-			if (e.offsetY < me._scrollarea_1.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_1.ggScrollByYSmooth(diffY);
-		}
-		elVertScrollBg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			var rect = me._scrollarea_1__vertScrollBg.getBoundingClientRect();
-			var diffY = me._scrollarea_1.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._scrollarea_1.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_1.ggScrollByYSmooth(diffY);
-		}
-		el.addEventListener('wheel', function(e) {
-			e.preventDefault();
-			var wheelDelta = Math.sign(e.deltaY);
-			me._scrollarea_1.ggScrollByYSmooth(20 * wheelDelta);
-		});
-		elCornerBg = me._scrollarea_1__cornerBg = document.createElement('div');
-		el.appendChild(elCornerBg);
-		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 0px; height: 0px; background-color: rgba(255,255,255,1);');
-		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
-		el.ggId="Scrollarea 1";
-		el.ggDy=-67;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_scrollarea ";
-		el.ggType='scrollarea';
-		hs ='';
-		hs+='border : 1px solid rgba(0, 0, 0, 0);';
-		hs+='height : 144px;';
-		hs+='left : 17px;';
-		hs+='overflow : hidden;';
-		hs+='position : absolute;';
-		hs+='top : -10000px;';
-		hs+='visibility : inherit;';
-		hs+='width : 176px;';
-		hs+='pointer-events:auto;';
-		hs+='z-index: 1;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._scrollarea_1.ggIsActive=function() {
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			return player.getCurrentNode();
-		}
-		me._scrollarea_1.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var ph=this.parentNode.clientHeight;
-				var h=this.offsetHeight;
-					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
-			}
-			{
-				var horScrollWasVisible = this.ggHorScrollVisible;
-				var vertScrollWasVisible = this.ggVertScrollVisible;
-				this.ggContent.style.left = '0px';
-				this.ggContent.style.top = '0px';
-				this.ggContentLeftOffset = 0;
-				this.ggContentTopOffset = 0;
-				var offsetWidthWithScale = this.getBoundingClientRect().width;
-				var offsetHeightWithScale = this.getBoundingClientRect().height;
-				var domRectContent = this.ggContent.getBoundingClientRect();
-				var minX = 0;
-				var minY = 0;
-				var maxX = 0;
-				var maxY = 0;
-				var stack=[];
-				stack.push(this.ggContent);
-				while(stack.length>0) {
-					var e=stack.pop();
-					if (e!=this.ggContent && e.getBoundingClientRect && e.style['display']!='none') {
-						var domRectChild = e.getBoundingClientRect();
-						var diffX = domRectChild.left - domRectContent.left;
-						minX = Math.min(minX, diffX);
-						maxX = Math.max(maxX, diffX + domRectChild.width);
-						var diffY = domRectChild.top - domRectContent.top;
-						minY = Math.min(minY, diffY);
-						maxY = Math.max(maxY, diffY + domRectChild.height);
-					}
-					if (e.hasChildNodes() && e.style['display']!='none') {
-						for(var i=0;i<e.childNodes.length;i++) {
-							stack.push(e.childNodes[i]);
-						}
-					}
-				}
-				if (minX < 0) this.ggContentLeftOffset = -minX;
-				if (minY < 0) this.ggContentTopOffset = -minY;
-				var contentWidth = maxX - minX;
-				var contentHeight = maxY - minY;
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.top = this.ggContentTopOffset + 'px';
-				this.ggContent.style.width = contentWidth + 'px';
-				this.ggContent.style.height = contentHeight + 'px';
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.marginLeft = '0px';
-				this.ggContent.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
-				this.ggContent.style.marginTop = '0px';
-				me._scrollarea_1__vertScrollBg.style.visibility = 'inherit';
-				me._scrollarea_1__vertScrollFg.style.visibility = 'inherit';
-				me._scrollarea_1.ggVertScrollVisible = true;
-				if(me._scrollarea_1.ggVertScrollVisible) {
-					me._scrollarea_1.ggAvailableWidth = me._scrollarea_1.offsetWidth - 0;
-					if (me._scrollarea_1.ggHorScrollVisible) {
-						me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.offsetHeight - 0;
-						me._scrollarea_1.ggAvailableHeightWithScale = me._scrollarea_1.getBoundingClientRect().height - me._scrollarea_1__vertScrollBg.getBoundingClientRect().width;
-						me._scrollarea_1__cornerBg.style.visibility = 'inherit';
-					} else {
-						me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.offsetHeight;
-						me._scrollarea_1.ggAvailableHeightWithScale = me._scrollarea_1.getBoundingClientRect().height;
-						me._scrollarea_1__cornerBg.style.visibility = 'hidden';
-					}
-					me._scrollarea_1__vertScrollBg.style.height = me._scrollarea_1.ggAvailableHeight + 'px';
-					me._scrollarea_1.ggVPercentVisible = contentHeight != 0 ? me._scrollarea_1.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._scrollarea_1.ggVPercentVisible > 1.0) me._scrollarea_1.ggVPercentVisible = 1.0;
-					me._scrollarea_1.ggScrollHeight =  Math.round(me._scrollarea_1__vertScrollBg.offsetHeight * me._scrollarea_1.ggVPercentVisible);
-					me._scrollarea_1__vertScrollFg.style.height = me._scrollarea_1.ggScrollHeight + 'px';
-					me._scrollarea_1.ggScrollPosY = me._scrollarea_1.ggScrollPosYPercent * me._scrollarea_1.ggAvailableHeight;
-					me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
-					me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
-					if (me._scrollarea_1.ggVPercentVisible < 1.0) {
-						me._scrollarea_1__content.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
-					}
-				} else {
-					me._scrollarea_1.ggAvailableWidth = me._scrollarea_1.offsetWidth;
-					me._scrollarea_1.ggScrollPosY = 0;
-					me._scrollarea_1.ggScrollPosYPercent = 0.0;
-					me._scrollarea_1__content.style.top = this.ggContentTopOffset + 'px';
-					me._scrollarea_1__cornerBg.style.visibility = 'hidden';
-				}
-				if(horScrollWasVisible != me._scrollarea_1.ggHorScrollVisible || vertScrollWasVisible != me._scrollarea_1.ggVertScrollVisible) {
-					me.updateSize(me._scrollarea_1);
-					me._scrollarea_1.ggUpdatePosition();
-				}
-			}
-		}
-		el=me._cloner_1=document.createElement('div');
-		el.ggNumRepeat = 1;
-		el.ggNumRows = 0;
-		el.ggNumCols = 0;
-		el.ggWidth = 144;
-		el.ggHeight = 122;
-		el.ggUpdating = false;
-		el.ggFilter = [];
-		el.ggInstances = [];
-		el.ggUpdate = function(filter) {
-			if(me._cloner_1.ggUpdating == true) return;
-			me._cloner_1.ggUpdating = true;
-			var el=me._cloner_1;
-			var curNumCols = 0;
-			curNumCols = me._cloner_1.ggNumRepeat;
-			if (curNumCols < 1) curNumCols = 1;
-			if (typeof filter=='object') {
-				el.ggFilter = filter;
-			} else {
-				filter = el.ggFilter;
-			};
-			if (me.ggTag) filter.push(me.ggTag);
-			filter=filter.sort();
-			if ((el.ggNumCols == curNumCols) && (el.ggInstances.length > 0) && (filter.length === el.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.ggCurrentFilter[index] }) )) {
-				me._cloner_1.ggUpdating = false;
-				return;
-			} else {
-				el.ggNumRows = 1;
-				el.ggNumCols = curNumCols;
-			}
-			el.ggCurrentFilter = filter;
-			el.ggInstances = [];
-			if (el.hasChildNodes() == true) {
-				while (el.firstChild) {
-					el.removeChild(el.firstChild);
-				}
-			}
-			var tourNodes = player.getNodeIds();
-			var row = 0;
-			var column = 0;
-			var currentIndex = 0;
-			for (var i=0; i < tourNodes.length; i++) {
-				var nodeId = tourNodes[i];
-				var passed = true;
-				var nodeData = player.getNodeUserdata(nodeId);
-				if (filter.length > 0) {
-					for (var j=0; j < filter.length; j++) {
-						if (nodeData['tags'].indexOf(filter[j]) == -1) passed = false;
-					}
-				}
-				if (passed) {
-				var parameter={};
-				parameter.top=(row * me._cloner_1.ggHeight) + 'px';
-				parameter.left=(column * me._cloner_1.ggWidth) + 'px';
-				parameter.index=currentIndex;
-				parameter.title=nodeData['title'];
-				var inst = new SkinCloner_cloner_1_Class(nodeId, me, el, parameter);
-				currentIndex++;
-				el.ggInstances.push(inst);
-				el.appendChild(inst.__div);
-				inst.__div.ggObj=inst;
-				skin.updateSize(inst.__div);
-				column++;
-				if (column >= el.ggNumCols) {
-					column = 0;
-					row++;
-					el.ggNumRows++;
-				}
-				}
-			}
-			me._cloner_1.ggUpdating = false;
-			player.triggerEvent('clonerchanged');
-			if (me._cloner_1.parentNode.classList.contains('ggskin_subelement') && me._cloner_1.parentNode.parentNode.classList.contains('ggskin_scrollarea')) me._cloner_1.parentNode.parentNode.ggUpdatePosition();
-		}
-		el.ggFilter = [];
-		el.ggId="Cloner 1";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_cloner ";
-		el.ggType='cloner';
-		hs ='';
-		hs+='height : 122px;';
-		hs+='left : 8px;';
-		hs+='overflow : visible;';
-		hs+='position : absolute;';
-		hs+='top : 33px;';
-		hs+='visibility : inherit;';
-		hs+='width : 144px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._cloner_1.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._cloner_1.ggUpdateConditionNodeChange=function () {
-			var cnode=player.getCurrentNode();
-			for(var i=0; i<me._cloner_1.childNodes.length; i++) {
-				var child=me._cloner_1.childNodes[i];
-				if (child.ggObj && child.ggObj.ggNodeId==cnode) {
-			        var childOffX = child.offsetLeft;
-			        var childOffY = child.offsetTop;
-					var p = child.parentElement;
-			        while (p != null && p!==this.divSkin) {
-						if (p.ggType && p.ggType == 'scrollarea') {
-							p.ggScrollIntoView(childOffX, childOffY, child.clientWidth, child.clientHeight);
-						}
-						childOffX += p.offsetLeft;
-						childOffY += p.offsetTop;
-						p = p.parentElement;
-					}
-				}
-			}
-		}
-		me._cloner_1.ggUpdatePosition=function (useTransition) {
-				me._cloner_1.ggUpdate();
-		}
-		me._cloner_1.ggNodeChange=function () {
-			me._cloner_1.ggUpdateConditionNodeChange();
-		}
-		me._scrollarea_1__content.appendChild(me._cloner_1);
-		me.divSkin.appendChild(me._scrollarea_1);
 		el=me._menu_background=document.createElement('div');
 		el.ggId="menu_background";
-		el.ggDy=-41;
+		el.ggDy=-27;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -1486,7 +546,7 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
 		hs+='height : 100%;';
-		hs+='left : -28px;';
+		hs+='left : -17px;';
 		hs+='opacity : 0;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
@@ -2081,8 +1141,8 @@ function pano2vrSkin(player,base) {
 		el=me._menu_open=document.createElement('div');
 		els=me._menu_open__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICctLy9XM0MvL0RURCBTVkcgMS4xLy9FTicgJ2h0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCc+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzJweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiBmaWxsLW9wYWNpdHk9IjEiIHdpZHRoPSIzMnB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy'+
-			'53My5vcmcvMTk5OS94bGluayIgZmlsbD0iI2ZmZmZmZiI+CiA8cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz4KPC9zdmc+Cg==';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICctLy9XM0MvL0RURCBTVkcgMS4xLy9FTicgJ2h0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCc+CjxzdmcgZmlsbC1vcGFjaXR5PSIxIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWw6c3BhY2U9InByZXNlcnZlIiB2ZXJzaW9uPSIxLjEiIGhlaWdodD0iMzJweCIgd2lkdGg9IjMycHgiIGZpbGw9IiNmZmZmZmYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxuczp4bG'+
+			'luaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz4KPC9zdmc+Cg==';
 		me._menu_open__img.setAttribute('src',hs);
 		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
 		els['ondragstart']=function() { return false; };
@@ -2170,12 +1230,12 @@ function pano2vrSkin(player,base) {
 		el=me._button_image_normalscreen=document.createElement('div');
 		els=me._button_image_normalscreen__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHZpZXdCb3g9Ii0yNDAgMzMyIDEzMCAxMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiBiYXNlUHJvZmlsZT0idGlueSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8ZyBpZD0iTG'+
-			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxyZWN0IHk9IjM5NyIgaGVpZ2h0PSIyMi4yIiB3aWR0aD0iMzIuMSIgeD0iLTIwNi4yIiBmaWxsPSIjMDAwMDAwIi8+CiAgIDxwYXRoIGQ9Ik0tMTc1LDM0MC45Yy0zMSwwLTU2LjEsMjUuMS01Ni4xLDU2LjFjMCwzMSwyNS4xLDU2LjEsNTYuMSw1Ni4xYzMxLDAsNTYuMS0yNS4xLDU2LjEtNTYuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTExOC45LDM2Ni0xNDQsMzQwLjktMTc1LDM0MC45eiBNLTE2OC42LDQyMC4zYzAsMi4zLTEuOSw0LjItNC4yLDQuMmgtMzQuNWMtMi4zLDAtNC4yLTEuOS00LjItNC4ydi0yNC41YzAtMi4zLDEuOS00LjIsNC4yLTQu'+
-			'MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtoMzQuNWMyLjMsMCw0LjIsMS45LDQuMiw0LjJMLTE2OC42LDQyMC4zTC0xNjguNiw0MjAuM3ogTS0xMzYuOCwzNzIuNmwtMTcuNSwxMi42Yy0wLjEsMC0wLjEsMC4xLTAuMiwwLjFsMC43LDAuOWwzLjMsNC43JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLjIsMC4zLDAuMiwwLjUsMC4xLDAuOWMtMC4yLDAuNC0wLjUsMC41LTAuOCwwLjVsLTE2LjIsMC4xYy0wLjQsMC0wLjYtMC4xLTAuOC0wLjRjLTAuMi0wLjItMC4yLTAuNS0wLjEtMC44bDUuMi0xNS40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLjEtMC4zLDAuNC0wLjYsMC44LTAuNmMwLj'+
-			'QsMCwwLjcsMC4xLDAuOSwwLjNsMy4zLDQuNmwwLjYsMC44YzAsMCwwLjEtMC4xLDAuMS0wLjFsMTcuNS0xMi42YzAuNy0wLjUsMS42LTAuMywyLjEsMC40bDEuNCwxLjkmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xMzUuOSwzNzEuMi0xMzYuMSwzNzIuMS0xMzYuOCwzNzIuNnoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+CiA8L2c+CiA8ZyBpZD0iTGF5ZXJfMiI+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0tMTM2LjQsMzcwLjVsLTEuNC0xLjljLTAuNS0wLjctMS41LTAuOC0yLjEtMC40bC0xNy41LDEyLjZjLTAuMSwwLTAuMSwwLjEtMC4xLDAuMWwtMC42LTAuOGwtMy4zLTQuNiYjeGQ7JiN4YTsm'+
-			'I3g5OyYjeDk7JiN4OTtjLTAuMi0wLjMtMC40LTAuNC0wLjktMC4zYy0wLjQsMC0wLjcsMC4zLTAuOCwwLjZsLTUuMiwxNS40Yy0wLjEsMC4zLTAuMSwwLjYsMC4xLDAuOGMwLjIsMC4zLDAuNCwwLjQsMC44LDAuNGwxNi4yLTAuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMC40LDAsMC43LTAuMSwwLjgtMC41YzAuMi0wLjQsMC4yLTAuNi0wLjEtMC45bC0zLjMtNC43bC0wLjctMC45YzAuMSwwLDAuMS0wLjEsMC4yLTAuMWwxNy41LTEyLjYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xMzYuMSwzNzIuMS0xMzUuOSwzNzEuMi0xMzYuNCwzNzAuNXoiIGZpbGw9IiNGRkZGRkYiLz4KICAgPH'+
-			'BhdGggZD0iTS0xNzIuOCwzOTEuNmgtMzQuNWMtMi4zLDAtNC4yLDEuOS00LjIsNC4ydjI0LjVjMCwyLjMsMS45LDQuMiw0LjIsNC4yaDM0LjVjMi4zLDAsNC4yLTEuOSw0LjItNC4ydi0yNC41JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O0MtMTY4LjYsMzkzLjUtMTcwLjUsMzkxLjYtMTcyLjgsMzkxLjZ6IE0tMTc0LDQxOS4yaC0zMi4xVjM5N2gzMi4xVjQxOS4yeiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KIDwvZz4KPC9zdmc+Cg==';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGlkPSJMYXllcl8xIiBiYXNlUHJvZmlsZT0idGlueSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjBweCIgdmlld0JveD0iLTI0MCAzMzIgMTMwIDEzMCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8ZyBpZD0iTG'+
+			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxyZWN0IGhlaWdodD0iMjIuMiIgZmlsbD0iIzAwMDAwMCIgd2lkdGg9IjMyLjEiIHk9IjM5NyIgeD0iLTIwNi4yIi8+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0tMTc1LDM0MC45Yy0zMSwwLTU2LjEsMjUuMS01Ni4xLDU2LjFjMCwzMSwyNS4xLDU2LjEsNTYuMSw1Ni4xYzMxLDAsNTYuMS0yNS4xLDU2LjEtNTYuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTExOC45LDM2Ni0xNDQsMzQwLjktMTc1LDM0MC45eiBNLTE2OC42LDQyMC4zYzAsMi4zLTEuOSw0LjItNC4yLDQuMmgtMzQuNWMtMi4zLDAtNC4yLTEuOS00LjItNC4ydi0yNC41YzAtMi4z'+
+			'LDEuOS00LjIsNC4yLTQuMiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtoMzQuNWMyLjMsMCw0LjIsMS45LDQuMiw0LjJMLTE2OC42LDQyMC4zTC0xNjguNiw0MjAuM3ogTS0xMzYuOCwzNzIuNmwtMTcuNSwxMi42Yy0wLjEsMC0wLjEsMC4xLTAuMiwwLjFsMC43LDAuOWwzLjMsNC43JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLjIsMC4zLDAuMiwwLjUsMC4xLDAuOWMtMC4yLDAuNC0wLjUsMC41LTAuOCwwLjVsLTE2LjIsMC4xYy0wLjQsMC0wLjYtMC4xLTAuOC0wLjRjLTAuMi0wLjItMC4yLTAuNS0wLjEtMC44bDUuMi0xNS40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLjEtMC4zLDAuNC'+
+			'0wLjYsMC44LTAuNmMwLjQsMCwwLjcsMC4xLDAuOSwwLjNsMy4zLDQuNmwwLjYsMC44YzAsMCwwLjEtMC4xLDAuMS0wLjFsMTcuNS0xMi42YzAuNy0wLjUsMS42LTAuMywyLjEsMC40bDEuNCwxLjkmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xMzUuOSwzNzEuMi0xMzYuMSwzNzIuMS0xMzYuOCwzNzIuNnoiLz4KICA8L2c+CiA8L2c+CiA8ZyBpZD0iTGF5ZXJfMiI+CiAgPGc+CiAgIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0tMTM2LjQsMzcwLjVsLTEuNC0xLjljLTAuNS0wLjctMS41LTAuOC0yLjEtMC40bC0xNy41LDEyLjZjLTAuMSwwLTAuMSwwLjEtMC4xLDAuMWwtMC42LTAuOGwtMy4z'+
+			'LTQuNiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjLTAuMi0wLjMtMC40LTAuNC0wLjktMC4zYy0wLjQsMC0wLjcsMC4zLTAuOCwwLjZsLTUuMiwxNS40Yy0wLjEsMC4zLTAuMSwwLjYsMC4xLDAuOGMwLjIsMC4zLDAuNCwwLjQsMC44LDAuNGwxNi4yLTAuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMC40LDAsMC43LTAuMSwwLjgtMC41YzAuMi0wLjQsMC4yLTAuNi0wLjEtMC45bC0zLjMtNC43bC0wLjctMC45YzAuMSwwLDAuMS0wLjEsMC4yLTAuMWwxNy41LTEyLjYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xMzYuMSwzNzIuMS0xMzUuOSwzNzEuMi0xMzYuNCwzNzAuNXoiLz4KICAgPH'+
+			'BhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTS0xNzIuOCwzOTEuNmgtMzQuNWMtMi4zLDAtNC4yLDEuOS00LjIsNC4ydjI0LjVjMCwyLjMsMS45LDQuMiw0LjIsNC4yaDM0LjVjMi4zLDAsNC4yLTEuOSw0LjItNC4ydi0yNC41JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O0MtMTY4LjYsMzkzLjUtMTcwLjUsMzkxLjYtMTcyLjgsMzkxLjZ6IE0tMTc0LDQxOS4yaC0zMi4xVjM5N2gzMi4xVjQxOS4yeiIvPgogIDwvZz4KIDwvZz4KPC9zdmc+Cg==';
 		me._button_image_normalscreen__img.setAttribute('src',hs);
 		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
 		els['ondragstart']=function() { return false; };
@@ -2183,12 +1243,12 @@ function pano2vrSkin(player,base) {
 		el.ggSubElement = els;
 		elo=me._button_image_normalscreen__imgo=document.createElement('img');
 		elo.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHZpZXdCb3g9Ii0yNDAgMzMyIDEzMCAxMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiBiYXNlUHJvZmlsZT0idGlueSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8ZyBpZD0iTG'+
-			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxyZWN0IHk9IjM5NyIgaGVpZ2h0PSIyNC42IiB3aWR0aD0iMzUuNyIgeD0iLTIwOS42IiBmaWxsPSIjMDAwMDAwIi8+CiAgIDxwYXRoIGQ9Ik0tMTc1LDMzNC42Yy0zNC40LDAtNjIuNCwyNy45LTYyLjQsNjIuNGMwLDM0LjQsMjcuOSw2Mi40LDYyLjQsNjIuNGMzNC40LDAsNjIuNC0yNy45LDYyLjQtNjIuNCYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTExMi42LDM2Mi42LTE0MC42LDMzNC42LTE3NSwzMzQuNnogTS0xNjcuOSw0MjIuOWMwLDIuNi0yLjEsNC43LTQuNyw0LjdoLTM4LjNjLTIuNiwwLTQuNy0yLjEtNC43LTQuN3YtMjcuMiYjeGQ7JiN4YTsm'+
-			'I3g5OyYjeDk7JiN4OTtjMC0yLjYsMi4xLTQuNyw0LjctNC43aDM4LjNjMi42LDAsNC43LDIuMSw0LjcsNC43TC0xNjcuOSw0MjIuOUwtMTY3LjksNDIyLjl6IE0tMTMyLjUsMzY5LjlsLTE5LjUsMTRjLTAuMSwwLTAuMSwwLjEtMC4yLDAuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtsMC43LDFsMy43LDUuMmMwLjIsMC4zLDAuMiwwLjYsMC4xLDFjLTAuMiwwLjQtMC41LDAuNi0wLjksMC42bC0xOCwwLjFjLTAuNCwwLTAuNy0wLjEtMC45LTAuNGMtMC4yLTAuMy0wLjItMC41LTAuMS0wLjkmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7bDUuOC0xNy4xYzAuMS0wLjQsMC40LTAuNywwLjgtMC43Yz'+
-			'AuNSwwLDAuNywwLjEsMSwwLjRsMy42LDUuMWwwLjcsMC45YzAuMSwwLDAuMS0wLjEsMC4yLTAuMWwxOS41LTE0YzAuOC0wLjUsMS44LTAuNCwyLjQsMC40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2wxLjUsMi4xQy0xMzEuNiwzNjguMy0xMzEuOCwzNjkuNC0xMzIuNSwzNjkuOXoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+CiA8L2c+CiA8ZyBpZD0iTGF5ZXJfMiI+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0tMTMyLjEsMzY3LjVsLTEuNS0yLjFjLTAuNS0wLjgtMS42LTAuOS0yLjQtMC40bC0xOS41LDE0Yy0wLjEsMC0wLjEsMC4xLTAuMiwwLjFsLTAuNy0wLjlsLTMuNi01LjEmI3hkOyYjeGE7JiN4'+
-			'OTsmI3g5OyYjeDk7Yy0wLjItMC4zLTAuNS0wLjQtMS0wLjRjLTAuNSwwLTAuNywwLjMtMC44LDAuN2wtNS44LDE3LjFjLTAuMSwwLjQtMC4xLDAuNywwLjEsMC45YzAuMiwwLjMsMC41LDAuNCwwLjksMC40bDE4LTAuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMC40LDAsMC44LTAuMiwwLjktMC42YzAuMi0wLjQsMC4yLTAuNy0wLjEtMWwtMy43LTUuMmwtMC43LTFjMC4xLDAsMC4xLTAuMSwwLjItMC4xbDE5LjUtMTQmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xMzEuOCwzNjkuNC0xMzEuNiwzNjguMy0xMzIuMSwzNjcuNXoiIGZpbGw9IiNGRkZGRkYiLz4KICAgPHBhdGggZD0iTS0xNz'+
-			'IuNiwzOTFoLTM4LjNjLTIuNiwwLTQuNywyLjEtNC43LDQuN3YyNy4yYzAsMi42LDIuMSw0LjcsNC43LDQuN2gzOC4zYzIuNiwwLDQuNy0yLjEsNC43LTQuN3YtMjcuMiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTE2Ny45LDM5My4xLTE3MCwzOTEtMTcyLjYsMzkxeiBNLTE3My45LDQyMS42aC0zNS43VjM5N2gzNS43VjQyMS42eiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KIDwvZz4KPC9zdmc+Cg==';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGlkPSJMYXllcl8xIiBiYXNlUHJvZmlsZT0idGlueSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjBweCIgdmlld0JveD0iLTI0MCAzMzIgMTMwIDEzMCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8ZyBpZD0iTG'+
+			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxyZWN0IGhlaWdodD0iMjQuNiIgZmlsbD0iIzAwMDAwMCIgd2lkdGg9IjM1LjciIHk9IjM5NyIgeD0iLTIwOS42Ii8+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0tMTc1LDMzNC42Yy0zNC40LDAtNjIuNCwyNy45LTYyLjQsNjIuNGMwLDM0LjQsMjcuOSw2Mi40LDYyLjQsNjIuNGMzNC40LDAsNjIuNC0yNy45LDYyLjQtNjIuNCYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTExMi42LDM2Mi42LTE0MC42LDMzNC42LTE3NSwzMzQuNnogTS0xNjcuOSw0MjIuOWMwLDIuNi0yLjEsNC43LTQuNyw0LjdoLTM4LjNjLTIuNiwwLTQuNy0yLjEtNC43LTQuN3Yt'+
+			'MjcuMiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMC0yLjYsMi4xLTQuNyw0LjctNC43aDM4LjNjMi42LDAsNC43LDIuMSw0LjcsNC43TC0xNjcuOSw0MjIuOUwtMTY3LjksNDIyLjl6IE0tMTMyLjUsMzY5LjlsLTE5LjUsMTRjLTAuMSwwLTAuMSwwLjEtMC4yLDAuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtsMC43LDFsMy43LDUuMmMwLjIsMC4zLDAuMiwwLjYsMC4xLDFjLTAuMiwwLjQtMC41LDAuNi0wLjksMC42bC0xOCwwLjFjLTAuNCwwLTAuNy0wLjEtMC45LTAuNGMtMC4yLTAuMy0wLjItMC41LTAuMS0wLjkmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7bDUuOC0xNy4xYzAuMS0wLjQsMC'+
+			'40LTAuNywwLjgtMC43YzAuNSwwLDAuNywwLjEsMSwwLjRsMy42LDUuMWwwLjcsMC45YzAuMSwwLDAuMS0wLjEsMC4yLTAuMWwxOS41LTE0YzAuOC0wLjUsMS44LTAuNCwyLjQsMC40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2wxLjUsMi4xQy0xMzEuNiwzNjguMy0xMzEuOCwzNjkuNC0xMzIuNSwzNjkuOXoiLz4KICA8L2c+CiA8L2c+CiA8ZyBpZD0iTGF5ZXJfMiI+CiAgPGc+CiAgIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0tMTMyLjEsMzY3LjVsLTEuNS0yLjFjLTAuNS0wLjgtMS42LTAuOS0yLjQtMC40bC0xOS41LDE0Yy0wLjEsMC0wLjEsMC4xLTAuMiwwLjFsLTAuNy0wLjlsLTMuNi01'+
+			'LjEmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy0wLjItMC4zLTAuNS0wLjQtMS0wLjRjLTAuNSwwLTAuNywwLjMtMC44LDAuN2wtNS44LDE3LjFjLTAuMSwwLjQtMC4xLDAuNywwLjEsMC45YzAuMiwwLjMsMC41LDAuNCwwLjksMC40bDE4LTAuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMC40LDAsMC44LTAuMiwwLjktMC42YzAuMi0wLjQsMC4yLTAuNy0wLjEtMWwtMy43LTUuMmwtMC43LTFjMC4xLDAsMC4xLTAuMSwwLjItMC4xbDE5LjUtMTQmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xMzEuOCwzNjkuNC0xMzEuNiwzNjguMy0xMzIuMSwzNjcuNXoiLz4KICAgPHBhdGggZmlsbD0iI0'+
+			'ZGRkZGRiIgZD0iTS0xNzIuNiwzOTFoLTM4LjNjLTIuNiwwLTQuNywyLjEtNC43LDQuN3YyNy4yYzAsMi42LDIuMSw0LjcsNC43LDQuN2gzOC4zYzIuNiwwLDQuNy0yLjEsNC43LTQuN3YtMjcuMiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTE2Ny45LDM5My4xLTE3MCwzOTEtMTcyLjYsMzkxeiBNLTE3My45LDQyMS42aC0zNS43VjM5N2gzNS43VjQyMS42eiIvPgogIDwvZz4KIDwvZz4KPC9zdmc+Cg==';
 		me._button_image_normalscreen__imgo.setAttribute('src',hs);
 		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
 		elo['ondragstart']=function() { return false; };
@@ -2259,12 +1319,12 @@ function pano2vrSkin(player,base) {
 		el=me._button_image_fullscreen=document.createElement('div');
 		els=me._button_image_fullscreen__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHZpZXdCb3g9Ii0yNDAgMzMyIDEzMCAxMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiBiYXNlUHJvZmlsZT0idGlueSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8ZyBpZD0iTG'+
-			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0tMjA2LjIsNDE5LjJoNjIuM3YtNDQuM2gtNjIuM1Y0MTkuMnogTS0xNzguOSwzOTcuM2MwLDAsMTcuNy0xMi43LDE3LjctMTIuN2wtNC01LjYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy0wLjItMC4zLTAuMi0wLjUtMC4xLTAuOWMwLjItMC40LDAuNS0wLjUsMC44LTAuNWwxNi4yLTAuMWMwLjQsMCwwLjYsMC4xLDAuOCwwLjRjMC4yLDAuMiwwLjIsMC41LDAuMSwwLjhsLTUuMiwxNS40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MtMC4xLDAuMy0wLjQsMC42LTAuOCwwLjZjLTAuNCwwLTAuNy0wLjEtMC45LTAuM2wtMy45LTUuNGMwLDAt'+
-			'MTcuNywxMi43LTE3LjcsMTIuN2MtMC43LDAuNS0xLjYsMC4zLTIuMS0wLjRsLTEuNC0xLjkmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xNzkuNywzOTguOC0xNzkuNSwzOTcuOC0xNzguOSwzOTcuM3oiIGZpbGw9IiMwMDAwMDAiLz4KICAgPHBhdGggZD0iTS0xNzUsMzQwLjljLTMxLDAtNTYuMSwyNS4xLTU2LjEsNTYuMXMyNS4xLDU2LjEsNTYuMSw1Ni4xYzMxLDAsNTYuMS0yNS4xLDU2LjEtNTYuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtTLTE0NCwzNDAuOS0xNzUsMzQwLjl6IE0tMTM4LjQsNDIwLjNjMCwyLjMtMS45LDQuMi00LjIsNC4yaC02NC43Yy0yLjMsMC00LjItMS45LTQuMi'+
-			'00LjJ2LTQ2LjdjMC0yLjMsMS45LTQuMiw0LjItNC4yaDY0LjcmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzIuMywwLDQuMiwxLjksNC4yLDQuMlY0MjAuM3oiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+CiA8L2c+CiA8ZyBpZD0iTGF5ZXJfMiI+CiAgPHBhdGggZD0iTS0xNDcuNCwzNzcuOWMtMC4yLTAuMy0wLjQtMC40LTAuOC0wLjRsLTE2LjIsMC4xYy0wLjQsMC0wLjcsMC4xLTAuOCwwLjVjLTAuMiwwLjQtMC4yLDAuNiwwLjEsMC45bDQsNS42JiN4ZDsmI3hhOyYjeDk7JiN4OTtjLTAuMSwwLTE3LjcsMTIuNy0xNy43LDEyLjdjLTAuNywwLjUtMC44LDEuNS0wLjQsMi4xbDEuNCwxLjljMC41'+
-			'LDAuNywxLjUsMC44LDIuMSwwLjRjMCwwLDE3LjYtMTIuNywxNy43LTEyLjdsMy45LDUuNCYjeGQ7JiN4YTsmI3g5OyYjeDk7YzAuMiwwLjMsMC40LDAuNCwwLjksMC4zYzAuNCwwLDAuNy0wLjMsMC44LTAuNmw1LjItMTUuNEMtMTQ3LjIsMzc4LjQtMTQ3LjIsMzc4LjEtMTQ3LjQsMzc3Ljl6IiBmaWxsPSIjRkZGRkZGIi8+CiAgPHBhdGggZD0iTS0xNDIuNyw0MjQuNmgtNjQuN2MtMi4zLDAtNC4yLTEuOS00LjItNC4ydi00Ni43YzAtMi4zLDEuOS00LjIsNC4yLTQuMmg2NC43YzIuMywwLDQuMiwxLjksNC4yLDQuMnY0Ni43JiN4ZDsmI3hhOyYjeDk7JiN4OTtDLTEzOC40LDQyMi43LTE0MC4zLD'+
-			'QyNC42LTE0Mi43LDQyNC42eiBNLTIwNi4yLDQxOS4yaDYyLjN2LTQ0LjNoLTYyLjNWNDE5LjJ6IiBmaWxsPSIjRkZGRkZGIi8+CiA8L2c+Cjwvc3ZnPgo=';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGlkPSJMYXllcl8xIiBiYXNlUHJvZmlsZT0idGlueSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjBweCIgdmlld0JveD0iLTI0MCAzMzIgMTMwIDEzMCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8ZyBpZD0iTG'+
+			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0tMjA2LjIsNDE5LjJoNjIuM3YtNDQuM2gtNjIuM1Y0MTkuMnogTS0xNzguOSwzOTcuM2MwLDAsMTcuNy0xMi43LDE3LjctMTIuN2wtNC01LjYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy0wLjItMC4zLTAuMi0wLjUtMC4xLTAuOWMwLjItMC40LDAuNS0wLjUsMC44LTAuNWwxNi4yLTAuMWMwLjQsMCwwLjYsMC4xLDAuOCwwLjRjMC4yLDAuMiwwLjIsMC41LDAuMSwwLjhsLTUuMiwxNS40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MtMC4xLDAuMy0wLjQsMC42LTAuOCwwLjZjLTAuNCwwLTAuNy0wLjEtMC45LTAu'+
+			'M2wtMy45LTUuNGMwLDAtMTcuNywxMi43LTE3LjcsMTIuN2MtMC43LDAuNS0xLjYsMC4zLTIuMS0wLjRsLTEuNC0xLjkmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Qy0xNzkuNywzOTguOC0xNzkuNSwzOTcuOC0xNzguOSwzOTcuM3oiLz4KICAgPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTS0xNzUsMzQwLjljLTMxLDAtNTYuMSwyNS4xLTU2LjEsNTYuMXMyNS4xLDU2LjEsNTYuMSw1Ni4xYzMxLDAsNTYuMS0yNS4xLDU2LjEtNTYuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtTLTE0NCwzNDAuOS0xNzUsMzQwLjl6IE0tMTM4LjQsNDIwLjNjMCwyLjMtMS45LDQuMi00LjIsNC4yaC02NC43Yy0yLj'+
+			'MsMC00LjItMS45LTQuMi00LjJ2LTQ2LjdjMC0yLjMsMS45LTQuMiw0LjItNC4yaDY0LjcmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzIuMywwLDQuMiwxLjksNC4yLDQuMlY0MjAuM3oiLz4KICA8L2c+CiA8L2c+CiA8ZyBpZD0iTGF5ZXJfMiI+CiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTS0xNDcuNCwzNzcuOWMtMC4yLTAuMy0wLjQtMC40LTAuOC0wLjRsLTE2LjIsMC4xYy0wLjQsMC0wLjcsMC4xLTAuOCwwLjVjLTAuMiwwLjQtMC4yLDAuNiwwLjEsMC45bDQsNS42JiN4ZDsmI3hhOyYjeDk7JiN4OTtjLTAuMSwwLTE3LjcsMTIuNy0xNy43LDEyLjdjLTAuNywwLjUtMC44LDEuNS0wLjQs'+
+			'Mi4xbDEuNCwxLjljMC41LDAuNywxLjUsMC44LDIuMSwwLjRjMCwwLDE3LjYtMTIuNywxNy43LTEyLjdsMy45LDUuNCYjeGQ7JiN4YTsmI3g5OyYjeDk7YzAuMiwwLjMsMC40LDAuNCwwLjksMC4zYzAuNCwwLDAuNy0wLjMsMC44LTAuNmw1LjItMTUuNEMtMTQ3LjIsMzc4LjQtMTQ3LjIsMzc4LjEtMTQ3LjQsMzc3Ljl6Ii8+CiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTS0xNDIuNyw0MjQuNmgtNjQuN2MtMi4zLDAtNC4yLTEuOS00LjItNC4ydi00Ni43YzAtMi4zLDEuOS00LjIsNC4yLTQuMmg2NC43YzIuMywwLDQuMiwxLjksNC4yLDQuMnY0Ni43JiN4ZDsmI3hhOyYjeDk7JiN4OTtDLTEzOC'+
+			'40LDQyMi43LTE0MC4zLDQyNC42LTE0Mi43LDQyNC42eiBNLTIwNi4yLDQxOS4yaDYyLjN2LTQ0LjNoLTYyLjNWNDE5LjJ6Ii8+CiA8L2c+Cjwvc3ZnPgo=';
 		me._button_image_fullscreen__img.setAttribute('src',hs);
 		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
 		els['ondragstart']=function() { return false; };
@@ -2272,12 +1332,12 @@ function pano2vrSkin(player,base) {
 		el.ggSubElement = els;
 		elo=me._button_image_fullscreen__imgo=document.createElement('img');
 		elo.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHZpZXdCb3g9Ii0yNDAgMzMyIDEzMCAxMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiBiYXNlUHJvZmlsZT0idGlueSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8ZyBpZD0iTG'+
-			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0tMjA5LjYsNDIxLjZoNjkuM3YtNDkuM2gtNjkuM1Y0MjEuNnogTS0xNzkuMywzOTcuNGMwLDAsMTkuNi0xNC4xLDE5LjctMTQuMWwtNC41LTYuMiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjLTAuMi0wLjMtMC4yLTAuNi0wLjEtMWMwLjItMC40LDAuNS0wLjYsMC45LTAuNmwxOC0wLjFjMC40LDAsMC43LDAuMSwwLjksMC40YzAuMiwwLjMsMC4yLDAuNSwwLjEsMC45bC01LjgsMTcuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjLTAuMSwwLjQtMC40LDAuNy0wLjgsMC43Yy0wLjUsMC0wLjctMC4xLTEtMC40bC00LjMtNmMtMC4xLDAuMS0x'+
-			'OS43LDE0LjEtMTkuNywxNC4xYy0wLjgsMC41LTEuOCwwLjQtMi40LTAuNGwtMS41LTIuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTE4MC4yLDM5OS0xODAsMzk3LjktMTc5LjMsMzk3LjR6IiBmaWxsPSIjMDAwMDAwIi8+CiAgIDxwYXRoIGQ9Ik0tMTc1LDMzNC42Yy0zNC40LDAtNjIuNCwyNy45LTYyLjQsNjIuNHMyNy45LDYyLjQsNjIuNCw2Mi40YzM0LjQsMCw2Mi40LTI3LjksNjIuNC02Mi40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1MtMTQwLjYsMzM0LjYtMTc1LDMzNC42eiBNLTEzNC40LDQyMi45YzAsMi42LTIuMSw0LjctNC43LDQuN2gtNzEuOGMtMi42LDAtNC43LTIuMS00Lj'+
-			'ctNC43di01MS44YzAtMi42LDIuMS00LjcsNC43LTQuN2g3MS44JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MyLjYsMCw0LjcsMi4xLDQuNyw0LjdWNDIyLjl6IiBmaWxsPSIjMDAwMDAwIi8+CiAgPC9nPgogPC9nPgogPGcgaWQ9IkxheWVyXzIiPgogIDxwYXRoIGQ9Ik0tMTQ0LjMsMzc1LjhjLTAuMi0wLjMtMC41LTAuNC0wLjktMC40bC0xOCwwLjFjLTAuNCwwLTAuOCwwLjItMC45LDAuNmMtMC4yLDAuNC0wLjIsMC43LDAuMSwxbDQuNSw2LjImI3hkOyYjeGE7JiN4OTsmI3g5O2MtMC4xLDAtMTkuNywxNC4xLTE5LjcsMTQuMWMtMC44LDAuNS0wLjksMS42LTAuNCwyLjRsMS41LDIuMWMwLjUs'+
-			'MC44LDEuNiwwLjksMi40LDAuNGMwLDAsMTkuNi0xNC4xLDE5LjctMTQuMWw0LjMsNiYjeGQ7JiN4YTsmI3g5OyYjeDk7YzAuMiwwLjMsMC41LDAuNCwxLDAuNGMwLjUsMCwwLjctMC4zLDAuOC0wLjdsNS44LTE3LjFDLTE0NC4xLDM3Ni4zLTE0NC4xLDM3Ni0xNDQuMywzNzUuOHoiIGZpbGw9IiNGRkZGRkYiLz4KICA8cGF0aCBkPSJNLTEzOS4xLDQyNy42aC03MS44Yy0yLjYsMC00LjctMi4xLTQuNy00Ljd2LTUxLjhjMC0yLjYsMi4xLTQuNyw0LjctNC43aDcxLjhjMi42LDAsNC43LDIuMSw0LjcsNC43djUxLjgmI3hkOyYjeGE7JiN4OTsmI3g5O0MtMTM0LjQsNDI1LjUtMTM2LjUsNDI3LjYtMT'+
-			'M5LjEsNDI3LjZ6IE0tMjA5LjYsNDIxLjZoNjkuM3YtNDkuM2gtNjkuM1Y0MjEuNnoiIGZpbGw9IiNGRkZGRkYiLz4KIDwvZz4KPC9zdmc+Cg==';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGlkPSJMYXllcl8xIiBiYXNlUHJvZmlsZT0idGlueSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjBweCIgdmlld0JveD0iLTI0MCAzMzIgMTMwIDEzMCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8ZyBpZD0iTG'+
+			'F5ZXJfMV8xXyI+CiAgPGc+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0tMjA5LjYsNDIxLjZoNjkuM3YtNDkuM2gtNjkuM1Y0MjEuNnogTS0xNzkuMywzOTcuNGMwLDAsMTkuNi0xNC4xLDE5LjctMTQuMWwtNC41LTYuMiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjLTAuMi0wLjMtMC4yLTAuNi0wLjEtMWMwLjItMC40LDAuNS0wLjYsMC45LTAuNmwxOC0wLjFjMC40LDAsMC43LDAuMSwwLjksMC40YzAuMiwwLjMsMC4yLDAuNSwwLjEsMC45bC01LjgsMTcuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjLTAuMSwwLjQtMC40LDAuNy0wLjgsMC43Yy0wLjUsMC0wLjctMC4xLTEtMC40bC00'+
+			'LjMtNmMtMC4xLDAuMS0xOS43LDE0LjEtMTkuNywxNC4xYy0wLjgsMC41LTEuOCwwLjQtMi40LTAuNGwtMS41LTIuMSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDLTE4MC4yLDM5OS0xODAsMzk3LjktMTc5LjMsMzk3LjR6Ii8+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0tMTc1LDMzNC42Yy0zNC40LDAtNjIuNCwyNy45LTYyLjQsNjIuNHMyNy45LDYyLjQsNjIuNCw2Mi40YzM0LjQsMCw2Mi40LTI3LjksNjIuNC02Mi40JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1MtMTQwLjYsMzM0LjYtMTc1LDMzNC42eiBNLTEzNC40LDQyMi45YzAsMi42LTIuMSw0LjctNC43LDQuN2gtNzEuOGMtMi'+
+			'42LDAtNC43LTIuMS00LjctNC43di01MS44YzAtMi42LDIuMS00LjcsNC43LTQuN2g3MS44JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MyLjYsMCw0LjcsMi4xLDQuNyw0LjdWNDIyLjl6Ii8+CiAgPC9nPgogPC9nPgogPGcgaWQ9IkxheWVyXzIiPgogIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0tMTQ0LjMsMzc1LjhjLTAuMi0wLjMtMC41LTAuNC0wLjktMC40bC0xOCwwLjFjLTAuNCwwLTAuOCwwLjItMC45LDAuNmMtMC4yLDAuNC0wLjIsMC43LDAuMSwxbDQuNSw2LjImI3hkOyYjeGE7JiN4OTsmI3g5O2MtMC4xLDAtMTkuNywxNC4xLTE5LjcsMTQuMWMtMC44LDAuNS0wLjksMS42LTAuNCwy'+
+			'LjRsMS41LDIuMWMwLjUsMC44LDEuNiwwLjksMi40LDAuNGMwLDAsMTkuNi0xNC4xLDE5LjctMTQuMWw0LjMsNiYjeGQ7JiN4YTsmI3g5OyYjeDk7YzAuMiwwLjMsMC41LDAuNCwxLDAuNGMwLjUsMCwwLjctMC4zLDAuOC0wLjdsNS44LTE3LjFDLTE0NC4xLDM3Ni4zLTE0NC4xLDM3Ni0xNDQuMywzNzUuOHoiLz4KICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNLTEzOS4xLDQyNy42aC03MS44Yy0yLjYsMC00LjctMi4xLTQuNy00Ljd2LTUxLjhjMC0yLjYsMi4xLTQuNyw0LjctNC43aDcxLjhjMi42LDAsNC43LDIuMSw0LjcsNC43djUxLjgmI3hkOyYjeGE7JiN4OTsmI3g5O0MtMTM0LjQsNDI1Lj'+
+			'UtMTM2LjUsNDI3LjYtMTM5LjEsNDI3LjZ6IE0tMjA5LjYsNDIxLjZoNjkuM3YtNDkuM2gtNjkuM1Y0MjEuNnoiLz4KIDwvZz4KPC9zdmc+Cg==';
 		me._button_image_fullscreen__imgo.setAttribute('src',hs);
 		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
 		elo['ondragstart']=function() { return false; };
@@ -2373,9 +1433,9 @@ function pano2vrSkin(player,base) {
 		el=me._button_facebook=document.createElement('div');
 		els=me._button_facebook__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHZpZXdCb3g9Ii0yNDAgMzMyIDEzMCAxMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiBiYXNlUHJvZmlsZT0idGlueSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8cGF0aCBkPS'+
-			'JNLTE3NSwzNDAuOGMtMzEsMC01Ni4yLDI1LjEtNTYuMiw1Ni4yYzAsMzEuMSwyNS4xLDU2LjIsNTYuMiw1Ni4yczU2LjItMjUuMSw1Ni4yLTU2LjImI3hkOyYjeGE7JiN4OTtDLTExOC44LDM2NS45LTE0NCwzNDAuOC0xNzUsMzQwLjh6IE0tMTU4LjMsMzc3LjZoLTEwYy0xLjIsMC0yLjUsMS42LTIuNSwzLjh2Ni40aDEyLjV2MTIuNWgtMTIuNXYzMC4xaC0xMi41di0zMC4xaC0xMHYtMTIuNWgxMCYjeGQ7JiN4YTsmI3g5O3YtNi4zYzAtOSw2LjctMTYuMywxNS0xNi4zaDEwVjM3Ny42eiIgZmlsbD0iIzAwMDAwMCIvPgogPHBhdGggZD0iTS0xNjguMywzNzcuNmgxMHYtMTIuNGgtMTBjLTguMyww'+
-			'LTE1LDcuMy0xNSwxNi4zdjYuM2gtMTB2MTIuNWgxMHYzMC4xaDEyLjV2LTMwLjFoMTIuNXYtMTIuNWgtMTIuNXYtNi40JiN4ZDsmI3hhOyYjeDk7Qy0xNzAuOCwzNzkuMi0xNjkuNSwzNzcuNi0xNjguMywzNzcuNnoiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+Cg==';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGlkPSJMYXllcl8xIiBiYXNlUHJvZmlsZT0idGlueSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjBweCIgdmlld0JveD0iLTI0MCAzMzIgMTMwIDEzMCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8cGF0aCBmaW'+
+			'xsPSIjMDAwMDAwIiBkPSJNLTE3NSwzNDAuOGMtMzEsMC01Ni4yLDI1LjEtNTYuMiw1Ni4yYzAsMzEuMSwyNS4xLDU2LjIsNTYuMiw1Ni4yczU2LjItMjUuMSw1Ni4yLTU2LjImI3hkOyYjeGE7JiN4OTtDLTExOC44LDM2NS45LTE0NCwzNDAuOC0xNzUsMzQwLjh6IE0tMTU4LjMsMzc3LjZoLTEwYy0xLjIsMC0yLjUsMS42LTIuNSwzLjh2Ni40aDEyLjV2MTIuNWgtMTIuNXYzMC4xaC0xMi41di0zMC4xaC0xMHYtMTIuNWgxMCYjeGQ7JiN4YTsmI3g5O3YtNi4zYzAtOSw2LjctMTYuMywxNS0xNi4zaDEwVjM3Ny42eiIvPgogPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTS0xNjguMywzNzcuNmgxMHYt'+
+			'MTIuNGgtMTBjLTguMywwLTE1LDcuMy0xNSwxNi4zdjYuM2gtMTB2MTIuNWgxMHYzMC4xaDEyLjV2LTMwLjFoMTIuNXYtMTIuNWgtMTIuNXYtNi40JiN4ZDsmI3hhOyYjeDk7Qy0xNzAuOCwzNzkuMi0xNjkuNSwzNzcuNi0xNjguMywzNzcuNnoiLz4KPC9zdmc+Cg==';
 		me._button_facebook__img.setAttribute('src',hs);
 		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
 		els['ondragstart']=function() { return false; };
@@ -2383,9 +1443,9 @@ function pano2vrSkin(player,base) {
 		el.ggSubElement = els;
 		elo=me._button_facebook__imgo=document.createElement('img');
 		elo.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHZpZXdCb3g9Ii0yNDAgMzMyIDEzMCAxMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiBiYXNlUHJvZmlsZT0idGlueSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8cGF0aCBkPS'+
-			'JNLTE3NSwzMzQuNmMtMzQuNSwwLTYyLjQsMjcuOS02Mi40LDYyLjRzMjcuOSw2Mi40LDYyLjQsNjIuNHM2Mi40LTI3LjksNjIuNC02Mi40Uy0xNDAuNSwzMzQuNi0xNzUsMzM0LjZ6IE0tMTU2LjUsMzc1LjYmI3hkOyYjeGE7JiN4OTtoLTExYy0xLjMsMC0yLjgsMS44LTIuOCw0LjF2N2gxMy44djEzLjdoLTEzLjh2MzMuMmgtMTMuOHYtMzMuMmgtMTF2LTEzLjdoMTF2LTYuOWMwLTkuOSw3LjQtMTcuOSwxNi41LTE3LjloMTFWMzc1LjZ6IiBmaWxsPSIjMDAwMDAwIi8+CiA8cGF0aCBkPSJNLTE2Ny41LDM3NS42aDExdi0xMy42aC0xMWMtOS4xLDAtMTYuNSw4LTE2LjUsMTcuOXY2LjloLTExdjEz'+
-			'LjdoMTF2MzMuMmgxMy44di0zMy4yaDEzLjh2LTEzLjdoLTEzLjh2LTcmI3hkOyYjeGE7JiN4OTtDLTE3MC4zLDM3Ny4zLTE2OC44LDM3NS42LTE2Ny41LDM3NS42eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGlkPSJMYXllcl8xIiBiYXNlUHJvZmlsZT0idGlueSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjBweCIgdmlld0JveD0iLTI0MCAzMzIgMTMwIDEzMCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8cGF0aCBmaW'+
+			'xsPSIjMDAwMDAwIiBkPSJNLTE3NSwzMzQuNmMtMzQuNSwwLTYyLjQsMjcuOS02Mi40LDYyLjRzMjcuOSw2Mi40LDYyLjQsNjIuNHM2Mi40LTI3LjksNjIuNC02Mi40Uy0xNDAuNSwzMzQuNi0xNzUsMzM0LjZ6IE0tMTU2LjUsMzc1LjYmI3hkOyYjeGE7JiN4OTtoLTExYy0xLjMsMC0yLjgsMS44LTIuOCw0LjF2N2gxMy44djEzLjdoLTEzLjh2MzMuMmgtMTMuOHYtMzMuMmgtMTF2LTEzLjdoMTF2LTYuOWMwLTkuOSw3LjQtMTcuOSwxNi41LTE3LjloMTFWMzc1LjZ6Ii8+CiA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNLTE2Ny41LDM3NS42aDExdi0xMy42aC0xMWMtOS4xLDAtMTYuNSw4LTE2LjUs'+
+			'MTcuOXY2LjloLTExdjEzLjdoMTF2MzMuMmgxMy44di0zMy4yaDEzLjh2LTEzLjdoLTEzLjh2LTcmI3hkOyYjeGE7JiN4OTtDLTE3MC4zLDM3Ny4zLTE2OC44LDM3NS42LTE2Ny41LDM3NS42eiIvPgo8L3N2Zz4K';
 		me._button_facebook__imgo.setAttribute('src',hs);
 		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
 		elo['ondragstart']=function() { return false; };
@@ -8572,8 +7632,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_520=document.createElement('div');
 		els=me._svg_520__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_520__img.setAttribute('src',hs);
@@ -8641,8 +7701,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_420=document.createElement('div');
 		els=me._svg_420__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_420__img.setAttribute('src',hs);
@@ -8708,8 +7768,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_320=document.createElement('div');
 		els=me._svg_320__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_320__img.setAttribute('src',hs);
@@ -16400,8 +15460,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_518=document.createElement('div');
 		els=me._svg_518__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_518__img.setAttribute('src',hs);
@@ -16469,8 +15529,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_418=document.createElement('div');
 		els=me._svg_418__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_418__img.setAttribute('src',hs);
@@ -16536,8 +15596,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_318=document.createElement('div');
 		els=me._svg_318__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_318__img.setAttribute('src',hs);
@@ -16832,8 +15892,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_517=document.createElement('div');
 		els=me._svg_517__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_517__img.setAttribute('src',hs);
@@ -16901,8 +15961,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_417=document.createElement('div');
 		els=me._svg_417__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_417__img.setAttribute('src',hs);
@@ -16968,8 +16028,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_317=document.createElement('div');
 		els=me._svg_317__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_317__img.setAttribute('src',hs);
@@ -17264,8 +16324,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_516=document.createElement('div');
 		els=me._svg_516__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_516__img.setAttribute('src',hs);
@@ -17333,8 +16393,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_416=document.createElement('div');
 		els=me._svg_416__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_416__img.setAttribute('src',hs);
@@ -17400,8 +16460,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_316=document.createElement('div');
 		els=me._svg_316__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_316__img.setAttribute('src',hs);
@@ -17696,8 +16756,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_515=document.createElement('div');
 		els=me._svg_515__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_515__img.setAttribute('src',hs);
@@ -17765,8 +16825,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_415=document.createElement('div');
 		els=me._svg_415__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_415__img.setAttribute('src',hs);
@@ -17832,8 +16892,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_315=document.createElement('div');
 		els=me._svg_315__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_315__img.setAttribute('src',hs);
@@ -18128,8 +17188,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_514=document.createElement('div');
 		els=me._svg_514__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_514__img.setAttribute('src',hs);
@@ -18197,8 +17257,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_414=document.createElement('div');
 		els=me._svg_414__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_414__img.setAttribute('src',hs);
@@ -18264,8 +17324,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_314=document.createElement('div');
 		els=me._svg_314__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_314__img.setAttribute('src',hs);
@@ -18560,8 +17620,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_513=document.createElement('div');
 		els=me._svg_513__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_513__img.setAttribute('src',hs);
@@ -18629,8 +17689,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_413=document.createElement('div');
 		els=me._svg_413__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_413__img.setAttribute('src',hs);
@@ -18696,8 +17756,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_313=document.createElement('div');
 		els=me._svg_313__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_313__img.setAttribute('src',hs);
@@ -18992,8 +18052,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_512=document.createElement('div');
 		els=me._svg_512__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_512__img.setAttribute('src',hs);
@@ -19061,8 +18121,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_412=document.createElement('div');
 		els=me._svg_412__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_412__img.setAttribute('src',hs);
@@ -19128,8 +18188,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_312=document.createElement('div');
 		els=me._svg_312__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_312__img.setAttribute('src',hs);
@@ -19424,8 +18484,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_511=document.createElement('div');
 		els=me._svg_511__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_511__img.setAttribute('src',hs);
@@ -19493,8 +18553,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_411=document.createElement('div');
 		els=me._svg_411__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_411__img.setAttribute('src',hs);
@@ -19560,8 +18620,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_311=document.createElement('div');
 		els=me._svg_311__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_311__img.setAttribute('src',hs);
@@ -19856,8 +18916,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_510=document.createElement('div');
 		els=me._svg_510__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_510__img.setAttribute('src',hs);
@@ -19925,8 +18985,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_410=document.createElement('div');
 		els=me._svg_410__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_410__img.setAttribute('src',hs);
@@ -19992,8 +19052,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_310=document.createElement('div');
 		els=me._svg_310__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_310__img.setAttribute('src',hs);
@@ -20288,8 +19348,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_59=document.createElement('div');
 		els=me._svg_59__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_59__img.setAttribute('src',hs);
@@ -20357,8 +19417,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_49=document.createElement('div');
 		els=me._svg_49__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_49__img.setAttribute('src',hs);
@@ -20424,8 +19484,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_39=document.createElement('div');
 		els=me._svg_39__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_39__img.setAttribute('src',hs);
@@ -20720,8 +19780,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_58=document.createElement('div');
 		els=me._svg_58__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_58__img.setAttribute('src',hs);
@@ -20789,8 +19849,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_48=document.createElement('div');
 		els=me._svg_48__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_48__img.setAttribute('src',hs);
@@ -20856,8 +19916,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_38=document.createElement('div');
 		els=me._svg_38__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_38__img.setAttribute('src',hs);
@@ -21152,8 +20212,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_57=document.createElement('div');
 		els=me._svg_57__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_57__img.setAttribute('src',hs);
@@ -21221,8 +20281,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_47=document.createElement('div');
 		els=me._svg_47__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_47__img.setAttribute('src',hs);
@@ -21288,8 +20348,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_37=document.createElement('div');
 		els=me._svg_37__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_37__img.setAttribute('src',hs);
@@ -21584,8 +20644,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_56=document.createElement('div');
 		els=me._svg_56__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_56__img.setAttribute('src',hs);
@@ -21653,8 +20713,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_46=document.createElement('div');
 		els=me._svg_46__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_46__img.setAttribute('src',hs);
@@ -21720,8 +20780,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_36=document.createElement('div');
 		els=me._svg_36__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_36__img.setAttribute('src',hs);
@@ -22016,8 +21076,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_55=document.createElement('div');
 		els=me._svg_55__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_55__img.setAttribute('src',hs);
@@ -22085,8 +21145,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_45=document.createElement('div');
 		els=me._svg_45__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_45__img.setAttribute('src',hs);
@@ -22152,8 +21212,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_35=document.createElement('div');
 		els=me._svg_35__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_35__img.setAttribute('src',hs);
@@ -22448,8 +21508,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_54=document.createElement('div');
 		els=me._svg_54__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_54__img.setAttribute('src',hs);
@@ -22517,8 +21577,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_44=document.createElement('div');
 		els=me._svg_44__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_44__img.setAttribute('src',hs);
@@ -22584,8 +21644,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_34=document.createElement('div');
 		els=me._svg_34__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_34__img.setAttribute('src',hs);
@@ -22880,8 +21940,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_53=document.createElement('div');
 		els=me._svg_53__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_53__img.setAttribute('src',hs);
@@ -22949,8 +22009,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_43=document.createElement('div');
 		els=me._svg_43__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_43__img.setAttribute('src',hs);
@@ -23016,8 +22076,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_33=document.createElement('div');
 		els=me._svg_33__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_33__img.setAttribute('src',hs);
@@ -23312,8 +22372,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_52=document.createElement('div');
 		els=me._svg_52__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_52__img.setAttribute('src',hs);
@@ -23381,8 +22441,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_42=document.createElement('div');
 		els=me._svg_42__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_42__img.setAttribute('src',hs);
@@ -23448,8 +22508,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_32=document.createElement('div');
 		els=me._svg_32__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_32__img.setAttribute('src',hs);
@@ -23744,8 +22804,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_51=document.createElement('div');
 		els=me._svg_51__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_51__img.setAttribute('src',hs);
@@ -23813,8 +22873,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_41=document.createElement('div');
 		els=me._svg_41__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_41__img.setAttribute('src',hs);
@@ -23880,8 +22940,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_31=document.createElement('div');
 		els=me._svg_31__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_31__img.setAttribute('src',hs);
@@ -24176,8 +23236,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_50=document.createElement('div');
 		els=me._svg_50__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_50__img.setAttribute('src',hs);
@@ -24245,8 +23305,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_40=document.createElement('div');
 		els=me._svg_40__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_40__img.setAttribute('src',hs);
@@ -24312,8 +23372,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_30=document.createElement('div');
 		els=me._svg_30__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_30__img.setAttribute('src',hs);
@@ -24608,8 +23668,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_5=document.createElement('div');
 		els=me._svg_5__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMC4wNSAzMC4wNTsiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
-			'cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjA1IDMwLjA1OyIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuMDUgMzAuMDUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy'+
+			'8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xOC45OTMsMTAuNjg4aC03LjkzNmMtMC4xOSwwLTAuMzQ2LDAuMTQ5LTAuMzQ2LDAuMzQydjguMDIyYzAsMC4xODksMC4xNTUsMC4zNDQsMC4zNDYsMC4zNDQmI3hkOyYjeGE7JiN4OTsmI3g5O2g3LjkzNmMwLjE5LDAsMC4zNDQtMC4xNTQsMC4zNDQtMC4zNDRWMTEuMDNDMTkuMzM2LDEwLjgzOCwxOS4xODMsMTAuNjg4LDE4Ljk5MywxMC42ODh6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0xNS4wMjYsMEM2LjcyOSwwLDAuMDAxLDYuNzI2LDAuMDAxLDE1LjAyNVM2'+
 			'LjcyOSwzMC4wNSwxNS4wMjYsMzAuMDUmI3hkOyYjeGE7JiN4OTsmI3g5O2M4LjI5OCwwLDE1LjAyMy02LjcyNiwxNS4wMjMtMTUuMDI1UzIzLjMyNCwwLDE1LjAyNiwweiBNMTUuMDI2LDI3LjU0Yy02LjkxMiwwLTEyLjUxNi01LjYwNC0xMi41MTYtMTIuNTE1JiN4ZDsmI3hhOyYjeDk7JiN4OTtjMC02LjkxNCw1LjYwNC0xMi41MTcsMTIuNTE2LTEyLjUxN2M2LjkxMywwLDEyLjUxNCw1LjYwMywxMi41MTQsMTIuNTE3QzI3LjU0LDIxLjkzNiwyMS45MzksMjcuNTQsMTUuMDI2LDI3LjU0eiIvPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPG'+
 			'cvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3N2Zz4K';
 		me._svg_5__img.setAttribute('src',hs);
@@ -24677,8 +23737,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_4=document.createElement('div');
 		els=me._svg_4__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgMjc1LjcyNSAyNzUuNzI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9Ij'+
-			'BweCIgaGVpZ2h0PSIyNzUuNzI1cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3NS43MjUgMjc1LjcyNTsiIHdpZHRoPSIyNzUuNzI1cHgiIHg9IjBweCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMjc1Lj'+
+			'cyNXB4IiB3aWR0aD0iMjc1LjcyNXB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNzUuNzI1IDI3NS43MjU7IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNzUuNzI1IDI3NS43MjUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiPgogPGc+CiAgPGc+CiAgIDxwYXRoIGQ9Ik0xMzcuODYyLDBDNjEuNzI2LDAsMCw2MS43MjYsMCwxMzcuODYyYzAsNzYuMTQsNjEuNzI2LDEzNy44NjIsMTM3Ljg2MiwxMzcuODYyYzc2LjEzOSwwLDEzNy44NjItNjEuNzIzLDEzNy44NjItMTM3Ljg2MiYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtDMjc1Ljcy'+
 			'NSw2MS43MjYsMjE0LjAwMSwwLDEzNy44NjIsMHogTTExNC4yNiwxODguODU2YzAsMTEuOTY3LTcuOTI1LDIxLjY1NS0xNy43MDQsMjEuNjU1Yy05Ljc3NiwwLTE3LjcwNC05LjY4OC0xNy43MDQtMjEuNjU1JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O1YxMDAuNjVjMC0xMS45NTcsNy45MjctMjEuNjU1LDE3LjcwNC0yMS42NTVjOS43NzksMCwxNy43MDQsOS42OTgsMTcuNzA0LDIxLjY1NVYxODguODU2eiBNMTk2Ljg3NywxODguODU2JiN4ZDsmI3hhOyYjeDk7JiN4OTsmI3g5O2MwLDExLjk2Ny03LjkzMywyMS42NTUtMTcuNzA0LDIxLjY1NWMtOS43NzEsMC0xNy42OTgtOS42ODgtMTcuNjk4LT'+
 			'IxLjY1NVYxMDAuNjVjMC0xMS45NTcsNy45MjgtMjEuNjU1LDE3LjY5OC0yMS42NTUmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7YzkuNzc2LDAsMTcuNzA0LDkuNjk4LDE3LjcwNCwyMS42NTVWMTg4Ljg1NnoiLz4KICA8L2c+CiA8L2c+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+CiA8Zy8+Cjwvc3ZnPgo=';
 		me._svg_4__img.setAttribute('src',hs);
@@ -24744,8 +23804,8 @@ function pano2vrSkin(player,base) {
 		el=me._svg_3=document.createElement('div');
 		els=me._svg_3__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHk9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeD0iMHB4IiB4bWxuczp4bGluaz0iaH'+
-			'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgaWQ9IkNhcGFfMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ny44NjcgNDc3Ljg2NzsiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3'+
+			'cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCI+CiA8Zz4KICA8Zz4KICAgPHBhdGggZD0iTTIzOC45MzMsMEMxMDYuOTc0LDAsMCwxMDYuOTc0LDAsMjM4LjkzM3MxMDYuOTc0LDIzOC45MzMsMjM4LjkzMywyMzguOTMzczIzOC45MzMtMTA2Ljk3NCwyMzguOTMzLTIzOC45MzMmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7QzQ3Ny43MjYsMTA3LjAzMywzNzAuODM0LDAuMTQxLDIzOC45MzMsMHogTTMzOS41NTcsMjQ2LjU0NmMtMS42NTQsMy4zMTgtNC4zNDMsNi4wMDgtNy42NjIsNy42NjJ2MC4wODVMMTk1LjM2MiwzMjIuNTYmI3hkOyYjeGE7JiN4OTsmI3g5OyYjeDk7Yy04LjQzMiw0LjIxMy0x'+
 			'OC42ODIsMC43OTQtMjIuODk2LTcuNjM4Yy0xLjE5OC0yLjM5Ny0xLjgxNS01LjA0My0xLjgtNy43MjJWMTcwLjY2N2MtMC4wMDQtOS40MjYsNy42MzMtMTcuMDcsMTcuMDU5LTE3LjA3NSYjeGQ7JiN4YTsmI3g5OyYjeDk7JiN4OTtjMi42NTEtMC4wMDEsNS4yNjYsMC42MTUsNy42MzcsMS44bDEzNi41MzMsNjguMjY3QzM0MC4zMzEsMjI3Ljg2MywzNDMuNzYyLDIzOC4xMSwzMzkuNTU3LDI0Ni41NDZ6Ii8+CiAgPC9nPgogPC9nPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgogPGcvPgo8L3'+
 			'N2Zz4K';
 		me._svg_3__img.setAttribute('src',hs);
@@ -30850,6 +29910,5736 @@ function pano2vrSkin(player,base) {
 		me._image_1.ggUpdatePosition=function (useTransition) {
 		}
 		me.divSkin.appendChild(me._image_1);
+		el=me._text_118=document.createElement('div');
+		els=me._text_118__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 563px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_118.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_118.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_118.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_118.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_118.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_118.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_118.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_118.style[domTransition]='';
+				if (me._text_118.ggCurrentLogicStateVisible == 0) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 1) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 2) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 3) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 4) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 5) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 6) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 7) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 8) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 9) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 10) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 11) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 12) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 13) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 14) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 15) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 16) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 17) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else if (me._text_118.ggCurrentLogicStateVisible == 18) {
+					me._text_118.style.visibility="hidden";
+					me._text_118.ggVisible=false;
+				}
+				else {
+					me._text_118.style.visibility=(Number(me._text_118.style.opacity)>0||!me._text_118.style.opacity)?'inherit':'hidden';
+					me._text_118.ggVisible=true;
+				}
+			}
+		}
+		me._text_118.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_118);
+		el=me._text_117=document.createElement('div');
+		els=me._text_117__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 541px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_117.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_117.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_117.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_117.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_117.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_117.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_117.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_117.style[domTransition]='';
+				if (me._text_117.ggCurrentLogicStateVisible == 0) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 1) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 2) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 3) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 4) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 5) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 6) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 7) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 8) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 9) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 10) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 11) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 12) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 13) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 14) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 15) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 16) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 17) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else if (me._text_117.ggCurrentLogicStateVisible == 18) {
+					me._text_117.style.visibility="hidden";
+					me._text_117.ggVisible=false;
+				}
+				else {
+					me._text_117.style.visibility=(Number(me._text_117.style.opacity)>0||!me._text_117.style.opacity)?'inherit':'hidden';
+					me._text_117.ggVisible=true;
+				}
+			}
+		}
+		me._text_117.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_117);
+		el=me._text_116=document.createElement('div');
+		els=me._text_116__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 519px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_116.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_116.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_116.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_116.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_116.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_116.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_116.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_116.style[domTransition]='';
+				if (me._text_116.ggCurrentLogicStateVisible == 0) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 1) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 2) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 3) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 4) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 5) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 6) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 7) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 8) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 9) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 10) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 11) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 12) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 13) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 14) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 15) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 16) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 17) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else if (me._text_116.ggCurrentLogicStateVisible == 18) {
+					me._text_116.style.visibility="hidden";
+					me._text_116.ggVisible=false;
+				}
+				else {
+					me._text_116.style.visibility=(Number(me._text_116.style.opacity)>0||!me._text_116.style.opacity)?'inherit':'hidden';
+					me._text_116.ggVisible=true;
+				}
+			}
+		}
+		me._text_116.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_116);
+		el=me._text_115=document.createElement('div');
+		els=me._text_115__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 431px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_115.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_115.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_115.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_115.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_115.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_115.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_115.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_115.style[domTransition]='';
+				if (me._text_115.ggCurrentLogicStateVisible == 0) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 1) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 2) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 3) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 4) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 5) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 6) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 7) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 8) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 9) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 10) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 11) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 12) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 13) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 14) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 15) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 16) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 17) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else if (me._text_115.ggCurrentLogicStateVisible == 18) {
+					me._text_115.style.visibility="hidden";
+					me._text_115.ggVisible=false;
+				}
+				else {
+					me._text_115.style.visibility=(Number(me._text_115.style.opacity)>0||!me._text_115.style.opacity)?'inherit':'hidden';
+					me._text_115.ggVisible=true;
+				}
+			}
+		}
+		me._text_115.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_115);
+		el=me._text_114=document.createElement('div');
+		els=me._text_114__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 45px;';
+		hs+='position : absolute;';
+		hs+='top : 453px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_114.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_114.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_114.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_114.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_114.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_114.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_114.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_114.style[domTransition]='';
+				if (me._text_114.ggCurrentLogicStateVisible == 0) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 1) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 2) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 3) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 4) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 5) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 6) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 7) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 8) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 9) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 10) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 11) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 12) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 13) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 14) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 15) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 16) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 17) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else if (me._text_114.ggCurrentLogicStateVisible == 18) {
+					me._text_114.style.visibility="hidden";
+					me._text_114.ggVisible=false;
+				}
+				else {
+					me._text_114.style.visibility=(Number(me._text_114.style.opacity)>0||!me._text_114.style.opacity)?'inherit':'hidden';
+					me._text_114.ggVisible=true;
+				}
+			}
+		}
+		me._text_114.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_114);
+		el=me._text_113=document.createElement('div');
+		els=me._text_113__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 475px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_113.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_113.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_113.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_113.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_113.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_113.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_113.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_113.style[domTransition]='';
+				if (me._text_113.ggCurrentLogicStateVisible == 0) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 1) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 2) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 3) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 4) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 5) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 6) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 7) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 8) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 9) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 10) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 11) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 12) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 13) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 14) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 15) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 16) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 17) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else if (me._text_113.ggCurrentLogicStateVisible == 18) {
+					me._text_113.style.visibility="hidden";
+					me._text_113.ggVisible=false;
+				}
+				else {
+					me._text_113.style.visibility=(Number(me._text_113.style.opacity)>0||!me._text_113.style.opacity)?'inherit':'hidden';
+					me._text_113.ggVisible=true;
+				}
+			}
+		}
+		me._text_113.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_113);
+		el=me._text_112=document.createElement('div');
+		els=me._text_112__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 497px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_112.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_112.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_112.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_112.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_112.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_112.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_112.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_112.style[domTransition]='';
+				if (me._text_112.ggCurrentLogicStateVisible == 0) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 1) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 2) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 3) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 4) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 5) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 6) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 7) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 8) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 9) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 10) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 11) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 12) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 13) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 14) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 15) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 16) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 17) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else if (me._text_112.ggCurrentLogicStateVisible == 18) {
+					me._text_112.style.visibility="hidden";
+					me._text_112.ggVisible=false;
+				}
+				else {
+					me._text_112.style.visibility=(Number(me._text_112.style.opacity)>0||!me._text_112.style.opacity)?'inherit':'hidden';
+					me._text_112.ggVisible=true;
+				}
+			}
+		}
+		me._text_112.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_112);
+		el=me._text_111=document.createElement('div');
+		els=me._text_111__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 409px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_111.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_111.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_111.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_111.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_111.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_111.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_111.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_111.style[domTransition]='';
+				if (me._text_111.ggCurrentLogicStateVisible == 0) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 1) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 2) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 3) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 4) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 5) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 6) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 7) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 8) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 9) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 10) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 11) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 12) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 13) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 14) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 15) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 16) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 17) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else if (me._text_111.ggCurrentLogicStateVisible == 18) {
+					me._text_111.style.visibility="hidden";
+					me._text_111.ggVisible=false;
+				}
+				else {
+					me._text_111.style.visibility=(Number(me._text_111.style.opacity)>0||!me._text_111.style.opacity)?'inherit':'hidden';
+					me._text_111.ggVisible=true;
+				}
+			}
+		}
+		me._text_111.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_111);
+		el=me._text_110=document.createElement('div');
+		els=me._text_110__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 387px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_110.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_110.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_110.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_110.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_110.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_110.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_110.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_110.style[domTransition]='';
+				if (me._text_110.ggCurrentLogicStateVisible == 0) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 1) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 2) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 3) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 4) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 5) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 6) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 7) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 8) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 9) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 10) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 11) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 12) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 13) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 14) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 15) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 16) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 17) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else if (me._text_110.ggCurrentLogicStateVisible == 18) {
+					me._text_110.style.visibility="hidden";
+					me._text_110.ggVisible=false;
+				}
+				else {
+					me._text_110.style.visibility=(Number(me._text_110.style.opacity)>0||!me._text_110.style.opacity)?'inherit':'hidden';
+					me._text_110.ggVisible=true;
+				}
+			}
+		}
+		me._text_110.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_110);
+		el=me._text_19=document.createElement('div');
+		els=me._text_19__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 365px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_19.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_19.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_19.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_19.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_19.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_19.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_19.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_19.style[domTransition]='';
+				if (me._text_19.ggCurrentLogicStateVisible == 0) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 1) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 2) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 3) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 4) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 5) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 6) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 7) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 8) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 9) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 10) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 11) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 12) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 13) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 14) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 15) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 16) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 17) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else if (me._text_19.ggCurrentLogicStateVisible == 18) {
+					me._text_19.style.visibility="hidden";
+					me._text_19.ggVisible=false;
+				}
+				else {
+					me._text_19.style.visibility=(Number(me._text_19.style.opacity)>0||!me._text_19.style.opacity)?'inherit':'hidden';
+					me._text_19.ggVisible=true;
+				}
+			}
+		}
+		me._text_19.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_19);
+		el=me._text_18=document.createElement('div');
+		els=me._text_18__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 343px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_18.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_18.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_18.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_18.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_18.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_18.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_18.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_18.style[domTransition]='';
+				if (me._text_18.ggCurrentLogicStateVisible == 0) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 1) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 2) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 3) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 4) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 5) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 6) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 7) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 8) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 9) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 10) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 11) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 12) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 13) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 14) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 15) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 16) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 17) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else if (me._text_18.ggCurrentLogicStateVisible == 18) {
+					me._text_18.style.visibility="hidden";
+					me._text_18.ggVisible=false;
+				}
+				else {
+					me._text_18.style.visibility=(Number(me._text_18.style.opacity)>0||!me._text_18.style.opacity)?'inherit':'hidden';
+					me._text_18.ggVisible=true;
+				}
+			}
+		}
+		me._text_18.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_18);
+		el=me._text_17=document.createElement('div');
+		els=me._text_17__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 255px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_17.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_17.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_17.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_17.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_17.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_17.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_17.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_17.style[domTransition]='';
+				if (me._text_17.ggCurrentLogicStateVisible == 0) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 1) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 2) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 3) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 4) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 5) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 6) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 7) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 8) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 9) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 10) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 11) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 12) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 13) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 14) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 15) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 16) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 17) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else if (me._text_17.ggCurrentLogicStateVisible == 18) {
+					me._text_17.style.visibility="hidden";
+					me._text_17.ggVisible=false;
+				}
+				else {
+					me._text_17.style.visibility=(Number(me._text_17.style.opacity)>0||!me._text_17.style.opacity)?'inherit':'hidden';
+					me._text_17.ggVisible=true;
+				}
+			}
+		}
+		me._text_17.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_17);
+		el=me._text_16=document.createElement('div');
+		els=me._text_16__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 276px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_16.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_16.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_16.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_16.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_16.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_16.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_16.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_16.style[domTransition]='';
+				if (me._text_16.ggCurrentLogicStateVisible == 0) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 1) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 2) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 3) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 4) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 5) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 6) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 7) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 8) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 9) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 10) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 11) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 12) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 13) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 14) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 15) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 16) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 17) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else if (me._text_16.ggCurrentLogicStateVisible == 18) {
+					me._text_16.style.visibility="hidden";
+					me._text_16.ggVisible=false;
+				}
+				else {
+					me._text_16.style.visibility=(Number(me._text_16.style.opacity)>0||!me._text_16.style.opacity)?'inherit':'hidden';
+					me._text_16.ggVisible=true;
+				}
+			}
+		}
+		me._text_16.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_16);
+		el=me._text_15=document.createElement('div');
+		els=me._text_15__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 299px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_15.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_15.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_15.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_15.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_15.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_15.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_15.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_15.style[domTransition]='';
+				if (me._text_15.ggCurrentLogicStateVisible == 0) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 1) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 2) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 3) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 4) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 5) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 6) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 7) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 8) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 9) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 10) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 11) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 12) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 13) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 14) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 15) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 16) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 17) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else if (me._text_15.ggCurrentLogicStateVisible == 18) {
+					me._text_15.style.visibility="hidden";
+					me._text_15.ggVisible=false;
+				}
+				else {
+					me._text_15.style.visibility=(Number(me._text_15.style.opacity)>0||!me._text_15.style.opacity)?'inherit':'hidden';
+					me._text_15.ggVisible=true;
+				}
+			}
+		}
+		me._text_15.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_15);
+		el=me._text_14=document.createElement('div');
+		els=me._text_14__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 321px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_14.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_14.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_14.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_14.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_14.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_14.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_14.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_14.style[domTransition]='';
+				if (me._text_14.ggCurrentLogicStateVisible == 0) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 1) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 2) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 3) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 4) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 5) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 6) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 7) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 8) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 9) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 10) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 11) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 12) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 13) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 14) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 15) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 16) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 17) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else if (me._text_14.ggCurrentLogicStateVisible == 18) {
+					me._text_14.style.visibility="hidden";
+					me._text_14.ggVisible=false;
+				}
+				else {
+					me._text_14.style.visibility=(Number(me._text_14.style.opacity)>0||!me._text_14.style.opacity)?'inherit':'hidden';
+					me._text_14.ggVisible=true;
+				}
+			}
+		}
+		me._text_14.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_14);
+		el=me._text_13=document.createElement('div');
+		els=me._text_13__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 233px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_13.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_13.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_13.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_13.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_13.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_13.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_13.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_13.style[domTransition]='';
+				if (me._text_13.ggCurrentLogicStateVisible == 0) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 1) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 2) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 3) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 4) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 5) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 6) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 7) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 8) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 9) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 10) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 11) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 12) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 13) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 14) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 15) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 16) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 17) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else if (me._text_13.ggCurrentLogicStateVisible == 18) {
+					me._text_13.style.visibility="hidden";
+					me._text_13.ggVisible=false;
+				}
+				else {
+					me._text_13.style.visibility=(Number(me._text_13.style.opacity)>0||!me._text_13.style.opacity)?'inherit':'hidden';
+					me._text_13.ggVisible=true;
+				}
+			}
+		}
+		me._text_13.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_13);
+		el=me._text_12=document.createElement('div');
+		els=me._text_12__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 211px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_12.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_12.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_12.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_12.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_12.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_12.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_12.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_12.style[domTransition]='';
+				if (me._text_12.ggCurrentLogicStateVisible == 0) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 1) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 2) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 3) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 4) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 5) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 6) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 7) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 8) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 9) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 10) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 11) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 12) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 13) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 14) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 15) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 16) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 17) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else if (me._text_12.ggCurrentLogicStateVisible == 18) {
+					me._text_12.style.visibility="hidden";
+					me._text_12.ggVisible=false;
+				}
+				else {
+					me._text_12.style.visibility=(Number(me._text_12.style.opacity)>0||!me._text_12.style.opacity)?'inherit':'hidden';
+					me._text_12.ggVisible=true;
+				}
+			}
+		}
+		me._text_12.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_12);
+		el=me._text_11=document.createElement('div');
+		els=me._text_11__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 189px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_11.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_11.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_11.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_11.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_11.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_11.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_11.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_11.style[domTransition]='';
+				if (me._text_11.ggCurrentLogicStateVisible == 0) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 1) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 2) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 3) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 4) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 5) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 6) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 7) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 8) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 9) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 10) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 11) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 12) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 13) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 14) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 15) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 16) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 17) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else if (me._text_11.ggCurrentLogicStateVisible == 18) {
+					me._text_11.style.visibility="hidden";
+					me._text_11.ggVisible=false;
+				}
+				else {
+					me._text_11.style.visibility=(Number(me._text_11.style.opacity)>0||!me._text_11.style.opacity)?'inherit':'hidden';
+					me._text_11.ggVisible=true;
+				}
+			}
+		}
+		me._text_11.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_11);
+		el=me._text_10=document.createElement('div');
+		els=me._text_10__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 167px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_10.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_10.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_10.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_10.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_10.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node8"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_10.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_10.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_10.style[domTransition]='';
+				if (me._text_10.ggCurrentLogicStateVisible == 0) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 1) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 2) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 3) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 4) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 5) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 6) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 7) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 8) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 9) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 10) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 11) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 12) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 13) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 14) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 15) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 16) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 17) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else if (me._text_10.ggCurrentLogicStateVisible == 18) {
+					me._text_10.style.visibility="hidden";
+					me._text_10.ggVisible=false;
+				}
+				else {
+					me._text_10.style.visibility=(Number(me._text_10.style.opacity)>0||!me._text_10.style.opacity)?'inherit':'hidden';
+					me._text_10.ggVisible=true;
+				}
+			}
+		}
+		me._text_10.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_10);
+		el=me._text_1=document.createElement('div');
+		els=me._text_1__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 28px;';
+		hs+='left : 44px;';
+		hs+='position : absolute;';
+		hs+='top : 145px;';
+		hs+='visibility : inherit;';
+		hs+='width : 120px;';
+		hs+='pointer-events:auto;';
+		hs+='<skin> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>33<\/x> <y>162<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>5<\/width> <height>438<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>7<\/x> <y>7<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>173<\/width> <height>352<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>30<\/x> <y>-159<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>100<\/width> <height>20<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>1<\/borderwidth> <backgroundenabled>1<\/backgroundenabled> <borderradius>0<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#000000<\/textcolor> <defaultfont>1<\/defaultfont> <fontsize>14<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>0<\/autosize> <wordwrap>0<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>0<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#febc48<\/scrollbarforeground> <scrollbarbackground>#ffffff<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>9<\/scrollbarswidth> <\/element> <element> <type>scrollarea<\/type> <id>Scrollarea 1<\/id> <x>17<\/x> <y>276<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>176<\/width> <height>144<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>1<\/guitreeclose> <guilock>0<\/guilock> <element> <type>cloner<\/type> <id>Cloner 1<\/id> <x>8<\/x> <y>33<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>144<\/width> <height>122<\/height> <anchor>0<\/anchor> <zindex>-10000<\/zindex> <permeable>1<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <element> <type>text<\/type> <id>Text 5<\/id> <x>11<\/x> <y>-15<\/y> <usexposcss>0<\/usexposcss> <useyposcss>0<\/useyposcss> <xunit>pixels<\/xunit> <yunit>pixels<\/yunit> <alpha>1<\/alpha> <Alpha>1<\/Alpha> <angle>0<\/angle> <scalex>1<\/scalex> <scaley>1<\/scaley> <visible>1<\/visible> <center>4<\/center> <width>142<\/width> <height>73<\/height> <anchor>3<\/anchor> <zindex>-10000<\/zindex> <permeable>0<\/permeable> <handcursor>0<\/handcursor> <notinflash>0<\/notinflash> <notinhtml5>0<\/notinhtml5> <cssstyles>z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;<\/cssstyles> <keycode>-1<\/keycode> <notexportposition>0<\/notexportposition> <notexportsize>0<\/notexportsize> <guihide>0<\/guihide> <guitreeclose>0<\/guitreeclose> <guilock>0<\/guilock> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#0746f1<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <borderradius>5<\/borderradius> <text>$(ut)<\/text> <textalign>1<\/textalign> <textcolor>#ffffff<\/textcolor> <defaultfont>0<\/defaultfont> <fontsize>17<\/fontsize> <fontweight>inherit<\/fontweight> <textexecute>0<\/textexecute> <autosize>1<\/autosize> <wordwrap>1<\/wordwrap> <scrollbar>1<\/scrollbar> <paddingtb>10<\/paddingtb> <paddinglr>0<\/paddinglr> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <mask>0<\/mask> <clonerdirection>vertical<\/clonerdirection> <clonerinvert>0<\/clonerinvert> <clonerautosize>0<\/clonerautosize> <clonertransition>0<\/clonertransition> <clonertransitiontime>1<\/clonertransitiontime> <clonerrepeat>1<\/clonerrepeat> <clonerrepeatunit>columns<\/clonerrepeatunit> <clonersource>nodes<\/clonersource> <clonerexpose>0<\/clonerexpose> <clonerinherittags>1<\/clonerinherittags> <clonerskipempty>1<\/clonerskipempty> <clonerscrolltoview>1<\/clonerscrolltoview> <\/element> <usewidthcss>0<\/usewidthcss> <useheightcss>0<\/useheightcss> <wunit>pixels<\/wunit> <hunit>pixels<\/hunit> <bordercolor>#000000<\/bordercolor> <backgroundcolor>#ffffff<\/backgroundcolor> <borderwidth>0<\/borderwidth> <backgroundenabled>0<\/backgroundenabled> <innerwidth>100<\/innerwidth> <innerheight>20<\/innerheight> <innersizeauto>1<\/innersizeauto> <alignment>0<\/alignment> <horscrollbar>no<\/horscrollbar> <vertscrollbar>yes<\/vertscrollbar> <scrollbarforeground>#c00003<\/scrollbarforeground> <scrollbarbackground>#e6c4c6<\/scrollbarbackground> <scrollbarscorner>#ffffff<\/scrollbarscorner> <scrollbarswidth>0<\/scrollbarswidth> <\/element> <\/skin>';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 120px;';
+		hs+='height: 28px;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: rgba(255,255,255,1);';
+		hs+='font-size: 18px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_1.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_1.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_1.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_1.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_1.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getCurrentNode() == "node1"))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getCurrentNode() == "node2"))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getCurrentNode() == "node3"))
+			)
+			{
+				newLogicStateVisible = 2;
+			}
+			else if (
+				((player.getCurrentNode() == "node4"))
+			)
+			{
+				newLogicStateVisible = 3;
+			}
+			else if (
+				((player.getCurrentNode() == "node5"))
+			)
+			{
+				newLogicStateVisible = 4;
+			}
+			else if (
+				((player.getCurrentNode() == "node6"))
+			)
+			{
+				newLogicStateVisible = 5;
+			}
+			else if (
+				((player.getCurrentNode() == "node7"))
+			)
+			{
+				newLogicStateVisible = 6;
+			}
+			else if (
+				((player.getCurrentNode() == "node9"))
+			)
+			{
+				newLogicStateVisible = 7;
+			}
+			else if (
+				((player.getCurrentNode() == "node10"))
+			)
+			{
+				newLogicStateVisible = 8;
+			}
+			else if (
+				((player.getCurrentNode() == "node11"))
+			)
+			{
+				newLogicStateVisible = 9;
+			}
+			else if (
+				((player.getCurrentNode() == "node13"))
+			)
+			{
+				newLogicStateVisible = 10;
+			}
+			else if (
+				((player.getCurrentNode() == "node14"))
+			)
+			{
+				newLogicStateVisible = 11;
+			}
+			else if (
+				((player.getCurrentNode() == "node15"))
+			)
+			{
+				newLogicStateVisible = 12;
+			}
+			else if (
+				((player.getCurrentNode() == "node16"))
+			)
+			{
+				newLogicStateVisible = 13;
+			}
+			else if (
+				((player.getCurrentNode() == "node17"))
+			)
+			{
+				newLogicStateVisible = 14;
+			}
+			else if (
+				((player.getCurrentNode() == "node18"))
+			)
+			{
+				newLogicStateVisible = 15;
+			}
+			else if (
+				((player.getCurrentNode() == "node19"))
+			)
+			{
+				newLogicStateVisible = 16;
+			}
+			else if (
+				((player.getCurrentNode() == "node20"))
+			)
+			{
+				newLogicStateVisible = 17;
+			}
+			else if (
+				((player.getCurrentNode() == "node22"))
+			)
+			{
+				newLogicStateVisible = 18;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._text_1.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._text_1.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._text_1.style[domTransition]='';
+				if (me._text_1.ggCurrentLogicStateVisible == 0) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 1) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 2) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 3) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 4) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 5) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 6) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 7) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 8) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 9) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 10) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 11) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 12) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 13) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 14) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 15) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 16) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 17) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else if (me._text_1.ggCurrentLogicStateVisible == 18) {
+					me._text_1.style.visibility="hidden";
+					me._text_1.ggVisible=false;
+				}
+				else {
+					me._text_1.style.visibility=(Number(me._text_1.style.opacity)>0||!me._text_1.style.opacity)?'inherit':'hidden';
+					me._text_1.ggVisible=true;
+				}
+			}
+		}
+		me._text_1.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._text_1);
+		el=me._scrollarea_1=document.createElement('div');
+		els=me._scrollarea_1__content=document.createElement('div');
+		els.className='ggskin ggskin_subelement ggskin_scrollarea';
+		el.ggContent=els;
+		el.appendChild(els);
+		el.ggHorScrollVisible = false;
+		el.ggVertScrollVisible = false;
+		el.ggContentLeftOffset = 0;
+		el.ggContentTopOffset = 0;
+		hs ='';
+		hs+='height : 358px;';
+		hs+='left : 0px;';
+		hs+='overflow : visible;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='width : 586px;';
+		hs+="";
+		els.setAttribute('style',hs);
+		me._scrollarea_1.ggScrollByX = function(diffX) {
+			if(!me._scrollarea_1.ggHorScrollVisible || diffX == 0 || me._scrollarea_1.ggHPercentVisible >= 1.0) return;
+			me._scrollarea_1.ggScrollPosX = (me._scrollarea_1__horScrollFg.offsetLeft + diffX);
+			me._scrollarea_1.ggScrollPosX = Math.max(me._scrollarea_1.ggScrollPosX, 0);
+			me._scrollarea_1.ggScrollPosX = Math.min(me._scrollarea_1.ggScrollPosX, me._scrollarea_1__horScrollBg.offsetWidth - me._scrollarea_1__horScrollFg.offsetWidth);
+			me._scrollarea_1__horScrollFg.style.left = me._scrollarea_1.ggScrollPosX + 'px';
+			me._scrollarea_1__content.style.left = -(Math.round(me._scrollarea_1.ggScrollPosX / me._scrollarea_1.ggHPercentVisible)) + me._scrollarea_1.ggContentLeftOffset + 'px';
+			me._scrollarea_1.ggScrollPosXPercent = (me._scrollarea_1__horScrollFg.offsetLeft / me._scrollarea_1__horScrollBg.offsetWidth);
+		}
+		me._scrollarea_1.ggScrollByXSmooth = function(diffX) {
+			if(!me._scrollarea_1.ggHorScrollVisible || diffX == 0 || me._scrollarea_1.ggHPercentVisible >= 1.0) return;
+			var scrollPerInterval = diffX / 25;
+			var scrollCurrX = 0;
+			var id = setInterval(function() {
+				scrollCurrX += scrollPerInterval;
+				me._scrollarea_1.ggScrollPosX += scrollPerInterval;
+				if (diffX > 0 && (scrollCurrX >= diffX || me._scrollarea_1.ggScrollPosX >= me._scrollarea_1__horScrollBg.offsetWidth - me._scrollarea_1__horScrollFg.offsetWidth)) {
+					me._scrollarea_1.ggScrollPosX = Math.min(me._scrollarea_1.ggScrollPosX, me._scrollarea_1__horScrollBg.offsetWidth - me._scrollarea_1__horScrollFg.offsetWidth);
+					clearInterval(id);
+				}
+				if (diffX < 0 && (scrollCurrX <= diffX || me._scrollarea_1.ggScrollPosX <= 0)) {
+					me._scrollarea_1.ggScrollPosX = Math.max(me._scrollarea_1.ggScrollPosX, 0);
+					clearInterval(id);
+				}
+			me._scrollarea_1__horScrollFg.style.left = me._scrollarea_1.ggScrollPosX + 'px';
+			me._scrollarea_1__content.style.left = -(Math.round(me._scrollarea_1.ggScrollPosX / me._scrollarea_1.ggHPercentVisible)) + me._scrollarea_1.ggContentLeftOffset + 'px';
+			me._scrollarea_1.ggScrollPosXPercent = (me._scrollarea_1__horScrollFg.offsetLeft / me._scrollarea_1__horScrollBg.offsetWidth);
+			}, 10);
+		}
+		me._scrollarea_1.ggScrollByY = function(diffY) {
+			if(!me._scrollarea_1.ggVertScrollVisible || diffY == 0 || me._scrollarea_1.ggVPercentVisible >= 1.0) return;
+			me._scrollarea_1.ggScrollPosY = (me._scrollarea_1__vertScrollFg.offsetTop + diffY);
+			me._scrollarea_1.ggScrollPosY = Math.max(me._scrollarea_1.ggScrollPosY, 0);
+			me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
+			me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
+			me._scrollarea_1__content.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + me._scrollarea_1.ggContentTopOffset + 'px';
+			me._scrollarea_1.ggScrollPosYPercent = (me._scrollarea_1__vertScrollFg.offsetTop / me._scrollarea_1__vertScrollBg.offsetHeight);
+		}
+		me._scrollarea_1.ggScrollByYSmooth = function(diffY) {
+			if(!me._scrollarea_1.ggVertScrollVisible || diffY == 0 || me._scrollarea_1.ggVPercentVisible >= 1.0) return;
+			var scrollPerInterval = diffY / 25;
+			var scrollCurrY = 0;
+			var id = setInterval(function() {
+				scrollCurrY += scrollPerInterval;
+				me._scrollarea_1.ggScrollPosY += scrollPerInterval;
+				if (diffY > 0 && (scrollCurrY >= diffY || me._scrollarea_1.ggScrollPosY >= me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight)) {
+					me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
+					clearInterval(id);
+				}
+				if (diffY < 0 && (scrollCurrY <= diffY || me._scrollarea_1.ggScrollPosY <= 0)) {
+					me._scrollarea_1.ggScrollPosY = Math.max(me._scrollarea_1.ggScrollPosY, 0);
+					clearInterval(id);
+				}
+			me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
+			me._scrollarea_1__content.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + me._scrollarea_1.ggContentTopOffset + 'px';
+			me._scrollarea_1.ggScrollPosYPercent = (me._scrollarea_1__vertScrollFg.offsetTop / me._scrollarea_1__vertScrollBg.offsetHeight);
+			}, 10);
+		}
+		me._scrollarea_1.ggScrollIntoView = function(posX, posY, width, height) {
+			if (me._scrollarea_1.ggHorScrollVisible) {
+				if (posX < 0) {
+					var diffX = Math.floor(posX * me._scrollarea_1.ggHPercentVisible);
+					me._scrollarea_1.ggScrollByXSmooth(diffX);
+				} else if (posX + width > me._scrollarea_1.offsetWidth - (me._scrollarea_1.ggVertScrollVisible ? 9 : 0)) {
+					var diffX = Math.ceil(((posX + width) - (me._scrollarea_1.offsetWidth - (me._scrollarea_1.ggVertScrollVisible ? 9 : 0))) * me._scrollarea_1.ggHPercentVisible);
+					me._scrollarea_1.ggScrollByXSmooth(diffX);
+				}
+			}
+			if (me._scrollarea_1.ggVertScrollVisible) {
+				if (posY < 0) {
+					var diffY = Math.floor(posY * me._scrollarea_1.ggVPercentVisible);
+					me._scrollarea_1.ggScrollByYSmooth(diffY);
+				} else if (posY + height > me._scrollarea_1.offsetHeight - (me._scrollarea_1.ggHorScrollVisible ? 9 : 0)) {
+					var diffY = Math.ceil(((posY + height) - (me._scrollarea_1.offsetHeight - (me._scrollarea_1.ggHorScrollVisible ? 9 : 0))) * me._scrollarea_1.ggVPercentVisible);
+					me._scrollarea_1.ggScrollByYSmooth(diffY);
+				}
+			}
+		}
+		els.ontouchstart = function(e) {
+			e = e || window.event;
+			var t = e.touches;
+			me._scrollarea_1.ggDragLastX = t[0].clientX;
+			me._scrollarea_1.ggDragLastY = t[0].clientY;
+			me._scrollarea_1__content.ontouchend = function() {
+				let inertiaInterval = setInterval(function() {
+					me._scrollarea_1.ggDragInertiaX *= 0.65;
+					me._scrollarea_1.ggDragInertiaY *= 0.65;
+					me._scrollarea_1.ggScrollByX(-me._scrollarea_1.ggDragInertiaX);
+					me._scrollarea_1.ggScrollByY(-me._scrollarea_1.ggDragInertiaY);
+					if (Math.abs(me._scrollarea_1.ggDragInertiaX) < 1.0 && Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
+						clearInterval(inertiaInterval);
+					}
+					}, 50);
+				me._scrollarea_1__content.ontouchend = null;
+				me._scrollarea_1__content.ontouchmove = null;
+			}
+			me._scrollarea_1__content.ontouchmove = function(e) {
+				e = e || window.event;
+				e.preventDefault();
+				var t = e.touches;
+				var diffX = t[0].clientX - me._scrollarea_1.ggDragLastX;
+				var diffY = t[0].clientY - me._scrollarea_1.ggDragLastY;
+				me._scrollarea_1.ggDragInertiaX = diffX;
+				me._scrollarea_1.ggDragInertiaY = diffY;
+				me._scrollarea_1.ggDragLastX = t[0].clientX;
+				me._scrollarea_1.ggDragLastY = t[0].clientY;
+				me._scrollarea_1.ggScrollByX(-diffX);
+				me._scrollarea_1.ggScrollByY(-diffY);
+			}
+		}
+		elVertScrollBg = me._scrollarea_1__vertScrollBg = document.createElement('div');
+		el.appendChild(elVertScrollBg);
+		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 9px; height: 438px; background-color: rgba(255,255,255,1); pointer-events: auto;');
+		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
+		elVertScrollFg = me._scrollarea_1__vertScrollFg = document.createElement('div');
+		elVertScrollBg.appendChild(elVertScrollFg);
+		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 9px; height: 438px; background-color: rgba(254,188,72,1); pointer-events: auto;');
+		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
+		me._scrollarea_1.ggScrollPosY = 0;
+		me._scrollarea_1.ggScrollPosYPercent = 0.0;
+		elVertScrollFg.onmousedown = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			e.stopPropagation();
+			me._scrollarea_1.ggDragLastY = e.clientY;
+			document.onmouseup = function() {
+				let inertiaInterval = setInterval(function() {
+					me._scrollarea_1.ggDragInertiaY *= 0.65;
+					me._scrollarea_1.ggScrollByY(me._scrollarea_1.ggDragInertiaY);
+					if (Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
+						clearInterval(inertiaInterval);
+					}
+					}, 50);
+				document.onmouseup = null;
+				document.onmousemove = null;
+			}
+			document.onmousemove = function(e) {
+				e = e || window.event;
+				e.preventDefault();
+				var diffY = e.clientY - me._scrollarea_1.ggDragLastY;
+				me._scrollarea_1.ggDragInertiaY = diffY;
+				me._scrollarea_1.ggDragLastY = e.clientY;
+				me._scrollarea_1.ggScrollByY(diffY);
+			}
+		}
+		elVertScrollFg.ontouchstart = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			e.stopPropagation();
+			var t = e.touches;
+			me._scrollarea_1.ggDragLastY = t[0].clientY;
+			document.ontouchend = function() {
+				let inertiaInterval = setInterval(function() {
+					me._scrollarea_1.ggDragInertiaY *= 0.65;
+					me._scrollarea_1.ggScrollByY(me._scrollarea_1.ggDragInertiaY);
+					if (Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
+						clearInterval(inertiaInterval);
+					}
+					}, 50);
+				document.ontouchend = null;
+				document.ontouchmove = null;
+			}
+			document.ontouchmove = function(e) {
+				e = e || window.event;
+				e.preventDefault();
+				var t = e.touches;
+				var diffY = t[0].clientY - me._scrollarea_1.ggDragLastY;
+				me._scrollarea_1.ggDragInertiaY = diffY;
+				me._scrollarea_1.ggDragLastY = t[0].clientY;
+				me._scrollarea_1.ggScrollByY(diffY);
+			}
+		}
+		elVertScrollBg.onmousedown = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			var diffY = me._scrollarea_1.ggScrollHeight;
+			if (e.offsetY < me._scrollarea_1.ggScrollPosY) {
+				diffY = diffY * -1;
+			}
+			me._scrollarea_1.ggScrollByYSmooth(diffY);
+		}
+		elVertScrollBg.ontouchstart = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			e.stopPropagation();
+			var t = e.touches;
+			var rect = me._scrollarea_1__vertScrollBg.getBoundingClientRect();
+			var diffY = me._scrollarea_1.ggScrollHeight;
+			if ((t[0].clientY - rect.top) < me._scrollarea_1.ggScrollPosY) {
+				diffY = diffY * -1;
+			}
+			me._scrollarea_1.ggScrollByYSmooth(diffY);
+		}
+		el.addEventListener('wheel', function(e) {
+			e.preventDefault();
+			var wheelDelta = Math.sign(e.deltaY);
+			me._scrollarea_1.ggScrollByYSmooth(20 * wheelDelta);
+		});
+		elCornerBg = me._scrollarea_1__cornerBg = document.createElement('div');
+		el.appendChild(elCornerBg);
+		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 9px; height: 9px; background-color: rgba(255,255,255,1);');
+		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
+		el.ggId="Scrollarea 1";
+		el.ggDy=-38;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_scrollarea ";
+		el.ggType='scrollarea';
+		hs ='';
+		hs+='border : 1px solid rgba(0, 0, 0, 0);';
+		hs+='height : 438px;';
+		hs+='left : 21px;';
+		hs+='overflow : hidden;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : inherit;';
+		hs+='width : 5px;';
+		hs+='pointer-events:auto;';
+		hs+='z-index: 1;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._scrollarea_1.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._scrollarea_1.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+			{
+				var horScrollWasVisible = this.ggHorScrollVisible;
+				var vertScrollWasVisible = this.ggVertScrollVisible;
+				this.ggContent.style.left = '0px';
+				this.ggContent.style.top = '0px';
+				this.ggContentLeftOffset = 0;
+				this.ggContentTopOffset = 0;
+				var offsetWidthWithScale = this.getBoundingClientRect().width;
+				var offsetHeightWithScale = this.getBoundingClientRect().height;
+				var domRectContent = this.ggContent.getBoundingClientRect();
+				var minX = 0;
+				var minY = 0;
+				var maxX = 0;
+				var maxY = 0;
+				var stack=[];
+				stack.push(this.ggContent);
+				while(stack.length>0) {
+					var e=stack.pop();
+					if (e!=this.ggContent && e.getBoundingClientRect && e.style['display']!='none') {
+						var domRectChild = e.getBoundingClientRect();
+						var diffX = domRectChild.left - domRectContent.left;
+						minX = Math.min(minX, diffX);
+						maxX = Math.max(maxX, diffX + domRectChild.width);
+						var diffY = domRectChild.top - domRectContent.top;
+						minY = Math.min(minY, diffY);
+						maxY = Math.max(maxY, diffY + domRectChild.height);
+					}
+					if (e.hasChildNodes() && e.style['display']!='none') {
+						for(var i=0;i<e.childNodes.length;i++) {
+							stack.push(e.childNodes[i]);
+						}
+					}
+				}
+				if (minX < 0) this.ggContentLeftOffset = -minX;
+				if (minY < 0) this.ggContentTopOffset = -minY;
+				var contentWidth = maxX - minX;
+				var contentHeight = maxY - minY;
+				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
+				this.ggContent.style.top = this.ggContentTopOffset + 'px';
+				this.ggContent.style.width = contentWidth + 'px';
+				this.ggContent.style.height = contentHeight + 'px';
+				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
+				this.ggContent.style.marginLeft = '0px';
+				this.ggContent.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
+				this.ggContent.style.marginTop = '0px';
+				me._scrollarea_1__vertScrollBg.style.visibility = 'inherit';
+				me._scrollarea_1__vertScrollFg.style.visibility = 'inherit';
+				me._scrollarea_1.ggVertScrollVisible = true;
+				if(me._scrollarea_1.ggVertScrollVisible) {
+					me._scrollarea_1.ggAvailableWidth = me._scrollarea_1.offsetWidth - 9;
+					if (me._scrollarea_1.ggHorScrollVisible) {
+						me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.offsetHeight - 9;
+						me._scrollarea_1.ggAvailableHeightWithScale = me._scrollarea_1.getBoundingClientRect().height - me._scrollarea_1__vertScrollBg.getBoundingClientRect().width;
+						me._scrollarea_1__cornerBg.style.visibility = 'inherit';
+					} else {
+						me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.offsetHeight;
+						me._scrollarea_1.ggAvailableHeightWithScale = me._scrollarea_1.getBoundingClientRect().height;
+						me._scrollarea_1__cornerBg.style.visibility = 'hidden';
+					}
+					me._scrollarea_1__vertScrollBg.style.height = me._scrollarea_1.ggAvailableHeight + 'px';
+					me._scrollarea_1.ggVPercentVisible = contentHeight != 0 ? me._scrollarea_1.ggAvailableHeightWithScale / contentHeight : 0.0;
+					if (me._scrollarea_1.ggVPercentVisible > 1.0) me._scrollarea_1.ggVPercentVisible = 1.0;
+					me._scrollarea_1.ggScrollHeight =  Math.round(me._scrollarea_1__vertScrollBg.offsetHeight * me._scrollarea_1.ggVPercentVisible);
+					me._scrollarea_1__vertScrollFg.style.height = me._scrollarea_1.ggScrollHeight + 'px';
+					me._scrollarea_1.ggScrollPosY = me._scrollarea_1.ggScrollPosYPercent * me._scrollarea_1.ggAvailableHeight;
+					me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
+					me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
+					if (me._scrollarea_1.ggVPercentVisible < 1.0) {
+						me._scrollarea_1__content.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
+					}
+				} else {
+					me._scrollarea_1.ggAvailableWidth = me._scrollarea_1.offsetWidth;
+					me._scrollarea_1.ggScrollPosY = 0;
+					me._scrollarea_1.ggScrollPosYPercent = 0.0;
+					me._scrollarea_1__content.style.top = this.ggContentTopOffset + 'px';
+					me._scrollarea_1__cornerBg.style.visibility = 'hidden';
+				}
+				if(horScrollWasVisible != me._scrollarea_1.ggHorScrollVisible || vertScrollWasVisible != me._scrollarea_1.ggVertScrollVisible) {
+					me.updateSize(me._scrollarea_1);
+					me._scrollarea_1.ggUpdatePosition();
+				}
+			}
+		}
+		el=me._cloner_1=document.createElement('div');
+		el.ggNumRepeat = 1;
+		el.ggNumRows = 0;
+		el.ggNumCols = 0;
+		el.ggWidth = 173;
+		el.ggHeight = 352;
+		el.ggUpdating = false;
+		el.ggFilter = [];
+		el.ggInstances = [];
+		el.ggUpdate = function(filter) {
+			if(me._cloner_1.ggUpdating == true) return;
+			me._cloner_1.ggUpdating = true;
+			var el=me._cloner_1;
+			var curNumCols = 0;
+			curNumCols = me._cloner_1.ggNumRepeat;
+			if (curNumCols < 1) curNumCols = 1;
+			if (typeof filter=='object') {
+				el.ggFilter = filter;
+			} else {
+				filter = el.ggFilter;
+			};
+			if (me.ggTag) filter.push(me.ggTag);
+			filter=filter.sort();
+			if ((el.ggNumCols == curNumCols) && (el.ggInstances.length > 0) && (filter.length === el.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.ggCurrentFilter[index] }) )) {
+				me._cloner_1.ggUpdating = false;
+				return;
+			} else {
+				el.ggNumRows = 1;
+				el.ggNumCols = curNumCols;
+			}
+			el.ggCurrentFilter = filter;
+			el.ggInstances = [];
+			if (el.hasChildNodes() == true) {
+				while (el.firstChild) {
+					el.removeChild(el.firstChild);
+				}
+			}
+			var tourNodes = player.getNodeIds();
+			var row = 0;
+			var column = 0;
+			var currentIndex = 0;
+			for (var i=0; i < tourNodes.length; i++) {
+				var nodeId = tourNodes[i];
+				var passed = true;
+				var nodeData = player.getNodeUserdata(nodeId);
+				if (filter.length > 0) {
+					for (var j=0; j < filter.length; j++) {
+						if (nodeData['tags'].indexOf(filter[j]) == -1) passed = false;
+					}
+				}
+				if (passed) {
+				var parameter={};
+				parameter.top=(row * me._cloner_1.ggHeight) + 'px';
+				parameter.left=(column * me._cloner_1.ggWidth) + 'px';
+				parameter.index=currentIndex;
+				parameter.title=nodeData['title'];
+				var inst = new SkinCloner_cloner_1_Class(nodeId, me, el, parameter);
+				currentIndex++;
+				el.ggInstances.push(inst);
+				el.appendChild(inst.__div);
+				inst.__div.ggObj=inst;
+				skin.updateSize(inst.__div);
+				column++;
+				if (column >= el.ggNumCols) {
+					column = 0;
+					row++;
+					el.ggNumRows++;
+				}
+				}
+			}
+			me._cloner_1.ggUpdating = false;
+			player.triggerEvent('clonerchanged');
+			if (me._cloner_1.parentNode.classList.contains('ggskin_subelement') && me._cloner_1.parentNode.parentNode.classList.contains('ggskin_scrollarea')) me._cloner_1.parentNode.parentNode.ggUpdatePosition();
+		}
+		el.ggFilter = [];
+		el.ggId="Cloner 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_cloner ";
+		el.ggType='cloner';
+		hs ='';
+		hs+='height : 352px;';
+		hs+='left : 7px;';
+		hs+='overflow : visible;';
+		hs+='position : absolute;';
+		hs+='top : 7px;';
+		hs+='visibility : inherit;';
+		hs+='width : 173px;';
+		hs+='pointer-events:none;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._cloner_1.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._cloner_1.ggUpdateConditionNodeChange=function () {
+			var cnode=player.getCurrentNode();
+			for(var i=0; i<me._cloner_1.childNodes.length; i++) {
+				var child=me._cloner_1.childNodes[i];
+				if (child.ggObj && child.ggObj.ggNodeId==cnode) {
+			        var childOffX = child.offsetLeft;
+			        var childOffY = child.offsetTop;
+					var p = child.parentElement;
+			        while (p != null && p!==this.divSkin) {
+						if (p.ggType && p.ggType == 'scrollarea') {
+							p.ggScrollIntoView(childOffX, childOffY, child.clientWidth, child.clientHeight);
+						}
+						childOffX += p.offsetLeft;
+						childOffY += p.offsetTop;
+						p = p.parentElement;
+					}
+				}
+			}
+		}
+		me._cloner_1.ggUpdatePosition=function (useTransition) {
+				me._cloner_1.ggUpdate();
+		}
+		me._cloner_1.ggNodeChange=function () {
+			me._cloner_1.ggUpdateConditionNodeChange();
+		}
+		me._scrollarea_1__content.appendChild(me._cloner_1);
+		me.divSkin.appendChild(me._scrollarea_1);
 		me._video_1.ggInitMedia('media/video_1.mp4');
 		me._video_2.ggInitMedia('media/video_25.mp4');
 		me._video_3.ggInitMedia('media/video_24.mp4');
@@ -30875,14 +35665,12 @@ function pano2vrSkin(player,base) {
 			me.updateSize(me.divSkin);
 		});
 		player.addListener('configloaded', function() {
-			me._cloner_10.ggUpdate();
-			me._cloner_1.ggUpdate();
 			me._node_cloner.ggUpdate();
+			me._cloner_1.ggUpdate();
 		});
 		player.addListener('imagesready', function() {
-			me._scrollarea_10.ggUpdatePosition();
-			me._scrollarea_1.ggUpdatePosition();
 			me._node_scroller.ggUpdatePosition();
+			me._scrollarea_1.ggUpdatePosition();
 		});
 	};
 	this.hotspotProxyClick=function(id, url) {
@@ -30900,7 +35688,7 @@ function pano2vrSkin(player,base) {
 		me.ggCurrentTime=new Date().getTime();
 	};
 	player.addListener('timer', me.skinTimerEvent);
-	function SkinCloner_cloner_10_Class(nodeId, parentScope,ggParent,parameter) {
+	function SkinCloner_cloner_1_Class(nodeId, parentScope,ggParent,parameter) {
 		var me=this;
 		var hs='';
 		me.parentScope=parentScope;
@@ -30922,112 +35710,24 @@ function pano2vrSkin(player,base) {
 		me.__div.ggElementNodeId=function() {
 			return me.ggNodeId;
 		}
-		el=me._text_50=document.createElement('div');
-		els=me._text_50__text=document.createElement('div');
-		el.className='ggskin ggskin_textdiv';
-		el.ggTextDiv=els;
-		el.ggId="Text 5";
-		el.ggDy=-159;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_text ";
-		el.ggType='text';
-		hs ='';
-		hs+='height : 20px;';
-		hs+='left : 30px;';
-		hs+='position : absolute;';
-		hs+='top : -10000px;';
-		hs+='visibility : inherit;';
-		hs+='width : 100px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		hs ='position:absolute;';
-		hs += 'box-sizing: border-box;';
-		hs+='cursor: default;';
-		hs+='left: 0px;';
-		hs+='top:  0px;';
-		hs+='width: 102px;';
-		hs+='height: 22px;';
-		hs+='background: #ffffff;';
-		hs+='border: 1px solid #000000;';
-		hs+='color: rgba(0,0,0,1);';
-		hs+='text-align: center;';
-		hs+='white-space: nowrap;';
-		hs+='padding: 0px 1px 0px 1px;';
-		hs+='overflow: hidden;';
-		hs+='overflow-y: auto;';
-		els.setAttribute('style',hs);
-		els.innerHTML=me.ggUserdata.title;
-		el.appendChild(els);
-		me._text_50.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._text_50.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var ph=this.parentNode.clientHeight;
-				var h=this.offsetHeight;
-					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
-			}
-		}
-		me.__div.appendChild(me._text_50);
-	};
-	function SkinCloner_cloner_1_Class(nodeId, parentScope,ggParent,parameter) {
-		var me=this;
-		var hs='';
-		me.parentScope=parentScope;
-		me.ggParent=ggParent;
-		me.findElements=skin.findElements;
-		me.ggIndex=parameter.index;
-		me.ggNodeId=nodeId;
-		me.ggTitle=parameter.title;
-		me.ggUserdata=skin.player.getNodeUserdata(me.ggNodeId);
-		me.elementMouseDown={};
-		me.elementMouseOver={};
-		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 144px; height: 122px; visibility: inherit; overflow: visible;');
-		me.__div.style.left=parameter.left;
-		me.__div.style.top=parameter.top;
-		me.__div.ggIsActive = function() {
-			return player.getCurrentNode()==me.ggNodeId;
-		}
-		me.__div.ggElementNodeId=function() {
-			return me.ggNodeId;
-		}
 		el=me._text_5=document.createElement('div');
 		els=me._text_5__text=document.createElement('div');
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 5";
-		el.ggDy=-15;
+		el.ggDy=-157;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
-		hs+='height : 73px;';
-		hs+='left : 11px;';
+		hs+='height : 23px;';
+		hs+='left : 460px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 142px;';
+		hs+='width : 120px;';
 		hs+='pointer-events:auto;';
-		hs+='z-index: 1; font-family:Geometrica; text-shadow: 2px 2px 60px #1c212a;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
 		hs ='position:absolute;';
@@ -31035,17 +35735,16 @@ function pano2vrSkin(player,base) {
 		hs+='cursor: default;';
 		hs+='left: 0px;';
 		hs+='top:  0px;';
-		hs+='width: 142px;';
-		hs+='height: auto;';
+		hs+='width: 120px;';
+		hs+='height: 23px;';
+		hs+='background: #ffffff;';
 		hs+='border: 0px solid #000000;';
-		hs+='border-radius: 5px;';
-		hs+=cssPrefix + 'border-radius: 5px;';
-		hs+='color: rgba(255,255,255,1);';
-		hs+='font-size: 17px;';
+		hs+='color: rgba(0,0,0,1);';
+		hs+='font-size: 18px;';
 		hs+='font-weight: inherit;';
 		hs+='text-align: center;';
-		hs+='white-space: pre-wrap;';
-		hs+='padding: 11px 2px 11px 2px;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
 		hs+='overflow: hidden;';
 		hs+='overflow-y: auto;';
 		els.setAttribute('style',hs);
@@ -31197,7 +35896,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="node_title";
-		el.ggDx=1;
+		el.ggDx=3;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -31209,7 +35908,7 @@ function pano2vrSkin(player,base) {
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 246px;';
+		hs+='width : 254px;';
 		hs+='pointer-events:none;';
 		hs+='font-family:Geometrica;';
 		el.setAttribute('style',hs);
@@ -31218,7 +35917,7 @@ function pano2vrSkin(player,base) {
 		hs += 'box-sizing: border-box;';
 		hs+='left: 0px;';
 		hs+='bottom:  0px;';
-		hs+='width: 246px;';
+		hs+='width: 254px;';
 		hs+='height: auto;';
 		hs+='pointer-events: none;';
 		hs+='background: #000000;';
@@ -31356,9 +36055,29 @@ function pano2vrSkin(player,base) {
 	me._boton_atras_19.logicBlock_visible();
 	me._boton_atras_20.logicBlock_visible();
 	me._boton_atras_21.logicBlock_visible();
+	me._text_118.logicBlock_visible();
+	me._text_117.logicBlock_visible();
+	me._text_116.logicBlock_visible();
+	me._text_115.logicBlock_visible();
+	me._text_114.logicBlock_visible();
+	me._text_113.logicBlock_visible();
+	me._text_112.logicBlock_visible();
+	me._text_111.logicBlock_visible();
+	me._text_110.logicBlock_visible();
+	me._text_19.logicBlock_visible();
+	me._text_18.logicBlock_visible();
+	me._text_17.logicBlock_visible();
+	me._text_16.logicBlock_visible();
+	me._text_15.logicBlock_visible();
+	me._text_14.logicBlock_visible();
+	me._text_13.logicBlock_visible();
+	me._text_12.logicBlock_visible();
+	me._text_11.logicBlock_visible();
+	me._text_10.logicBlock_visible();
+	me._text_1.logicBlock_visible();
 	player.addListener('fullscreenenter', function(args) { me._button_image_normalscreen.logicBlock_visible();me._button_image_fullscreen.logicBlock_visible(); });
 	player.addListener('fullscreenexit', function(args) { me._button_image_normalscreen.logicBlock_visible();me._button_image_fullscreen.logicBlock_visible(); });
-	player.addListener('changenode', function(args) { me._boton_atras_1.logicBlock_visible();me._menu_background.logicBlock_alpha();me._menu_open.logicBlock_position();me._video_1.logicBlock_visible();me._video_2.logicBlock_visible();me._video_3.logicBlock_visible();me._video_4.logicBlock_visible();me._video_5.logicBlock_visible();me._video_6.logicBlock_visible();me._video_7.logicBlock_visible();me._video_8.logicBlock_visible();me._video_9.logicBlock_visible();me._video_10.logicBlock_visible();me._video_11.logicBlock_visible();me._video_12.logicBlock_visible();me._video_13.logicBlock_visible();me._video_14.logicBlock_visible();me._video_15.logicBlock_visible();me._video_16.logicBlock_visible();me._video_17.logicBlock_visible();me._video_18.logicBlock_visible();me._video_19.logicBlock_visible();me._video_20.logicBlock_visible();me._video_21.logicBlock_visible();me._botones_1.logicBlock_visible();me._svg_1.logicBlock_visible();me._svg_2.logicBlock_visible();me._svg_319.logicBlock_visible();me._svg_419.logicBlock_visible();me._svg_519.logicBlock_visible();me._svg_6.logicBlock_visible();me._svg_7.logicBlock_visible();me._svg_8.logicBlock_visible();me._svg_9.logicBlock_visible();me._svg_10.logicBlock_visible();me._svg_11.logicBlock_visible();me._svg_12.logicBlock_visible();me._svg_13.logicBlock_visible();me._svg_14.logicBlock_visible();me._svg_15.logicBlock_visible();me._svg_16.logicBlock_visible();me._svg_17.logicBlock_visible();me._svg_18.logicBlock_visible();me._svg_19.logicBlock_visible();me._svg_20.logicBlock_visible();me._svg_21.logicBlock_visible();me._botones_2.logicBlock_visible();me._botones_3.logicBlock_visible();me._botones_4.logicBlock_visible();me._botones_5.logicBlock_visible();me._botones_6.logicBlock_visible();me._botones_7.logicBlock_visible();me._botones_8.logicBlock_visible();me._botones_9.logicBlock_visible();me._botones_10.logicBlock_visible();me._botones_11.logicBlock_visible();me._botones_12.logicBlock_visible();me._botones_13.logicBlock_visible();me._botones_14.logicBlock_visible();me._botones_15.logicBlock_visible();me._botones_16.logicBlock_visible();me._botones_17.logicBlock_visible();me._botones_18.logicBlock_visible();me._botones_19.logicBlock_visible();me._botones_20.logicBlock_visible();me._botones_21.logicBlock_visible();me._boton_atras_2.logicBlock_visible();me._boton_atras_3.logicBlock_visible();me._boton_atras_4.logicBlock_visible();me._boton_atras_5.logicBlock_visible();me._boton_atras_6.logicBlock_visible();me._boton_atras_7.logicBlock_visible();me._boton_atras_8.logicBlock_visible();me._boton_atras_9.logicBlock_visible();me._boton_atras_10.logicBlock_visible();me._boton_atras_11.logicBlock_visible();me._boton_atras_12.logicBlock_visible();me._boton_atras_13.logicBlock_visible();me._boton_atras_14.logicBlock_visible();me._boton_atras_15.logicBlock_visible();me._boton_atras_16.logicBlock_visible();me._boton_atras_17.logicBlock_visible();me._boton_atras_18.logicBlock_visible();me._boton_atras_19.logicBlock_visible();me._boton_atras_20.logicBlock_visible();me._boton_atras_21.logicBlock_visible(); });
+	player.addListener('changenode', function(args) { me._boton_atras_1.logicBlock_visible();me._menu_background.logicBlock_alpha();me._menu_open.logicBlock_position();me._video_1.logicBlock_visible();me._video_2.logicBlock_visible();me._video_3.logicBlock_visible();me._video_4.logicBlock_visible();me._video_5.logicBlock_visible();me._video_6.logicBlock_visible();me._video_7.logicBlock_visible();me._video_8.logicBlock_visible();me._video_9.logicBlock_visible();me._video_10.logicBlock_visible();me._video_11.logicBlock_visible();me._video_12.logicBlock_visible();me._video_13.logicBlock_visible();me._video_14.logicBlock_visible();me._video_15.logicBlock_visible();me._video_16.logicBlock_visible();me._video_17.logicBlock_visible();me._video_18.logicBlock_visible();me._video_19.logicBlock_visible();me._video_20.logicBlock_visible();me._video_21.logicBlock_visible();me._botones_1.logicBlock_visible();me._svg_1.logicBlock_visible();me._svg_2.logicBlock_visible();me._svg_319.logicBlock_visible();me._svg_419.logicBlock_visible();me._svg_519.logicBlock_visible();me._svg_6.logicBlock_visible();me._svg_7.logicBlock_visible();me._svg_8.logicBlock_visible();me._svg_9.logicBlock_visible();me._svg_10.logicBlock_visible();me._svg_11.logicBlock_visible();me._svg_12.logicBlock_visible();me._svg_13.logicBlock_visible();me._svg_14.logicBlock_visible();me._svg_15.logicBlock_visible();me._svg_16.logicBlock_visible();me._svg_17.logicBlock_visible();me._svg_18.logicBlock_visible();me._svg_19.logicBlock_visible();me._svg_20.logicBlock_visible();me._svg_21.logicBlock_visible();me._botones_2.logicBlock_visible();me._botones_3.logicBlock_visible();me._botones_4.logicBlock_visible();me._botones_5.logicBlock_visible();me._botones_6.logicBlock_visible();me._botones_7.logicBlock_visible();me._botones_8.logicBlock_visible();me._botones_9.logicBlock_visible();me._botones_10.logicBlock_visible();me._botones_11.logicBlock_visible();me._botones_12.logicBlock_visible();me._botones_13.logicBlock_visible();me._botones_14.logicBlock_visible();me._botones_15.logicBlock_visible();me._botones_16.logicBlock_visible();me._botones_17.logicBlock_visible();me._botones_18.logicBlock_visible();me._botones_19.logicBlock_visible();me._botones_20.logicBlock_visible();me._botones_21.logicBlock_visible();me._boton_atras_2.logicBlock_visible();me._boton_atras_3.logicBlock_visible();me._boton_atras_4.logicBlock_visible();me._boton_atras_5.logicBlock_visible();me._boton_atras_6.logicBlock_visible();me._boton_atras_7.logicBlock_visible();me._boton_atras_8.logicBlock_visible();me._boton_atras_9.logicBlock_visible();me._boton_atras_10.logicBlock_visible();me._boton_atras_11.logicBlock_visible();me._boton_atras_12.logicBlock_visible();me._boton_atras_13.logicBlock_visible();me._boton_atras_14.logicBlock_visible();me._boton_atras_15.logicBlock_visible();me._boton_atras_16.logicBlock_visible();me._boton_atras_17.logicBlock_visible();me._boton_atras_18.logicBlock_visible();me._boton_atras_19.logicBlock_visible();me._boton_atras_20.logicBlock_visible();me._boton_atras_21.logicBlock_visible();me._text_118.logicBlock_visible();me._text_117.logicBlock_visible();me._text_116.logicBlock_visible();me._text_115.logicBlock_visible();me._text_114.logicBlock_visible();me._text_113.logicBlock_visible();me._text_112.logicBlock_visible();me._text_111.logicBlock_visible();me._text_110.logicBlock_visible();me._text_19.logicBlock_visible();me._text_18.logicBlock_visible();me._text_17.logicBlock_visible();me._text_16.logicBlock_visible();me._text_15.logicBlock_visible();me._text_14.logicBlock_visible();me._text_13.logicBlock_visible();me._text_12.logicBlock_visible();me._text_11.logicBlock_visible();me._text_10.logicBlock_visible();me._text_1.logicBlock_visible(); });
 	player.addListener('varchanged_vis_thumbnail_menu', function(args) { me._menu_background.logicBlock_alpha();me._menu_open.logicBlock_position(); });
 	player.addListener('mouseover', function(args) { me._node_cloner.callChildLogicBlocks_mouseover(); });
 	me.skinTimerEvent();
