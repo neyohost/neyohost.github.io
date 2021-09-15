@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: customizacion_ny.ggsk
-// Generated 2021-09-15T13:33:23
+// Generated 2021-09-15T14:47:47
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -6459,7 +6459,7 @@ function pano2vrSkin(player,base) {
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 586px;';
+		hs+='width : 366px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._scrollarea_1.ggScrollByX = function(diffX) {
@@ -29769,6 +29769,77 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me.divSkin.appendChild(me._text_3);
+		el=me._text_2=document.createElement('div');
+		els=me._text_2__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 2";
+		el.ggDx=-146;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='height : 27px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : 14px;';
+		hs+='visibility : hidden;';
+		hs+='width : 157px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 159px;';
+		hs+='height: 29px;';
+		hs+='background: #ffffff;';
+		hs+='border: 1px solid #000000;';
+		hs+='color: #000000;';
+		hs+='text-align: center;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		els.setAttribute('style',hs);
+		me._text_2.ggUpdateText=function() {
+			var hs=me.ggUserdata.title;
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_2.ggUpdateText();
+		player.addListener('changenode', function() {
+			me._text_2.ggUpdateText();
+		});
+		el.appendChild(els);
+		me._text_2.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_2.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth + 2;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+			}
+		}
+		me._text_2.ggNodeChange=function () {
+			history.replaceState({}, player.userdata.title, location.href.replace(location.hash,"") + '#' + player.getCurrentNode());
+		}
+		me.divSkin.appendChild(me._text_2);
 		me._floorplan.ggMarkerInstances=[];
 		me._floorplan.ggMapId = 'FloorPlan01';
 		me._floorplan.ggLastNodeId=null;
@@ -30202,18 +30273,18 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 5";
-		el.ggDy=-157;
+		el.ggDy=-374;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
-		hs+='height : 23px;';
-		hs+='left : 460px;';
+		hs+='height : 10px;';
+		hs+='left : 350px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 120px;';
+		hs+='width : 10px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -30222,8 +30293,8 @@ function pano2vrSkin(player,base) {
 		hs+='cursor: default;';
 		hs+='left: 0px;';
 		hs+='top:  0px;';
-		hs+='width: 120px;';
-		hs+='height: 23px;';
+		hs+='width: 10px;';
+		hs+='height: 10px;';
 		hs+='background: #ffffff;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(0,0,0,1);';
