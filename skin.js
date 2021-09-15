@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: customizacion_ny.ggsk
-// Generated 2021-09-15T14:47:47
+// Generated 2021-09-15T15:08:05
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -122,7 +122,7 @@ function pano2vrSkin(player,base) {
 		this.ggCurrentTime=new Date().getTime();
 		el=me._rectangle_1=document.createElement('div');
 		el.ggId="Rectangle 1";
-		el.ggDy=-5;
+		el.ggDy=-134;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -130,8 +130,8 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
-		hs+='height : 100.964%;';
-		hs+='left : 254px;';
+		hs+='height : 80.63%;';
+		hs+='left : 256px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
@@ -165,7 +165,7 @@ function pano2vrSkin(player,base) {
 		me.divSkin.appendChild(me._rectangle_1);
 		el=me._menu_background=document.createElement('div');
 		el.ggId="menu_background";
-		el.ggDy=-34;
+		el.ggDy=-35;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -174,7 +174,7 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
 		hs+='height : 100%;';
-		hs+='left : -22px;';
+		hs+='left : -20px;';
 		hs+='opacity : 0;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
@@ -949,7 +949,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=175;
+		el.ggDy=182;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -1224,7 +1224,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=153;
+		el.ggDy=160;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -1499,7 +1499,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=131;
+		el.ggDy=138;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -1774,7 +1774,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=43;
+		el.ggDy=50;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -2049,7 +2049,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=65;
+		el.ggDy=72;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -2324,7 +2324,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=87;
+		el.ggDy=94;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -2599,7 +2599,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=109;
+		el.ggDy=116;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -2874,7 +2874,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=21;
+		el.ggDy=28;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -3149,7 +3149,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-1;
+		el.ggDy=6;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -3424,7 +3424,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-29;
+		el.ggDy=-22;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -3699,7 +3699,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-51;
+		el.ggDy=-44;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -3974,7 +3974,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-139;
+		el.ggDy=-132;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -4249,7 +4249,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-118;
+		el.ggDy=-111;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -4524,7 +4524,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-95;
+		el.ggDy=-88;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -4799,7 +4799,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-73;
+		el.ggDy=-66;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -5074,7 +5074,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-161;
+		el.ggDy=-154;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -5349,7 +5349,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-183;
+		el.ggDy=-176;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -5624,7 +5624,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-208;
+		el.ggDy=-201;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -5899,7 +5899,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-230;
+		el.ggDy=-223;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -6174,7 +6174,7 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 1";
-		el.ggDy=-252;
+		el.ggDy=-245;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -6928,16 +6928,16 @@ function pano2vrSkin(player,base) {
 		hs+='background-clip : padding-box;';
 		hs+='background : #ffffff;';
 		hs+='border : 1px solid rgba(255,117,244,0);';
-		hs+='bottom : 5px;';
+		hs+='bottom : 9px;';
 		hs+='cursor : default;';
 		hs+='height : 38.5714%;';
-		hs+='left : 285px;';
+		hs+='left : 20px;';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
 		hs+='width : 30%;';
 		hs+='pointer-events:auto;';
-		hs+='z-index: 5;';
+		hs+='z-index: 4;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='0% 100%';
 		me._floorplan.ggIsActive=function() {
