@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: customizacion_ny.ggsk
-// Generated 2021-09-15T16:29:20
+// Generated 2021-09-15T16:46:56
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -29769,6 +29769,37 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me.divSkin.appendChild(me._text_3);
+		el=me._rectangle_3=document.createElement('div');
+		el.ggId="Rectangle 3";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		hs ='';
+		hs+='background : #ffffff;';
+		hs+='border : 1px solid #000000;';
+		hs+='cursor : default;';
+		hs+='height : 42px;';
+		hs+='left : 631px;';
+		hs+='position : absolute;';
+		hs+='top : 13px;';
+		hs+='visibility : hidden;';
+		hs+='width : 118px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._rectangle_3.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._rectangle_3.ggUpdatePosition=function (useTransition) {
+		}
+		me._rectangle_3.ggNodeChange=function () {
+			history.replaceState({}, player.userdata.title, location.href.replace(location.hash,"") + '#' + player.getCurrentNode());
+		}
+		me.divSkin.appendChild(me._rectangle_3);
 		me._floorplan.ggMarkerInstances=[];
 		me._floorplan.ggMapId = 'FloorPlan01';
 		me._floorplan.ggLastNodeId=null;
