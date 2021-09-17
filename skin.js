@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: customizacion_ny.ggsk
-// Generated 2021-09-17T13:02:36
+// Generated 2021-09-17T13:44:27
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -319,7 +319,7 @@ function pano2vrSkin(player,base) {
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
 		hs+='top : 50%;';
-		hs+='width : 316px;';
+		hs+='width : 374px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._node_scroller1.ggScrollByX = function(diffX) {
@@ -536,9 +536,9 @@ function pano2vrSkin(player,base) {
 		hs+='left : 14px;';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
-		hs+='top : 54px;';
+		hs+='top : 51px;';
 		hs+='visibility : inherit;';
-		hs+='width : 328px;';
+		hs+='width : 389px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -650,7 +650,7 @@ function pano2vrSkin(player,base) {
 		el.ggNumRepeat = 1;
 		el.ggNumRows = 0;
 		el.ggNumCols = 0;
-		el.ggWidth = 312;
+		el.ggWidth = 370;
 		el.ggHeight = 151;
 		el.ggUpdating = false;
 		el.ggFilter = [];
@@ -732,7 +732,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : 10px;';
 		hs+='visibility : inherit;';
-		hs+='width : 312px;';
+		hs+='width : 370px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -35103,6 +35103,34 @@ function pano2vrSkin(player,base) {
 		}
 		me._rectangle_4.appendChild(me.__logo_responsive_1);
 		me.divSkin.appendChild(me._rectangle_4);
+		el=me._rectangle_5=document.createElement('div');
+		el.ggId="Rectangle 5";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		hs ='';
+		hs+='background : #ffffff;';
+		hs+='border : 1px solid #000000;';
+		hs+='cursor : default;';
+		hs+='height : 188px;';
+		hs+='left : 215px;';
+		hs+='position : absolute;';
+		hs+='top : 256px;';
+		hs+='visibility : inherit;';
+		hs+='width : 69.2308%;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._rectangle_5.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._rectangle_5.ggUpdatePosition=function (useTransition) {
+		}
+		me.divSkin.appendChild(me._rectangle_5);
 		me._video_21.ggInitMedia('media/video_5.mp4');
 		me._video_20.ggInitMedia('media/video_7.mp4');
 		me._video_19.ggInitMedia('media/video_8.mp4');
@@ -35526,7 +35554,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseDown={};
 		me.elementMouseOver={};
 		me.__div=document.createElement('div');
-		me.__div.setAttribute('style','position: absolute;width: 312px; height: 151px; visibility: inherit; overflow: hidden;');
+		me.__div.setAttribute('style','position: absolute;width: 370px; height: 151px; visibility: inherit; overflow: hidden;');
 		me.__div.style.left=parameter.left;
 		me.__div.style.top=parameter.top;
 		me.__div.ggIsActive = function() {
@@ -35538,7 +35566,7 @@ function pano2vrSkin(player,base) {
 		el=me._node_image_cloner1=document.createElement('div');
 		els=me._node_image_cloner1__img=document.createElement('img');
 		els.className='ggskin ggskin_nodeimage';
-		els.setAttribute('src',basePath + "images/node_image_cloner0_" + nodeId + ".jpg");
+		els.setAttribute('src',basePath + "images/node_image_cloner1_" + nodeId + ".jpg");
 		el.ggNodeId=nodeId;
 		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
 		els.className='ggskin ggskin_nodeimage';
@@ -35546,7 +35574,7 @@ function pano2vrSkin(player,base) {
 		el.appendChild(els);
 		el.ggSubElement = els;
 		el.ggId="node_Image_cloner";
-		el.ggDy=-1;
+		el.ggDy=-3;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_nodeimage ";
@@ -35558,7 +35586,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 303px;';
+		hs+='width : 350px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
