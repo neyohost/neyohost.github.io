@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: minka-custom.ggsk
-// Generated 2021-09-22T15:45:24
+// Generated 2021-09-22T15:56:50
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -16077,7 +16077,7 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
-		hs+='height : 41px;';
+		hs+='height : 45px;';
 		hs+='left : 9px;';
 		hs+='position : absolute;';
 		hs+='top : 12px;';
@@ -16092,6 +16092,32 @@ function pano2vrSkin(player,base) {
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
+		}
+		me._rectangle_4.logicBlock_scaling = function() {
+			var newLogicStateScaling;
+			if (
+				((player.getViewerSize().width > 1024))
+			)
+			{
+				newLogicStateScaling = 0;
+			}
+			else {
+				newLogicStateScaling = -1;
+			}
+			if (me._rectangle_4.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._rectangle_4.ggCurrentLogicStateScaling = newLogicStateScaling;
+				me._rectangle_4.style[domTransition]='' + cssPrefix + 'transform 0s';
+				if (me._rectangle_4.ggCurrentLogicStateScaling == 0) {
+					me._rectangle_4.ggParameter.sx = 0;
+					me._rectangle_4.ggParameter.sy = 0;
+					me._rectangle_4.style[domTransform]=parameterToTransform(me._rectangle_4.ggParameter);
+				}
+				else {
+					me._rectangle_4.ggParameter.sx = 1;
+					me._rectangle_4.ggParameter.sy = 1;
+					me._rectangle_4.style[domTransform]=parameterToTransform(me._rectangle_4.ggParameter);
+				}
+			}
 		}
 		me._rectangle_4.ggUpdatePosition=function (useTransition) {
 		}
@@ -16133,32 +16159,6 @@ function pano2vrSkin(player,base) {
 				return this.parentNode.ggElementNodeId();
 			}
 			return player.getCurrentNode();
-		}
-		me.__logo_responsive_1.logicBlock_scaling = function() {
-			var newLogicStateScaling;
-			if (
-				((player.getViewerSize().width > 1024))
-			)
-			{
-				newLogicStateScaling = 0;
-			}
-			else {
-				newLogicStateScaling = -1;
-			}
-			if (me.__logo_responsive_1.ggCurrentLogicStateScaling != newLogicStateScaling) {
-				me.__logo_responsive_1.ggCurrentLogicStateScaling = newLogicStateScaling;
-				me.__logo_responsive_1.style[domTransition]='' + cssPrefix + 'transform 0s';
-				if (me.__logo_responsive_1.ggCurrentLogicStateScaling == 0) {
-					me.__logo_responsive_1.ggParameter.sx = 0;
-					me.__logo_responsive_1.ggParameter.sy = 0;
-					me.__logo_responsive_1.style[domTransform]=parameterToTransform(me.__logo_responsive_1.ggParameter);
-				}
-				else {
-					me.__logo_responsive_1.ggParameter.sx = 1;
-					me.__logo_responsive_1.ggParameter.sy = 1;
-					me.__logo_responsive_1.style[domTransform]=parameterToTransform(me.__logo_responsive_1.ggParameter);
-				}
-			}
 		}
 		me.__logo_responsive_1.ggUpdatePosition=function (useTransition) {
 		}
@@ -20260,7 +20260,7 @@ function pano2vrSkin(player,base) {
 		hs+='visibility : inherit;';
 		hs+='width : 262px;';
 		hs+='pointer-events:none;';
-		hs+='font-family: Geometrica; text-shadow: 5px 5px 10px #000000, -5px -5px 10px #000000;';
+		hs+='font-family: \"Geometrica\", sans-serif; text-shadow: 5px 5px 10px #000000, -5px -5px 10px #000000;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 100%';
 		hs ='position:absolute;';
@@ -20352,7 +20352,7 @@ function pano2vrSkin(player,base) {
 	me._node1.logicBlock_scaling();
 	me._scrollarea_1.logicBlock_scaling();
 	me._botons_responsive_.logicBlock_scaling();
-	me.__logo_responsive_1.logicBlock_scaling();
+	me._rectangle_4.logicBlock_scaling();
 	me._boton_next.logicBlock_scaling();
 	me._video_prueba.logicBlock_scaling();
 	me._svg_9.logicBlock_scaling();
@@ -20414,7 +20414,7 @@ function pano2vrSkin(player,base) {
 	me._image_popup.logicBlock_visible();
 	me._popup_image.logicBlock_visible();
 	me._image_popup_close.logicBlock_visible();
-	player.addListener('sizechanged', function(args) { me._menu_responsive_small.logicBlock_scaling();me._menu_responsive_tablets.logicBlock_scaling();me._menu_background.logicBlock_scaling();me._rectangle_1.logicBlock_scaling();me._boxshadow_left.logicBlock_scaling();me._logo_destok.logicBlock_scaling();me._mapfloor.logicBlock_scaling();me._node_next.logicBlock_scaling();me._boton_nextresponsive.logicBlock_scaling();me._box_shadow_topresponsive.logicBlock_scaling();me._box_shadow_botresponsive.logicBlock_scaling();me._boton_responsive.logicBlock_scaling();me._scroll_name_left.logicBlock_scaling();me._node20.logicBlock_scaling();me._node19.logicBlock_scaling();me._node18.logicBlock_scaling();me._node17.logicBlock_scaling();me._node16.logicBlock_scaling();me._node15.logicBlock_scaling();me._node14.logicBlock_scaling();me._node13.logicBlock_scaling();me._node12.logicBlock_scaling();me._node11.logicBlock_scaling();me._node10.logicBlock_scaling();me._node9.logicBlock_scaling();me._node8.logicBlock_scaling();me._node7.logicBlock_scaling();me._node6.logicBlock_scaling();me._node5.logicBlock_scaling();me._node4.logicBlock_scaling();me._node3.logicBlock_scaling();me._node2.logicBlock_scaling();me._node1.logicBlock_scaling();me._scrollarea_1.logicBlock_scaling();me._botons_responsive_.logicBlock_scaling();me.__logo_responsive_1.logicBlock_scaling();me._boton_next.logicBlock_scaling();me._video_prueba.logicBlock_scaling();me._svg_9.logicBlock_scaling();me._svg_10.logicBlock_scaling();me._svg_7.logicBlock_scaling();me._svg_8.logicBlock_scaling();me._buttons_social.logicBlock_scaling(); });
+	player.addListener('sizechanged', function(args) { me._menu_responsive_small.logicBlock_scaling();me._menu_responsive_tablets.logicBlock_scaling();me._menu_background.logicBlock_scaling();me._rectangle_1.logicBlock_scaling();me._boxshadow_left.logicBlock_scaling();me._logo_destok.logicBlock_scaling();me._mapfloor.logicBlock_scaling();me._node_next.logicBlock_scaling();me._boton_nextresponsive.logicBlock_scaling();me._box_shadow_topresponsive.logicBlock_scaling();me._box_shadow_botresponsive.logicBlock_scaling();me._boton_responsive.logicBlock_scaling();me._scroll_name_left.logicBlock_scaling();me._node20.logicBlock_scaling();me._node19.logicBlock_scaling();me._node18.logicBlock_scaling();me._node17.logicBlock_scaling();me._node16.logicBlock_scaling();me._node15.logicBlock_scaling();me._node14.logicBlock_scaling();me._node13.logicBlock_scaling();me._node12.logicBlock_scaling();me._node11.logicBlock_scaling();me._node10.logicBlock_scaling();me._node9.logicBlock_scaling();me._node8.logicBlock_scaling();me._node7.logicBlock_scaling();me._node6.logicBlock_scaling();me._node5.logicBlock_scaling();me._node4.logicBlock_scaling();me._node3.logicBlock_scaling();me._node2.logicBlock_scaling();me._node1.logicBlock_scaling();me._scrollarea_1.logicBlock_scaling();me._botons_responsive_.logicBlock_scaling();me._rectangle_4.logicBlock_scaling();me._boton_next.logicBlock_scaling();me._video_prueba.logicBlock_scaling();me._svg_9.logicBlock_scaling();me._svg_10.logicBlock_scaling();me._svg_7.logicBlock_scaling();me._svg_8.logicBlock_scaling();me._buttons_social.logicBlock_scaling(); });
 	player.addListener('changenode', function(args) { me._menu_responsive_small.logicBlock_alpha();me._menu_responsive_tablets.logicBlock_alpha();me._menu_background.logicBlock_alpha();me._floorplan0.logicBlock_scaling();me._boton_next1.logicBlock_visible();me._boton_next2.logicBlock_visible();me._boton_next3.logicBlock_visible();me._boton_next4.logicBlock_visible();me._boton_next5.logicBlock_visible();me._boton_next6.logicBlock_visible();me._boton_next7.logicBlock_visible();me._boton_next8.logicBlock_visible();me._boton_next9.logicBlock_visible();me._boton_next10.logicBlock_visible();me._boton_next11.logicBlock_visible();me._boton_next12.logicBlock_visible();me._boton_next13.logicBlock_visible();me._boton_next14.logicBlock_visible();me._boton_next15.logicBlock_visible();me._boton_next16.logicBlock_visible();me._boton_next17.logicBlock_visible();me._boton_next18.logicBlock_visible();me._boton_next19.logicBlock_visible();me._boton_next20.logicBlock_visible();me._boton_next21.logicBlock_visible();me._node20.logicBlock_visible();me._node19.logicBlock_visible();me._node18.logicBlock_visible();me._node17.logicBlock_visible();me._node16.logicBlock_visible();me._node15.logicBlock_visible();me._node14.logicBlock_visible();me._node13.logicBlock_visible();me._node12.logicBlock_visible();me._node11.logicBlock_visible();me._node10.logicBlock_visible();me._node9.logicBlock_visible();me._node8.logicBlock_visible();me._node7.logicBlock_visible();me._node6.logicBlock_visible();me._node5.logicBlock_visible();me._node4.logicBlock_visible();me._node3.logicBlock_visible();me._node2.logicBlock_visible();me._node1.logicBlock_visible();me._video_screentint_file.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_controls_file.logicBlock_visible();me._video_popup_close_file.logicBlock_visible();me._screentint_image.logicBlock_visible();me._image_popup.logicBlock_visible();me._popup_image.logicBlock_visible();me._image_popup_close.logicBlock_visible(); });
 	player.addListener('varchanged_vis_thumbnail_menu', function(args) { me._menu_responsive_small.logicBlock_alpha();me._menu_responsive_tablets.logicBlock_alpha();me._menu_background.logicBlock_alpha(); });
 	player.addListener('varchanged_vis_video_file', function(args) { me._video_screentint_file.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_controls_file.logicBlock_visible();me._video_popup_close_file.logicBlock_visible(); });
