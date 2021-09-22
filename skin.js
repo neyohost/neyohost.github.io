@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.8/17956
 // Filename: minka-custom.ggsk
-// Generated 2021-09-21T18:52:13
+// Generated 2021-09-21T19:08:00
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_thumbnail_menu_tooltip', 2, true);
@@ -9192,7 +9192,7 @@ function pano2vrSkin(player,base) {
 		hs+='left : 3px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 171px;';
+		hs+='width : 185px;';
 		hs+='pointer-events:none;';
 		hs+='z-index: 2;';
 		el.setAttribute('style',hs);
@@ -9256,7 +9256,7 @@ function pano2vrSkin(player,base) {
 		hs+='bottom : 11px;';
 		hs+='cursor : pointer;';
 		hs+='height : 15px;';
-		hs+='left : 148px;';
+		hs+='left : 167px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
 		hs+='width : 13px;';
@@ -9291,19 +9291,19 @@ function pano2vrSkin(player,base) {
 		hs+='bottom : 0px;';
 		hs+='cursor : pointer;';
 		hs+='height : 35px;';
-		hs+='left : 5px;';
+		hs+='left : 2px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 137px;';
+		hs+='width : 158px;';
 		hs+='pointer-events:auto;';
-		hs+='font-family:Geometrica;';
+		hs+='font-family: monospace;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
 		hs ='position:absolute;';
 		hs += 'box-sizing: border-box;';
 		hs+='left: 0px;';
 		hs+='bottom:  0px;';
-		hs+='width: 137px;';
+		hs+='width: 158px;';
 		hs+='height: auto;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
@@ -9369,6 +9369,32 @@ function pano2vrSkin(player,base) {
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
+		}
+		me._scroll_name_left.logicBlock_scaling = function() {
+			var newLogicStateScaling;
+			if (
+				((player.getViewerSize().width < 1024))
+			)
+			{
+				newLogicStateScaling = 0;
+			}
+			else {
+				newLogicStateScaling = -1;
+			}
+			if (me._scroll_name_left.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._scroll_name_left.ggCurrentLogicStateScaling = newLogicStateScaling;
+				me._scroll_name_left.style[domTransition]='' + cssPrefix + 'transform 0s';
+				if (me._scroll_name_left.ggCurrentLogicStateScaling == 0) {
+					me._scroll_name_left.ggParameter.sx = 0;
+					me._scroll_name_left.ggParameter.sy = 0;
+					me._scroll_name_left.style[domTransform]=parameterToTransform(me._scroll_name_left.ggParameter);
+				}
+				else {
+					me._scroll_name_left.ggParameter.sx = 1;
+					me._scroll_name_left.ggParameter.sy = 1;
+					me._scroll_name_left.style[domTransform]=parameterToTransform(me._scroll_name_left.ggParameter);
+				}
+			}
 		}
 		me._scroll_name_left.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
@@ -19290,6 +19316,7 @@ function pano2vrSkin(player,base) {
 	me._box_shadow_topresponsive.logicBlock_scaling();
 	me._box_shadow_botresponsive.logicBlock_scaling();
 	me._boton_responsive.logicBlock_scaling();
+	me._scroll_name_left.logicBlock_scaling();
 	me._node20.logicBlock_scaling();
 	me._node19.logicBlock_scaling();
 	me._node18.logicBlock_scaling();
@@ -19374,7 +19401,7 @@ function pano2vrSkin(player,base) {
 	me._popup_video_file.logicBlock_visible();
 	me._video_popup_controls_file.logicBlock_visible();
 	me._video_popup_close_file.logicBlock_visible();
-	player.addListener('sizechanged', function(args) { me._menu_responsive_small.logicBlock_scaling();me._menu_responsive_tablets.logicBlock_scaling();me._menu_background.logicBlock_scaling();me._rectangle_1.logicBlock_scaling();me._boxshadow_left.logicBlock_scaling();me._logo_destok.logicBlock_scaling();me._button_fullscreen.logicBlock_scaling();me._button_image_normalscreen.logicBlock_scaling();me._button_image_fullscreen.logicBlock_scaling();me._button_facebook.logicBlock_scaling();me._mapfloor.logicBlock_scaling();me._node_next.logicBlock_scaling();me._boton_nextresponsive.logicBlock_scaling();me._box_shadow_topresponsive.logicBlock_scaling();me._box_shadow_botresponsive.logicBlock_scaling();me._boton_responsive.logicBlock_scaling();me._node20.logicBlock_scaling();me._node19.logicBlock_scaling();me._node18.logicBlock_scaling();me._node17.logicBlock_scaling();me._node16.logicBlock_scaling();me._node15.logicBlock_scaling();me._node14.logicBlock_scaling();me._node13.logicBlock_scaling();me._node12.logicBlock_scaling();me._node11.logicBlock_scaling();me._node10.logicBlock_scaling();me._node9.logicBlock_scaling();me._node8.logicBlock_scaling();me._node7.logicBlock_scaling();me._node6.logicBlock_scaling();me._node5.logicBlock_scaling();me._node4.logicBlock_scaling();me._node3.logicBlock_scaling();me._node2.logicBlock_scaling();me._node1.logicBlock_scaling();me._scrollarea_1.logicBlock_scaling();me._botons_responsive_.logicBlock_scaling();me.__logo_responsive_1.logicBlock_scaling();me._video_prueba.logicBlock_scaling();me._svg_9.logicBlock_scaling();me._svg_10.logicBlock_scaling();me._svg_7.logicBlock_scaling();me._svg_8.logicBlock_scaling(); });
+	player.addListener('sizechanged', function(args) { me._menu_responsive_small.logicBlock_scaling();me._menu_responsive_tablets.logicBlock_scaling();me._menu_background.logicBlock_scaling();me._rectangle_1.logicBlock_scaling();me._boxshadow_left.logicBlock_scaling();me._logo_destok.logicBlock_scaling();me._button_fullscreen.logicBlock_scaling();me._button_image_normalscreen.logicBlock_scaling();me._button_image_fullscreen.logicBlock_scaling();me._button_facebook.logicBlock_scaling();me._mapfloor.logicBlock_scaling();me._node_next.logicBlock_scaling();me._boton_nextresponsive.logicBlock_scaling();me._box_shadow_topresponsive.logicBlock_scaling();me._box_shadow_botresponsive.logicBlock_scaling();me._boton_responsive.logicBlock_scaling();me._scroll_name_left.logicBlock_scaling();me._node20.logicBlock_scaling();me._node19.logicBlock_scaling();me._node18.logicBlock_scaling();me._node17.logicBlock_scaling();me._node16.logicBlock_scaling();me._node15.logicBlock_scaling();me._node14.logicBlock_scaling();me._node13.logicBlock_scaling();me._node12.logicBlock_scaling();me._node11.logicBlock_scaling();me._node10.logicBlock_scaling();me._node9.logicBlock_scaling();me._node8.logicBlock_scaling();me._node7.logicBlock_scaling();me._node6.logicBlock_scaling();me._node5.logicBlock_scaling();me._node4.logicBlock_scaling();me._node3.logicBlock_scaling();me._node2.logicBlock_scaling();me._node1.logicBlock_scaling();me._scrollarea_1.logicBlock_scaling();me._botons_responsive_.logicBlock_scaling();me.__logo_responsive_1.logicBlock_scaling();me._video_prueba.logicBlock_scaling();me._svg_9.logicBlock_scaling();me._svg_10.logicBlock_scaling();me._svg_7.logicBlock_scaling();me._svg_8.logicBlock_scaling(); });
 	player.addListener('imagesready', function(args) { me._video_prueba.logicBlock_visible();me._svg_7.logicBlock_visible();me._svg_8.logicBlock_visible(); });
 	player.addListener('fullscreenenter', function(args) { me._button_image_normalscreen.logicBlock_visible();me._button_image_fullscreen.logicBlock_visible(); });
 	player.addListener('fullscreenexit', function(args) { me._button_image_normalscreen.logicBlock_visible();me._button_image_fullscreen.logicBlock_visible(); });
