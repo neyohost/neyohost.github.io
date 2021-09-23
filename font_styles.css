@@ -1,0 +1,14 @@
+
+
+@font-face {
+    font-family: 'geometrica';
+    src: url('Latinotype_Geometrica_Medium.WOFF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.text_minka{
+            font-family: "geometrica";
+            }
+        
